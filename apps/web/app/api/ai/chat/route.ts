@@ -3,6 +3,22 @@ import OpenAI from 'openai';
 import { retrieveRelevantKnowledge, KnowledgeDocument } from '@/lib/ai/knowledge';
 import { PERSONAS, AssistantPersona } from '@/lib/ai/personas';
 
+export async function GET(req: NextRequest) {
+  const accept = req.headers.get('accept') || '';
+  if (accept.includes('text/html')) {
+    return NextResponse.redirect(new URL('/en/research/ai-assistant', req.url));
+  }
+
+  return NextResponse.json({
+    status: 'online',
+    service: 'Accra-Helsinki AI Research Assistant API',
+    method: 'POST',
+    uiUrl: '/en/research/ai-assistant',
+    personas: Object.keys(PERSONAS),
+    documentation: 'Send a POST request with JSON body { messages: [{ role: "user", content: "..." }], persona: "general" }'
+  });
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
