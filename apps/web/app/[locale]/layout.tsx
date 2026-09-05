@@ -22,8 +22,10 @@ export default async function LocaleLayout({
   const { locale } = await params;
   const messages = await getMessages();
 
+  const isRtl = locale === 'ar';
+
   return (
-    <html lang={locale} className={`${inter.variable} antialiased`}>
+    <html lang={locale} dir={isRtl ? 'rtl' : 'ltr'} className={`${inter.variable} antialiased`}>
       <body className="min-h-screen flex flex-col font-sans bg-white text-slate-900">
         <NextIntlClientProvider messages={messages}>
           <Header locale={locale} />

@@ -1,0 +1,61 @@
+{
+  "nav": {
+    "home": "Nyumbani",
+    "issues": "Changamoto",
+    "countries": "Nchi",
+    "research": "Utafiti na Takwimu",
+    "laws": "Sheria na Sera",
+    "solutions": "Suluhu",
+    "media": "Habari na Vyombo",
+    "learn": "Elimu",
+    "action": "Chukua Hatua",
+    "about": "Kuhusu Sisi"
+  },
+  "home": {
+    "heroTitle": "Afrika Sio Jalala la Taka Duniani",
+    "heroSubtitle": "Jukwaa la Ujasusi wa Mazingira la CSRTA linawezesha jamii, watafiti, na watunga sera kwa takwimu thabiti ili kukomesha utupaji taka hatarishi barani Afrika.",
+    "takeAction": "Chukua Hatua",
+    "exploreData": "Chunguza Takwimu",
+    "readResearch": "Soma Utafiti",
+    "stat1": "25-75%",
+    "stat1Label": "Vifaa Vibovu Vinavyoagizwa",
+    "stat2": "54",
+    "stat2Label": "Nchi Zilizoathirika",
+    "stat3": "4",
+    "stat3Label": "Mikataba ya Kimataifa",
+    "stat4": "1,000+",
+    "stat4Label": "Matukio Yaliyothibitishwa",
+    "theCrisis": "Mgogoro wa Mazingira",
+    "theCrisisSubtitle": "Vitisho vikubwa vya mazingira vinavyoikabili bara la Afrika leo.",
+    "reportTitle": "Ripoti Utupaji Taka Hatarishi",
+    "reportDesc": "Je, umeshuhudia utupaji haramu wa taka za kielektroniki? Toa taarifa bila kujitambulisha.",
+    "reportBtn": "Ripoti Tukio",
+    "aiTitle": "Msaidizi wa Utafiti wa AI",
+    "aiDesc": "Uliza msaidizi wetu kuhusu sheria, mikataba na takwimu za mazingira barani Afrika.",
+    "aiBtn": "Uliza Msaidizi"
+  },
+  "common": {
+    "search": "Tafuta...",
+    "filter": "Chuja",
+    "readMore": "Soma Zaidi →",
+    "viewAll": "Tazama Yote",
+    "loading": "Inapakia..."
+  },
+  "footer": {
+    "organization": "Jukwaa la Ujasusi wa Mazingira la CSRTA. Kulinda mazingira ya Afrika kupitia takwimu na hatua thabiti.",
+    "explore": "Chunguza",
+    "takeAction": "Chukua Hatua",
+    "connect": "Wasiliana",
+    "newsletter": "Jiunge na jarida letu",
+    "emailPlaceholder": "Barua pepe yako",
+    "subscribe": "Jiunge",
+    "copyright": "© 2025 CSRTA. Haki zote zimehifadhiwa.",
+    "privacy": "Sera ya Faragha",
+    "terms": "Vigezo vya Huduma",
+    "accessibility": "Upatikanaji"
+  },
+  "about": {
+    "title": "Kuhusu Sisi",
+    "description": "Jifunze zaidi kuhusu CSRTA na wajibu wetu barani Afrika."
+  }
+}

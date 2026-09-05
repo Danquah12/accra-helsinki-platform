@@ -4,12 +4,13 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronDown, ChevronRight, Globe } from 'lucide-react';
+import LanguageSwitcher from './LanguageSwitcher';
 
 interface MobileNavProps {
   locale: string;
   navItems: any[];
   onClose: () => void;
-  toggleLocale: () => void;
+  toggleLocale?: () => void;
 }
 
 export default function MobileNav({ locale, navItems, onClose, toggleLocale }: MobileNavProps) {
@@ -109,12 +110,7 @@ export default function MobileNav({ locale, navItems, onClose, toggleLocale }: M
       <div className="p-4 border-t border-emerald-100 bg-slate-50 flex flex-col gap-4 mt-auto">
         <div className="flex items-center justify-between">
           <span className="text-sm font-medium text-slate-500">Language</span>
-          <button
-            onClick={toggleLocale}
-            className="text-sm font-bold text-emerald-900 bg-white border border-emerald-200 px-4 py-2 rounded-lg"
-          >
-            {locale === 'en' ? 'Français' : 'English'}
-          </button>
+          <LanguageSwitcher currentLocale={locale} />
         </div>
         <Link
           href={`/${locale}/take-action`}

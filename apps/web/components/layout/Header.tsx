@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Globe, Menu, ChevronDown, CheckCircle, Bot, AlertTriangle } from 'lucide-react';
 import MobileNav from './MobileNav';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -311,12 +312,7 @@ export default function Header({ locale }: { locale: string }) {
 
           {/* Right actions */}
           <div className="hidden lg:flex items-center gap-4 shrink-0">
-            <button
-              onClick={toggleLocale}
-              className="text-sm font-bold text-emerald-900 hover:text-emerald-700 transition-colors uppercase px-2 py-1 rounded-md hover:bg-emerald-50"
-            >
-              {locale === 'en' ? 'FR' : 'EN'}
-            </button>
+            <LanguageSwitcher currentLocale={locale} />
             <Link
               href={`/${locale}/take-action`}
               className="px-5 py-2.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white font-medium text-sm transition-all shadow-sm shadow-amber-600/20 active:scale-95"
