@@ -3,12 +3,6 @@ import IndicatorGrid from '@/components/country/IndicatorGrid';
 import TreatyStatus from '@/components/country/TreatyStatus';
 import { notFound } from 'next/navigation';
 
-export async function generateStaticParams() {
-  const countries = getAllCountries();
-  return countries.map((country) => ({
-    slug: country.slug,
-  }));
-}
 
 export default async function CountryOverviewPage({
   params,
