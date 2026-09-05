@@ -1,0 +1,45 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "LineString", "coordinates": [[4.469, 51.924], [3.395, 6.455]] },
+      "properties": { "origin_port": "Rotterdam", "destination_port": "Lagos", "waste_type": "e-waste", "documented": false }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "LineString", "coordinates": [[9.993, 53.551], [-0.017, 5.638]] },
+      "properties": { "origin_port": "Hamburg", "destination_port": "Tema", "waste_type": "used appliances", "documented": true }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "LineString", "coordinates": [[0.127, 51.507], [39.668, -4.043]] },
+      "properties": { "origin_port": "London", "destination_port": "Mombasa", "waste_type": "electronics", "documented": false }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "LineString", "coordinates": [[4.402, 51.219], [-4.028, 5.316]] },
+      "properties": { "origin_port": "Antwerp", "destination_port": "Abidjan", "waste_type": "chemicals", "documented": false }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "LineString", "coordinates": [[5.369, 43.296], [-17.447, 14.693]] },
+      "properties": { "origin_port": "Marseille", "destination_port": "Dakar", "waste_type": "textiles", "documented": true }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "LineString", "coordinates": [[55.270, 25.204], [39.208, -6.792]] },
+      "properties": { "origin_port": "Dubai", "destination_port": "Dar es Salaam", "waste_type": "used vehicles", "documented": true }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "LineString", "coordinates": [[139.691, 35.689], [31.029, -29.858]] },
+      "properties": { "origin_port": "Tokyo", "destination_port": "Durban", "waste_type": "electronics", "documented": true }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "LineString", "coordinates": [[-74.006, 40.712], [29.919, 31.200]] },
+      "properties": { "origin_port": "New York", "destination_port": "Alexandria", "waste_type": "mixed waste", "documented": false }
+    }
+  ]
+}

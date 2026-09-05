@@ -1,0 +1,80 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-0.225, 5.556] },
+      "properties": { "title": "Agbogbloshie E-waste Dump", "category": "ewaste_dump", "severity": "critical", "country": "Ghana", "description": "One of the world's largest informal e-waste recycling sites.", "date": "2024-05-12", "status": "active" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [3.395, 6.455] },
+      "properties": { "title": "Lagos Port E-waste", "category": "illegal_shipment", "severity": "high", "country": "Nigeria", "description": "Major entry point for undocumented electronics from Europe.", "date": "2024-06-20", "status": "monitoring" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-0.017, 5.638] },
+      "properties": { "title": "Tema Port Appliance Imports", "category": "illegal_shipment", "severity": "medium", "country": "Ghana", "description": "Import of near end-of-life cooling appliances containing ODS.", "date": "2024-08-05", "status": "investigating" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [39.668, -4.043] },
+      "properties": { "title": "Mombasa Used Electronics", "category": "illegal_shipment", "severity": "medium", "country": "Kenya", "description": "Container of non-functional IT equipment intercepted.", "date": "2024-07-11", "status": "resolved" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [39.208, -6.792] },
+      "properties": { "title": "Dar es Salaam Informal E-waste", "category": "ewaste_dump", "severity": "high", "country": "Tanzania", "description": "Informal dismantling of cathode ray tubes without protection.", "date": "2024-03-22", "status": "active" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [31.029, -29.858] },
+      "properties": { "title": "Durban Chemical Waste", "category": "contamination", "severity": "critical", "country": "South Africa", "description": "Illegal dumping of persistent organic pollutants near water source.", "date": "2024-09-01", "status": "active" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [29.919, 31.200] },
+      "properties": { "title": "Alexandria Used Vehicles", "category": "appliance_dump", "severity": "medium", "country": "Egypt", "description": "Accumulation of end-of-life vehicles from imports.", "date": "2024-01-15", "status": "monitoring" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-4.028, 5.316] },
+      "properties": { "title": "Abidjan Toxic Waste Site", "category": "contamination", "severity": "high", "country": "Côte d'Ivoire", "description": "Historical toxic waste contamination area undergoing remediation.", "date": "2023-11-10", "status": "monitoring" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-17.447, 14.693] },
+      "properties": { "title": "Dakar Textile Waste", "category": "appliance_dump", "severity": "low", "country": "Senegal", "description": "Massive accumulation of unsellable imported second-hand clothing.", "date": "2024-04-30", "status": "active" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-7.589, 33.573] },
+      "properties": { "title": "Casablanca Electronics Market", "category": "ewaste_dump", "severity": "medium", "country": "Morocco", "description": "Informal processing of imported used electronics.", "date": "2024-08-20", "status": "active" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [38.747, 9.025] },
+      "properties": { "title": "Addis Ababa Appliances", "category": "appliance_dump", "severity": "medium", "country": "Ethiopia", "description": "Dumping of irreparable cooling appliances.", "date": "2024-02-14", "status": "monitoring" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [36.817, -1.286] },
+      "properties": { "title": "Nairobi Informal Recycling", "category": "ewaste_dump", "severity": "high", "country": "Kenya", "description": "Open burning of cables for copper recovery.", "date": "2024-07-05", "status": "active" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [28.050, -26.205] },
+      "properties": { "title": "Johannesburg E-waste Facility", "category": "ewaste_dump", "severity": "low", "country": "South Africa", "description": "Formal facility with some compliance issues.", "date": "2024-06-11", "status": "resolved" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [31.236, 30.044] },
+      "properties": { "title": "Cairo Refrigerator Dump", "category": "appliance_dump", "severity": "high", "country": "Egypt", "description": "Release of CFCs from improperly handled old refrigerators.", "date": "2024-08-28", "status": "active" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [2.433, 6.367] },
+      "properties": { "title": "Cotonou Vehicles Port", "category": "illegal_shipment", "severity": "medium", "country": "Benin", "description": "Import of vehicles below minimum environmental standards.", "date": "2024-05-22", "status": "monitoring" }
+    }
+  ]
+}

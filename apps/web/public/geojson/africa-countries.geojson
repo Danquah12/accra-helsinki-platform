@@ -1,0 +1,55 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Ghana", "iso_alpha2": "GH", "slug": "ghana", "recycling_capacity_score": 60 },
+      "geometry": { "type": "Polygon", "coordinates": [[[-3.2, 5.0], [-1.0, 4.7], [1.1, 6.0], [1.1, 11.0], [-2.8, 11.0], [-3.2, 5.0]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Nigeria", "iso_alpha2": "NG", "slug": "nigeria", "recycling_capacity_score": 50 },
+      "geometry": { "type": "Polygon", "coordinates": [[[2.6, 6.3], [4.5, 4.3], [8.5, 4.7], [14.0, 13.5], [3.5, 13.8], [2.6, 6.3]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Kenya", "iso_alpha2": "KE", "slug": "kenya", "recycling_capacity_score": 75 },
+      "geometry": { "type": "Polygon", "coordinates": [[[34.0, -1.0], [39.0, -4.5], [41.0, -2.0], [42.0, 4.0], [35.0, 4.5], [34.0, -1.0]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "South Africa", "iso_alpha2": "ZA", "slug": "south-africa", "recycling_capacity_score": 85 },
+      "geometry": { "type": "Polygon", "coordinates": [[[16.5, -28.5], [18.5, -34.5], [26.0, -34.0], [33.0, -27.0], [29.5, -22.0], [16.5, -28.5]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Egypt", "iso_alpha2": "EG", "slug": "egypt", "recycling_capacity_score": 65 },
+      "geometry": { "type": "Polygon", "coordinates": [[[25.0, 22.0], [35.0, 22.0], [34.0, 31.0], [25.0, 31.5], [25.0, 22.0]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Côte d'Ivoire", "iso_alpha2": "CI", "slug": "cote-divoire", "recycling_capacity_score": 40 },
+      "geometry": { "type": "Polygon", "coordinates": [[[-8.5, 4.3], [-3.0, 5.0], [-2.5, 10.0], [-8.0, 10.5], [-8.5, 4.3]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Senegal", "iso_alpha2": "SN", "slug": "senegal", "recycling_capacity_score": 45 },
+      "geometry": { "type": "Polygon", "coordinates": [[[-17.5, 14.7], [-16.0, 12.3], [-11.5, 12.5], [-12.0, 16.5], [-16.5, 16.0], [-17.5, 14.7]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tanzania", "iso_alpha2": "TZ", "slug": "tanzania", "recycling_capacity_score": 55 },
+      "geometry": { "type": "Polygon", "coordinates": [[[29.5, -4.5], [29.0, -10.0], [40.0, -10.5], [39.0, -4.5], [29.5, -4.5]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ethiopia", "iso_alpha2": "ET", "slug": "ethiopia", "recycling_capacity_score": 45 },
+      "geometry": { "type": "Polygon", "coordinates": [[[33.0, 8.0], [36.0, 4.0], [48.0, 8.0], [42.0, 14.0], [35.0, 14.0], [33.0, 8.0]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Morocco", "iso_alpha2": "MA", "slug": "morocco", "recycling_capacity_score": 70 },
+      "geometry": { "type": "Polygon", "coordinates": [[[-13.0, 27.5], [-1.0, 34.0], [-5.0, 36.0], [-10.0, 35.0], [-13.0, 27.5]]] }
+    }
+  ]
+}

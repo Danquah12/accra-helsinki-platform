@@ -1,0 +1,61 @@
+{
+  "nav": {
+    "home": "Home",
+    "issues": "Issues",
+    "countries": "Countries",
+    "research": "Research & Data",
+    "laws": "Laws & Policy",
+    "solutions": "Solutions",
+    "media": "Media",
+    "learn": "Learn",
+    "action": "Take Action",
+    "about": "About"
+  },
+  "home": {
+    "heroTitle": "Africa Is Not the World's Dumping Ground",
+    "heroSubtitle": "The CSRTA Africa Environmental Intelligence Platform empowers communities, researchers, and policymakers with data-driven insights to stop environmental dumping and build sustainable futures.",
+    "takeAction": "Take Action",
+    "exploreData": "Explore Data",
+    "readResearch": "Read Research",
+    "stat1": "25-75%",
+    "stat1Label": "Unusable Imported Appliances",
+    "stat2": "54",
+    "stat2Label": "Affected Countries",
+    "stat3": "4",
+    "stat3Label": "International Treaties",
+    "stat4": "1,000+",
+    "stat4Label": "Known Dumping Incidents",
+    "theCrisis": "The Crisis",
+    "theCrisisSubtitle": "Major environmental threats facing the African continent today.",
+    "reportTitle": "Report Environmental Dumping",
+    "reportDesc": "Witnessed illegal dumping of e-waste or hazardous materials? Report it anonymously.",
+    "reportBtn": "Report an Incident",
+    "aiTitle": "AI Research Assistant",
+    "aiDesc": "Ask our AI assistant about policies, treaties, or data regarding environmental dumping in Africa.",
+    "aiBtn": "Ask the Assistant"
+  },
+  "common": {
+    "search": "Search...",
+    "filter": "Filter",
+    "readMore": "Read More →",
+    "viewAll": "View All",
+    "loading": "Loading..."
+  },
+  "footer": {
+    "organization": "CSRTA Environmental Intelligence Platform. Protecting Africa's ecosystems through data and action.",
+    "explore": "Explore",
+    "takeAction": "Take Action",
+    "connect": "Connect",
+    "newsletter": "Subscribe to our newsletter",
+    "emailPlaceholder": "Email address",
+    "subscribe": "Subscribe",
+    "copyright": "© 2025 CSRTA. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "accessibility": "Accessibility"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Learn more about CSRTA and our mission."
+  }
+}

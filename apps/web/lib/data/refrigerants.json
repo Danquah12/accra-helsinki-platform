@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "r-12",
+    "ashraeNumber": "R-12",
+    "name": "Dichlorodifluoromethane",
+    "type": "CFC",
+    "gwp": 10900,
+    "odp": 1.0,
+    "safetyClass": "A1",
+    "phaseOutStatus": "Banned"
+  },
+  {
+    "slug": "r-22",
+    "ashraeNumber": "R-22",
+    "name": "Chlorodifluoromethane",
+    "type": "HCFC",
+    "gwp": 1810,
+    "odp": 0.055,
+    "safetyClass": "A1",
+    "phaseOutStatus": "Phase-out"
+  },
+  {
+    "slug": "r-134a",
+    "ashraeNumber": "R-134a",
+    "name": "1,1,1,2-Tetrafluoroethane",
+    "type": "HFC",
+    "gwp": 1430,
+    "odp": 0,
+    "safetyClass": "A1",
+    "phaseOutStatus": "Phase-down"
+  },
+  {
+    "slug": "r-410a",
+    "ashraeNumber": "R-410A",
+    "name": "R-32/R-125 (50/50)",
+    "type": "HFC",
+    "gwp": 2088,
+    "odp": 0,
+    "safetyClass": "A1",
+    "phaseOutStatus": "Phase-down"
+  },
+  {
+    "slug": "r-32",
+    "ashraeNumber": "R-32",
+    "name": "Difluoromethane",
+    "type": "HFC",
+    "gwp": 675,
+    "odp": 0,
+    "safetyClass": "A2L",
+    "phaseOutStatus": "Phase-down"
+  },
+  {
+    "slug": "r-290",
+    "ashraeNumber": "R-290",
+    "name": "Propane",
+    "type": "Natural",
+    "gwp": 3,
+    "odp": 0,
+    "safetyClass": "A3",
+    "phaseOutStatus": "Alternative"
+  },
+  {
+    "slug": "r-600a",
+    "ashraeNumber": "R-600a",
+    "name": "Isobutane",
+    "type": "Natural",
+    "gwp": 3,
+    "odp": 0,
+    "safetyClass": "A3",
+    "phaseOutStatus": "Alternative"
+  }
+]

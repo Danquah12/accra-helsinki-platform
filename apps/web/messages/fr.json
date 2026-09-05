@@ -1,0 +1,61 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "issues": "Problèmes",
+    "countries": "Pays",
+    "research": "Recherche & Données",
+    "laws": "Lois & Politiques",
+    "solutions": "Solutions",
+    "media": "Médias",
+    "learn": "Apprendre",
+    "action": "Agir",
+    "about": "À Propos"
+  },
+  "home": {
+    "heroTitle": "L'Afrique N'est Pas le Dépotoir du Monde",
+    "heroSubtitle": "La plateforme d'intelligence environnementale CSRTA Afrique donne aux communautés, chercheurs et décideurs les moyens d'arrêter le dumping environnemental grâce aux données.",
+    "takeAction": "Agir",
+    "exploreData": "Explorer les Données",
+    "readResearch": "Lire la Recherche",
+    "stat1": "25-75%",
+    "stat1Label": "Appareils Importés Inutilisables",
+    "stat2": "54",
+    "stat2Label": "Pays Touchés",
+    "stat3": "4",
+    "stat3Label": "Traités Internationaux",
+    "stat4": "1,000+",
+    "stat4Label": "Incidents Connus",
+    "theCrisis": "La Crise",
+    "theCrisisSubtitle": "Les principales menaces environnementales auxquelles le continent africain est confronté aujourd'hui.",
+    "reportTitle": "Signaler un Dumping",
+    "reportDesc": "Vous avez été témoin d'un déversement illégal de déchets ? Signalez-le de manière anonyme.",
+    "reportBtn": "Signaler un Incident",
+    "aiTitle": "Assistant de Recherche IA",
+    "aiDesc": "Posez des questions à notre assistant IA sur les politiques et les données concernant le dumping en Afrique.",
+    "aiBtn": "Interroger l'IA"
+  },
+  "common": {
+    "search": "Rechercher...",
+    "filter": "Filtrer",
+    "readMore": "Lire la Suite →",
+    "viewAll": "Voir Tout",
+    "loading": "Chargement..."
+  },
+  "footer": {
+    "organization": "Plateforme d'Intelligence Environnementale CSRTA. Protéger les écosystèmes d'Afrique.",
+    "explore": "Explorer",
+    "takeAction": "Agir",
+    "connect": "Se Connecter",
+    "newsletter": "Abonnez-vous à notre newsletter",
+    "emailPlaceholder": "Adresse e-mail",
+    "subscribe": "S'abonner",
+    "copyright": "© 2025 CSRTA. Tous droits réservés.",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
+    "accessibility": "Accessibilité"
+  },
+  "about": {
+    "title": "À Propos",
+    "description": "En savoir plus sur CSRTA et notre mission."
+  }
+}

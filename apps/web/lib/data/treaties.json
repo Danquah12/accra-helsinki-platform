@@ -1,0 +1,91 @@
+[
+  {
+    "id": "montreal-protocol",
+    "name": "Montreal Protocol",
+    "description": "The Montreal Protocol on Substances that Deplete the Ozone Layer is an international treaty designed to protect the ozone layer by phasing out the production of numerous substances that are responsible for ozone depletion.",
+    "adoptionDate": "1987-09-16",
+    "entryIntoForce": "1989-01-01",
+    "keyProvisions": [
+      "Phase-out of CFCs and halons",
+      "Phase-out of HCFCs",
+      "Multilateral Fund for Article 5 countries"
+    ],
+    "relevanceToAfrica": "Essential for technology transfer and funding to transition away from ozone-depleting substances.",
+    "ratificationStatus": "Universal ratification",
+    "timelineEvents": [
+      {
+        "date": "1987",
+        "title": "Montreal Protocol Adopted",
+        "description": "Adopted in Montreal, Canada"
+      },
+      {
+        "date": "1989",
+        "title": "Entry into Force",
+        "description": "Montreal Protocol enters into force"
+      }
+    ]
+  },
+  {
+    "id": "basel-convention",
+    "name": "Basel Convention",
+    "description": "The Basel Convention on the Control of Transboundary Movements of Hazardous Wastes and Their Disposal is an international treaty that was designed to reduce the movements of hazardous waste between nations, and specifically to prevent transfer of hazardous waste from developed to less developed countries (LDCs).",
+    "adoptionDate": "1989-03-22",
+    "entryIntoForce": "1992-05-05",
+    "keyProvisions": [
+      "Prior Informed Consent (PIC)",
+      "Environmentally Sound Management (ESM)",
+      "Ban Amendment"
+    ],
+    "relevanceToAfrica": "Crucial for preventing the dumping of e-waste and other hazardous materials in African countries.",
+    "ratificationStatus": "Widely ratified",
+    "timelineEvents": [
+      {
+        "date": "1989",
+        "title": "Basel Convention Adopted",
+        "description": "Adopted in Basel, Switzerland"
+      }
+    ]
+  },
+  {
+    "id": "bamako-convention",
+    "name": "Bamako Convention",
+    "description": "The Bamako Convention is a treaty of African nations prohibiting the import into Africa of any hazardous (including radioactive) waste.",
+    "adoptionDate": "1991-01-30",
+    "entryIntoForce": "1998-04-22",
+    "keyProvisions": [
+      "Total ban on the import of hazardous wastes into Africa",
+      "Prohibition of dumping at sea",
+      "Control of transboundary movement within Africa"
+    ],
+    "relevanceToAfrica": "Africa's own response to the perceived weaknesses of the Basel Convention.",
+    "ratificationStatus": "Ratified by 29 African nations",
+    "timelineEvents": [
+      {
+        "date": "1991",
+        "title": "Bamako Convention Adopted",
+        "description": "Adopted in Bamako, Mali"
+      }
+    ]
+  },
+  {
+    "id": "kigali-amendment",
+    "name": "Kigali Amendment",
+    "description": "The Kigali Amendment to the Montreal Protocol is an international agreement to gradually reduce the consumption and production of hydrofluorocarbons (HFCs).",
+    "adoptionDate": "2016-10-15",
+    "entryIntoForce": "2019-01-01",
+    "keyProvisions": [
+      "Phase-down of HFCs",
+      "Article 5 Group 1 and Group 2 schedules",
+      "Focus on energy efficiency"
+    ],
+    "relevanceToAfrica": "Crucial for climate change mitigation while improving cooling access and energy efficiency.",
+    "ratificationStatus": "Over 150 countries have ratified",
+    "timelineEvents": [
+      {
+        "date": "2016",
+        "title": "Kigali Amendment Adopted",
+        "description": "Adopted in Kigali, Rwanda"
+      }
+    ]
+  }
+]

@@ -1,0 +1,179 @@
+[
+  {
+    "name": "Lead",
+    "slug": "lead",
+    "formula": "Pb",
+    "cas_number": "7439-92-1",
+    "type": "Heavy Metal",
+    "health_effects": {
+      "severity": "High",
+      "details": "Neurotoxin affecting cognitive development in children. Causes cardiovascular and renal damage."
+    },
+    "organs_affected": ["Brain", "Nervous System", "Kidneys", "Cardiovascular System"],
+    "env_effects": {
+      "soil": "Persistent, accumulates in surface soil.",
+      "water": "Toxic to aquatic life."
+    },
+    "description_en": "Found heavily in CRT monitors, lead-acid batteries, and older printed circuit boards. Highly toxic even at low exposure levels.",
+    "published": true
+  },
+  {
+    "name": "Mercury",
+    "slug": "mercury",
+    "formula": "Hg",
+    "cas_number": "7439-97-6",
+    "type": "Heavy Metal",
+    "health_effects": {
+      "severity": "Extreme",
+      "details": "Potent neurotoxin. Vapors cause severe respiratory and neurological damage."
+    },
+    "organs_affected": ["Brain", "Nervous System", "Lungs", "Kidneys"],
+    "env_effects": {
+      "soil": "Bioaccumulates in the food chain as methylmercury.",
+      "water": "Highly toxic to fish and aquatic life."
+    },
+    "description_en": "Found in fluorescent lamps, LCD screen backlights, and old switches. Easily vaporizes during crude e-waste dismantling.",
+    "published": true
+  },
+  {
+    "name": "Cadmium",
+    "slug": "cadmium",
+    "formula": "Cd",
+    "cas_number": "7440-43-9",
+    "type": "Heavy Metal",
+    "health_effects": {
+      "severity": "High",
+      "details": "Carcinogen. Causes severe kidney damage and bone demineralization (Itai-itai disease)."
+    },
+    "organs_affected": ["Kidneys", "Bones", "Lungs"],
+    "env_effects": {
+      "soil": "Highly persistent.",
+      "water": "Toxic to aquatic organisms."
+    },
+    "description_en": "Historically used in Ni-Cd rechargeable batteries, older CRT monitors, and as a stabilizer in plastics.",
+    "published": true
+  },
+  {
+    "name": "Chromium VI",
+    "slug": "chromium-vi",
+    "formula": "Cr(VI)",
+    "cas_number": "18540-29-9",
+    "type": "Heavy Metal",
+    "health_effects": {
+      "severity": "High",
+      "details": "Known human carcinogen if inhaled. Causes severe skin ulcers and respiratory issues."
+    },
+    "organs_affected": ["Lungs", "Skin", "Respiratory Tract"],
+    "env_effects": {
+      "soil": "Mobile in soil and can leach into groundwater.",
+      "water": "Highly toxic."
+    },
+    "description_en": "Hexavalent chromium is used for corrosion protection in untreated galvanized steel plates and as a decorative or hard coating.",
+    "published": true
+  },
+  {
+    "name": "Polychlorinated Biphenyls (PCBs)",
+    "slug": "pcbs",
+    "formula": "C12H10-xClx",
+    "cas_number": "1336-36-3",
+    "type": "Persistent Organic Pollutant (POP)",
+    "health_effects": {
+      "severity": "High",
+      "details": "Probable human carcinogen. Affects immune, reproductive, nervous, and endocrine systems."
+    },
+    "organs_affected": ["Liver", "Skin", "Immune System", "Endocrine System"],
+    "env_effects": {
+      "soil": "Highly persistent, bioaccumulates.",
+      "water": "Concentrates in aquatic food chains."
+    },
+    "description_en": "Found in older transformers, capacitors, and fluorescent light ballasts. Banned globally but still present in legacy e-waste.",
+    "published": true
+  },
+  {
+    "name": "Dioxins",
+    "slug": "dioxins",
+    "formula": "Various",
+    "cas_number": "1746-01-6 (TCDD)",
+    "type": "Persistent Organic Pollutant (POP)",
+    "health_effects": {
+      "severity": "Extreme",
+      "details": "Highly toxic. Carcinogenic, disrupts hormones, affects reproduction and immune system."
+    },
+    "organs_affected": ["Immune System", "Endocrine System", "Liver", "Skin"],
+    "env_effects": {
+      "soil": "Highly persistent and bioaccumulative.",
+      "water": "Persistent in sediments."
+    },
+    "description_en": "Unintentionally produced during the open burning of e-waste (especially PVC cables) to recover copper.",
+    "published": true
+  },
+  {
+    "name": "Furans",
+    "slug": "furans",
+    "formula": "Various",
+    "type": "Persistent Organic Pollutant (POP)",
+    "health_effects": {
+      "severity": "Extreme",
+      "details": "Similar to dioxins; highly toxic, carcinogenic, hormone disruptors."
+    },
+    "organs_affected": ["Immune System", "Endocrine System", "Liver"],
+    "env_effects": {
+      "soil": "Persistent and bioaccumulative.",
+      "water": "Persistent in sediments."
+    },
+    "description_en": "Polychlorinated dibenzofurans (PCDFs) are released alongside dioxins during the low-temperature combustion of plastics and e-waste.",
+    "published": true
+  },
+  {
+    "name": "Brominated Flame Retardants (BFRs)",
+    "slug": "bfrs",
+    "formula": "Various",
+    "type": "Persistent Organic Pollutant (POP)",
+    "health_effects": {
+      "severity": "Medium-High",
+      "details": "Endocrine disruptors, affecting thyroid function. Suspected neurodevelopmental toxicants."
+    },
+    "organs_affected": ["Thyroid", "Nervous System", "Endocrine System"],
+    "env_effects": {
+      "soil": "Persistent in the environment.",
+      "water": "Bioaccumulates in aquatic life."
+    },
+    "description_en": "Used extensively in plastic casings of electronics (TVs, computers) and printed circuit boards to prevent fires. Release toxic fumes when burned.",
+    "published": true
+  },
+  {
+    "name": "Black Carbon",
+    "slug": "black-carbon",
+    "formula": "C",
+    "type": "Particulate Matter",
+    "health_effects": {
+      "severity": "High",
+      "details": "Deeply penetrates lungs, causing severe respiratory and cardiovascular diseases."
+    },
+    "organs_affected": ["Lungs", "Heart", "Cardiovascular System"],
+    "env_effects": {
+      "soil": "Settles and affects local albedo.",
+      "atmosphere": "Significant short-lived climate pollutant, absorbing heat in the atmosphere."
+    },
+    "description_en": "Soot produced from incomplete combustion during the open burning of e-waste tires and plastics at informal dumpsites.",
+    "published": true
+  },
+  {
+    "name": "Beryllium",
+    "slug": "beryllium",
+    "formula": "Be",
+    "cas_number": "7440-41-7",
+    "type": "Alkaline Earth Metal",
+    "health_effects": {
+      "severity": "High",
+      "details": "Carcinogen if inhaled. Causes berylliosis, an incurable inflammatory lung disease."
+    },
+    "organs_affected": ["Lungs", "Immune System"],
+    "env_effects": {
+      "soil": "Can settle in soils from industrial dust.",
+      "water": "Generally insoluble in water."
+    },
+    "description_en": "Used in copper-beryllium alloys for connectors, springs, and relays in electronics due to high conductivity and strength.",
+    "published": true
+  }
+]

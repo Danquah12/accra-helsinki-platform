@@ -1,0 +1,78 @@
+[
+  {
+    "name": "Basel Convention on the Control of Transboundary Movements of Hazardous Wastes and their Disposal",
+    "short_name": "Basel Convention",
+    "slug": "basel-convention",
+    "type": "Environmental Treaty",
+    "adopted_date": "1989-03-22",
+    "entered_into_force": "1992-05-05",
+    "description_en": "The Basel Convention is an international treaty that was designed to reduce the movements of hazardous waste between nations, and specifically to prevent transfer of hazardous waste from developed to less developed countries (LDCs).",
+    "description_fr": "La Convention de Bâle est un traité international conçu pour réduire les mouvements de déchets dangereux entre les pays...",
+    "full_text_url": "http://www.basel.int/TheConvention/Overview/TextoftheConvention/tabid/1275/Default.aspx",
+    "secretariat": "UNEP",
+    "website": "http://www.basel.int/",
+    "timeline": [
+      { "year": 1989, "event": "Adopted in Basel, Switzerland." },
+      { "year": 1992, "event": "Entered into force." },
+      { "year": 1995, "event": "Ban Amendment adopted (entered into force in 2019)." },
+      { "year": 2019, "event": "Plastic Waste Amendments adopted." }
+    ],
+    "published": true
+  },
+  {
+    "name": "Bamako Convention on the Ban of the Import into Africa and the Control of Transboundary Movement and Management of Hazardous Wastes within Africa",
+    "short_name": "Bamako Convention",
+    "slug": "bamako-convention",
+    "type": "Environmental Treaty",
+    "adopted_date": "1991-01-30",
+    "entered_into_force": "1998-04-22",
+    "description_en": "The Bamako Convention is a treaty of African nations prohibiting the import into Africa of any hazardous (including radioactive) waste. It was negotiated by twelve nations of the Organization of African Unity at Bamako, Mali in January 1991.",
+    "description_fr": "La Convention de Bamako est un traité des nations africaines interdisant l'importation en Afrique de tout déchet dangereux...",
+    "full_text_url": "https://www.unep.org/explore-topics/environmental-rights-and-governance/what-we-do/meeting-international-environmental",
+    "secretariat": "UNEP (Africa Office)",
+    "website": "https://www.unep.org/bamako-convention",
+    "timeline": [
+      { "year": 1991, "event": "Adopted in Bamako, Mali." },
+      { "year": 1998, "event": "Entered into force." }
+    ],
+    "published": true
+  },
+  {
+    "name": "Montreal Protocol on Substances that Deplete the Ozone Layer",
+    "short_name": "Montreal Protocol",
+    "slug": "montreal-protocol",
+    "type": "Environmental Treaty",
+    "adopted_date": "1987-09-16",
+    "entered_into_force": "1989-01-01",
+    "description_en": "The Montreal Protocol is a landmark multilateral environmental agreement that regulates the production and consumption of nearly 100 man-made chemicals referred to as ozone depleting substances (ODS).",
+    "description_fr": "Le Protocole de Montréal est un accord environnemental multilatéral historique qui réglemente la production et la consommation...",
+    "full_text_url": "https://ozone.unep.org/treaties/montreal-protocol",
+    "secretariat": "Ozone Secretariat (UNEP)",
+    "website": "https://ozone.unep.org/",
+    "timeline": [
+      { "year": 1987, "event": "Adopted in Montreal, Canada." },
+      { "year": 1989, "event": "Entered into force." },
+      { "year": 2010, "event": "Complete phase-out of CFCs globally." }
+    ],
+    "published": true
+  },
+  {
+    "name": "Kigali Amendment to the Montreal Protocol",
+    "short_name": "Kigali Amendment",
+    "slug": "kigali-amendment",
+    "type": "Environmental Treaty Amendment",
+    "adopted_date": "2016-10-15",
+    "entered_into_force": "2019-01-01",
+    "description_en": "The Kigali Amendment aims for the phase-down of hydrofluorocarbons (HFCs) by cutting their production and consumption. Given their zero impact on the depletion of the ozone layer, HFCs are currently used as replacements of hydrochlorofluorocarbons (HCFCs) and chlorofluorocarbons (CFCs), however they are powerful greenhouse gases.",
+    "description_fr": "L'Amendement de Kigali vise la réduction progressive des hydrofluorocarbones (HFC)...",
+    "full_text_url": "https://ozone.unep.org/treaties/montreal-protocol/amendments/kigali-amendment-2016-amendment-montreal-protocol-agreed",
+    "secretariat": "Ozone Secretariat (UNEP)",
+    "website": "https://ozone.unep.org/",
+    "timeline": [
+      { "year": 2016, "event": "Adopted in Kigali, Rwanda." },
+      { "year": 2019, "event": "Entered into force." },
+      { "year": 2024, "event": "First phase-down step for Article 5 Group 1 countries." }
+    ],
+    "published": true
+  }
+]
