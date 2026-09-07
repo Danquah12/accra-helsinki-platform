@@ -1,0 +1,275 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 800; font-size: 27px; fill: #111827; }
+      .box-label { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; fill: #111827; text-anchor: middle; }
+      .badge-text { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; text-anchor: middle; }
+      .white-text { fill: #ffffff; }
+      .dark-green-text { fill: #1e3a12; }
+      .flow-text { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; fill: #ffffff; text-anchor: middle; }
+    </style>
+    
+    <!-- Block Arrow Right Definition -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#00b0f0" />
+    </marker>
+  </defs>
+
+  <!-- Clean Canvas Background -->
+  <rect width="1200" height="700" fill="#ffffff" rx="16" />
+  <rect x="2" y="2" width="1196" height="696" fill="none" stroke="#e2e8f0" stroke-width="2" rx="16" />
+
+  <!-- Slide Title -->
+  <text x="600" y="52" text-anchor="middle" class="title">
+    Beyond Kigali – Accra-Helsinki Group for Truly Sustainable Cooling
+  </text>
+
+  <!-- ============================================================== -->
+  <!-- TOP DIAGRAM SECTION                                            -->
+  <!-- ============================================================== -->
+
+  <!-- LEFT COLUMN: Passive Cooling & Refrigerant Free -->
+  <!-- Box 1: Passive Cooling First -->
+  <g transform="translate(35, 140)">
+    <rect width="130" height="80" rx="4" fill="#a9d18e" stroke="#375623" stroke-width="2" />
+    <text x="65" y="32" class="box-label" font-size="16">Passive</text>
+    <text x="65" y="52" class="box-label" font-size="16">Cooling</text>
+    <text x="65" y="72" class="box-label" font-size="16">First</text>
+  </g>
+
+  <!-- Arrow 1 to Center -->
+  <polygon points="175,168 200,168 200,160 216,180 200,200 200,192 175,192" fill="#00b0f0" />
+
+  <!-- Box 2: Refrigerant Free Cooling -->
+  <g transform="translate(35, 270)">
+    <rect width="130" height="80" rx="4" fill="#a9d18e" stroke="#375623" stroke-width="2" />
+    <text x="65" y="32" class="box-label" font-size="16">Refrigerant</text>
+    <text x="65" y="52" class="box-label" font-size="16">free</text>
+    <text x="65" y="72" class="box-label" font-size="16">cooling</text>
+  </g>
+
+  <!-- Arrow 2 to Center -->
+  <polygon points="175,298 200,298 200,290 216,310 200,330 200,322 175,322" fill="#00b0f0" />
+
+
+  <!-- ============================================================== -->
+  <!-- CENTER CONTAINER: Sustainable Refrigerant Transition            -->
+  <!-- ============================================================== -->
+  <g transform="translate(226, 85)">
+    <!-- Container background -->
+    <rect width="700" height="340" rx="6" fill="#c5e0b4" stroke="#548235" stroke-width="2" />
+    
+    <text x="350" y="32" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#274e13">
+      Sustainable Refrigerant Transition
+    </text>
+
+    <!-- Inner White Table Card -->
+    <rect x="18" y="48" width="664" height="274" rx="4" fill="#ffffff" />
+
+    <!-- 5 Columns inside Table -->
+
+    <!-- Column 1: CFC's -->
+    <g transform="translate(32, 58)">
+      <rect width="104" height="254" fill="#f2f5f9" rx="4" />
+      <text x="52" y="36" class="box-label" font-size="17">CFC's</text>
+      
+      <!-- Very high ODP -->
+      <rect x="8" y="65" width="88" height="48" rx="5" fill="#c00000" />
+      <text x="52" y="86" class="badge-text white-text" font-size="12.5">Very high</text>
+      <text x="52" y="103" class="badge-text white-text" font-size="12.5">ODP</text>
+
+      <!-- Very high GWP -->
+      <rect x="8" y="145" width="88" height="48" rx="5" fill="#c00000" />
+      <text x="52" y="166" class="badge-text white-text" font-size="12.5">Very high</text>
+      <text x="52" y="183" class="badge-text white-text" font-size="12.5">GWP</text>
+    </g>
+
+    <!-- Arrow 1 -> 2 -->
+    <polygon points="144,185 156,185 156,180 166,190 156,200 156,195 144,195" fill="#8ea9db" />
+
+    <!-- Column 2: HCFC's -->
+    <g transform="translate(174, 58)">
+      <rect width="104" height="254" fill="#f2f5f9" rx="4" />
+      <text x="52" y="36" class="box-label" font-size="17">HCFC's</text>
+      
+      <!-- High ODP -->
+      <rect x="8" y="65" width="88" height="48" rx="5" fill="#ffe699" />
+      <text x="52" y="94" class="badge-text" font-size="13" fill="#805b00">High ODP</text>
+
+      <!-- Middle to high GWP -->
+      <rect x="8" y="145" width="88" height="48" rx="5" fill="#f4b084" />
+      <text x="52" y="166" class="badge-text white-text" font-size="12">Middle to</text>
+      <text x="52" y="183" class="badge-text white-text" font-size="12">high GWP</text>
+    </g>
+
+    <!-- Arrow 2 -> 3 -->
+    <polygon points="286,185 298,185 298,180 308,190 298,200 298,195 286,195" fill="#8ea9db" />
+
+    <!-- Column 3: HFC's -->
+    <g transform="translate(316, 58)">
+      <rect width="104" height="254" fill="#f2f5f9" rx="4" />
+      <text x="52" y="36" class="box-label" font-size="17">HFC's</text>
+      
+      <!-- No ODP -->
+      <rect x="8" y="65" width="88" height="48" rx="5" fill="#c5e0b4" />
+      <text x="52" y="94" class="badge-text dark-green-text" font-size="13">No ODP</text>
+
+      <!-- Middle to high GWP -->
+      <rect x="8" y="145" width="88" height="48" rx="5" fill="#f4b084" />
+      <text x="52" y="166" class="badge-text white-text" font-size="12">Middle to</text>
+      <text x="52" y="183" class="badge-text white-text" font-size="12">high GWP</text>
+    </g>
+
+    <!-- Arrow 3 -> 4 -->
+    <polygon points="428,185 440,185 440,180 450,190 440,200 440,195 428,195" fill="#8ea9db" />
+
+    <!-- Column 4: Climate friendly alternatives -->
+    <g transform="translate(458, 58)">
+      <rect width="104" height="254" fill="#f2f5f9" rx="4" />
+      <text x="52" y="24" class="box-label" font-size="12.5">Climate</text>
+      <text x="52" y="38" class="box-label" font-size="12.5">friendly</text>
+      <text x="52" y="52" class="box-label" font-size="12.5">alternatives</text>
+      
+      <!-- No ODP -->
+      <rect x="8" y="65" width="88" height="48" rx="5" fill="#c5e0b4" />
+      <text x="52" y="94" class="badge-text dark-green-text" font-size="13">No ODP</text>
+
+      <!-- Very low GWP -->
+      <rect x="8" y="145" width="88" height="48" rx="5" fill="#a9d18e" />
+      <text x="52" y="166" class="badge-text dark-green-text" font-size="12.5">Very low</text>
+      <text x="52" y="183" class="badge-text dark-green-text" font-size="12.5">GWP</text>
+    </g>
+
+    <!-- Arrow 4 -> 5 -->
+    <polygon points="570,185 582,185 582,180 592,190 582,200 582,195 570,195" fill="#8ea9db" />
+
+    <!-- Column 5: Climate friendly and chemically safe alternatives -->
+    <g transform="translate(600, 58)">
+      <rect width="106" height="254" fill="#e2efda" stroke="#548235" stroke-width="1.5" rx="4" />
+      <text x="53" y="18" class="badge-text dark-green-text" font-size="11">Climate</text>
+      <text x="53" y="31" class="badge-text dark-green-text" font-size="11">friendly and</text>
+      <text x="53" y="44" class="badge-text dark-green-text" font-size="11">chemically</text>
+      <text x="53" y="57" class="badge-text dark-green-text" font-size="11">safe alternatives</text>
+      
+      <!-- No ODP -->
+      <rect x="7" y="68" width="92" height="36" rx="4" fill="#c5e0b4" />
+      <text x="53" y="91" class="badge-text dark-green-text" font-size="12">No ODP</text>
+
+      <!-- Very low GWP -->
+      <rect x="7" y="112" width="92" height="36" rx="4" fill="#a9d18e" />
+      <text x="53" y="135" class="badge-text dark-green-text" font-size="11.5">Very low GWP</text>
+
+      <!-- No harmful break-down product -->
+      <rect x="7" y="156" width="92" height="48" rx="4" fill="#548235" />
+      <text x="53" y="174" class="badge-text white-text" font-size="10.5">No harmful</text>
+      <text x="53" y="188" class="badge-text white-text" font-size="10.5">break-down</text>
+      <text x="53" y="202" class="badge-text white-text" font-size="10.5">product</text>
+    </g>
+  </g>
+
+
+  <!-- ============================================================== -->
+  <!-- RIGHT COLUMN: Enablers & Measures                              -->
+  <!-- ============================================================== -->
+
+  <!-- Top Right Arrow -->
+  <polygon points="936,155 964,155 964,147 980,167 964,187 964,179 936,179" fill="#00b0f0" />
+
+  <!-- Box 1: Life Cycle Refrigeration Management -->
+  <g transform="translate(988, 125)">
+    <rect width="176" height="74" rx="4" fill="#c5e0b4" stroke="#375623" stroke-width="2" />
+    <text x="88" y="28" class="box-label" font-size="14.5">Life Cycle</text>
+    <text x="88" y="47" class="box-label" font-size="14.5">Refrigeration</text>
+    <text x="88" y="66" class="box-label" font-size="14.5">Management</text>
+  </g>
+
+  <!-- Middle Right Arrow -->
+  <polygon points="936,252 964,252 964,244 980,264 964,284 964,276 936,276" fill="#00b0f0" />
+
+  <!-- Box 2: Energy Efficiency Measures -->
+  <g transform="translate(988, 222)">
+    <rect width="176" height="74" rx="4" fill="#c5e0b4" stroke="#375623" stroke-width="2" />
+    <text x="88" y="34" class="box-label" font-size="15">Energy</text>
+    <text x="88" y="55" class="box-label" font-size="15">Efficiency Measures</text>
+  </g>
+
+  <!-- Bottom Right Arrow -->
+  <polygon points="936,350 964,350 964,342 980,362 964,382 964,374 936,374" fill="#00b0f0" />
+
+  <!-- Box 3: New additional restrictions? -->
+  <g transform="translate(988, 320)">
+    <rect width="176" height="74" rx="4" fill="#c5e0b4" stroke="#375623" stroke-width="2" />
+    <text x="88" y="34" class="box-label" font-size="15">New additional</text>
+    <text x="88" y="55" class="box-label" font-size="15">restrictions?</text>
+  </g>
+
+
+  <!-- ============================================================== -->
+  <!-- CONNECTOR BRACKET (Spanning Across Bottom of Top Diagram)      -->
+  <!-- ============================================================== -->
+  <path d="M 45 448 C 45 464, 570 464, 595 478 C 620 464, 1145 464, 1145 448" fill="none" stroke="#2b6cb0" stroke-width="2.5" />
+
+
+  <!-- ============================================================== -->
+  <!-- BOTTOM FLOW: 5 Steps of Co-benefits & Lifecycle Impact         -->
+  <!-- ============================================================== -->
+
+  <!-- Step 1: Reduced need for Cooling -->
+  <g transform="translate(42, 500)">
+    <rect width="112" height="135" rx="4" fill="#70ad47" stroke="#375623" stroke-width="2" />
+    <text x="56" y="50" class="flow-text" font-size="15">Reduced</text>
+    <text x="56" y="72" class="flow-text" font-size="15">need for</text>
+    <text x="56" y="94" class="flow-text" font-size="15">Cooling</text>
+  </g>
+
+  <!-- Flow Arrow 1 -> 2 -->
+  <polygon points="162,558 184,558 184,550 200,568 184,586 184,578 162,578" fill="#00b0f0" />
+
+  <!-- Step 2: Reduced need to produce halogenated refrigerants -->
+  <g transform="translate(208, 485)">
+    <rect width="144" height="155" rx="4" fill="#70ad47" stroke="#375623" stroke-width="2" />
+    <text x="72" y="38" class="flow-text" font-size="14">Reduced</text>
+    <text x="72" y="58" class="flow-text" font-size="14">need to</text>
+    <text x="72" y="78" class="flow-text" font-size="14">produce</text>
+    <text x="72" y="98" class="flow-text" font-size="14">halogenated</text>
+    <text x="72" y="118" class="flow-text" font-size="14">refrigerants</text>
+  </g>
+
+  <!-- Flow Arrow 2 -> 3 -->
+  <polygon points="360,558 382,558 382,550 398,568 382,586 382,578 360,578" fill="#00b0f0" />
+
+  <!-- Step 3: Reduced need for Feedstock production -->
+  <g transform="translate(406, 500)">
+    <rect width="132" height="135" rx="4" fill="#70ad47" stroke="#375623" stroke-width="2" />
+    <text x="66" y="44" class="flow-text" font-size="14">Reduced</text>
+    <text x="66" y="66" class="flow-text" font-size="14">need for</text>
+    <text x="66" y="88" class="flow-text" font-size="14">Feedstock</text>
+    <text x="66" y="110" class="flow-text" font-size="14">production</text>
+  </g>
+
+  <!-- Flow Arrow 3 -> 4 -->
+  <polygon points="546,558 568,558 568,550 584,568 568,586 568,578 546,578" fill="#00b0f0" />
+
+  <!-- Step 4: Quicker implementation of the Kigali amendment -->
+  <g transform="translate(592, 500)">
+    <rect width="138" height="135" rx="4" fill="#70ad47" stroke="#375623" stroke-width="2" />
+    <text x="69" y="38" class="flow-text" font-size="13.5">Quicker</text>
+    <text x="69" y="58" class="flow-text" font-size="13.5">implementation</text>
+    <text x="69" y="78" class="flow-text" font-size="13.5">of the</text>
+    <text x="69" y="98" class="flow-text" font-size="13.5">Kigali</text>
+    <text x="69" y="118" class="flow-text" font-size="13.5">amendment</text>
+  </g>
+
+  <!-- Flow Arrow 4 -> 5 -->
+  <polygon points="738,558 760,558 760,550 776,568 760,586 760,578 738,578" fill="#00b0f0" />
+
+  <!-- Step 5: Reduced emissions of several regulated and unregulated substances -->
+  <g transform="translate(784, 505)">
+    <rect width="374" height="125" rx="4" fill="#70ad47" stroke="#375623" stroke-width="2" />
+    <text x="187" y="36" class="flow-text" font-size="13.5">Reduced emissions of several</text>
+    <text x="187" y="56" class="flow-text" font-size="13.5">regulated and unregulated</text>
+    <text x="187" y="76" class="flow-text" font-size="13.5">substances e.g. N₂O, SF₆, PFC&apos;s,</text>
+    <text x="187" y="96" class="flow-text" font-size="13.5">VSLS&apos;s, PFAS, TFA, etc.</text>
+  </g>
+
+</svg>

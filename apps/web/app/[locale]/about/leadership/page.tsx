@@ -13,7 +13,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       <div className="container mx-auto px-4 py-12">
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {[
-        {name: 'Kofi Agyarko', title: 'CEO', org: 'Former Director of RE & EE, Energy Commission of Ghana'},
+        {name: 'Kofi Agyarko', title: 'CEO', org: 'Center for Shared Responsibility and Technology Ambition (CSRTA), former Director, Energy Commission, Ghana'},
         {name: 'Jane Doe', title: 'CTO', org: 'CSRTA'},
         {name: 'John Smith', title: 'Research Director', org: 'CSRTA'},
         {name: 'Sarah Lee', title: 'Policy Director', org: 'CSRTA'},

@@ -87,7 +87,7 @@ export function Footer({ locale }: { locale: string }) {
             <div className="space-y-3 text-xs sm:text-sm text-slate-400">
               <p>
                 <strong className="text-slate-200">Kofi A. Agyarko</strong> (Ghana)<br />
-                <span className="text-[11px] text-slate-500">Former Director, Energy Commission</span>
+                <span className="text-[11px] text-slate-400">CEO of Center for Shared Responsibility and Technology Ambition (CSRTA), former Director, Energy Commission, Ghana</span>
               </p>
               <p>
                 <strong className="text-slate-200">Tapio Reinikainen</strong> (Finland)<br />

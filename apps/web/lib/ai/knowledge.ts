@@ -102,7 +102,7 @@ export const KNOWLEDGE_BASE: KnowledgeDocument[] = [
     category: 'general',
     link: '/about/accra-helsinki',
     keywords: ['accra-helsinki', 'csrta', 'mop-36', 'finland', 'ghana', 'kofi agyarko', 'tapio reinikainen'],
-    content: 'The Accra-Helsinki Initiative is an informal coalition co-chaired by Ghana (Kofi Agyarko) and Finland (Tapio Reinikainen), inaugurated at MOP-36 in Bangkok (November 2024). Governed under the Chatham House Rule, it brings together African nations, EU partners, UNEP, IGSD, and CCAC to stop the dumping of inefficient, obsolete cooling appliances and hazardous e-waste in Africa and accelerate adoption of climate-friendly natural refrigerants.'
+    content: 'The Accra-Helsinki Initiative is an informal coalition co-chaired by Kofi Agyarko (CEO of Center for Shared Responsibility and Technology Ambition - CSRTA, former Director, Energy Commission, Ghana) and Finland (Tapio Reinikainen), inaugurated at MOP-36 in Bangkok (November 2024). Governed under the Chatham House Rule, it brings together African nations, EU partners, UNEP, IGSD, and CCAC to stop the dumping of inefficient, obsolete cooling appliances and hazardous e-waste in Africa and accelerate adoption of climate-friendly natural refrigerants.'
   }
 ];
 

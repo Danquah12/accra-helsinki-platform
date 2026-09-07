@@ -145,7 +145,7 @@ export function GroupOverview({ locale }: { locale: string }) {
               <div className="space-y-4 text-sm">
                 <div className="border-l-2 border-amber-500 pl-3">
                   <div className="font-bold text-white">Kofi Agyarko</div>
-                  <div className="text-xs text-slate-400">Co-Chair &bull; Ghana (Former Director, Energy Commission)</div>
+                  <div className="text-xs text-slate-400">Co-Chair &bull; CEO of Center for Shared Responsibility and Technology Ambition (CSRTA), former Director, Energy Commission, Ghana</div>
                 </div>
 
                 <div className="border-l-2 border-sky-500 pl-3">
@@ -183,6 +183,28 @@ export function GroupOverview({ locale }: { locale: string }) {
                     className="hover:text-amber-400 transition-colors inline-flex items-center gap-1.5 underline"
                   >
                     <span>UNEP Document: History of Accra-Helsinki Group (Marco &amp; Stephen)</span>
+                    <ExternalLink size={12} className="shrink-0" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://ozone.unep.org/meetings/thirty-seventh-meeting-parties/side-events?arg_1=2025-11-03"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-amber-400 transition-colors inline-flex items-center gap-1.5 underline"
+                  >
+                    <span>UNEP Ozone Secretariat: MOP-37 Side Events Schedule (Nov 3, 2025)</span>
+                    <ExternalLink size={12} className="shrink-0" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://ozone.unep.org/meetings/47th-meeting-open-ended-working-group-parties/side-events"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-amber-400 transition-colors inline-flex items-center gap-1.5 underline"
+                  >
+                    <span>UNEP Ozone Secretariat: OEWG-47 Side Events Schedule</span>
                     <ExternalLink size={12} className="shrink-0" />
                   </a>
                 </li>
@@ -253,13 +275,21 @@ export function GroupOverview({ locale }: { locale: string }) {
                 <span>Expand Fullscreen</span>
               </button>
               <a
-                href="/images/beyond-kigali-framework.png"
+                href="/images/beyond-kigali-framework.svg"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs sm:text-sm font-semibold transition-all shadow-sm active:scale-95"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-700/80 hover:bg-emerald-600 text-white text-xs sm:text-sm font-semibold transition-all shadow-sm active:scale-95"
               >
                 <ExternalLink size={16} />
-                <span>Open Original Slide</span>
+                <span>Vector SVG</span>
+              </a>
+              <a
+                href="/images/beyond-kigali-framework.png"
+                download="beyond-kigali-accra-helsinki-framework.png"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs sm:text-sm font-semibold transition-all shadow-sm active:scale-95"
+              >
+                <Download size={16} />
+                <span>HD PNG</span>
               </a>
             </div>
           </div>
@@ -353,12 +383,21 @@ export function GroupOverview({ locale }: { locale: string }) {
 
               <div className="flex justify-end gap-3 pt-4">
                 <a
+                  href="/images/beyond-kigali-framework.svg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-emerald-700/80 hover:bg-emerald-600 text-white text-xs sm:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2"
+                >
+                  <ExternalLink size={16} />
+                  <span>Open Vector SVG</span>
+                </a>
+                <a
                   href="/images/beyond-kigali-framework.png"
                   download="beyond-kigali-accra-helsinki-framework.png"
                   className="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white text-xs sm:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2"
                 >
                   <Download size={16} />
-                  <span>Download Slide</span>
+                  <span>Download HD PNG</span>
                 </a>
               </div>
             </div>
@@ -392,22 +431,41 @@ export function GroupOverview({ locale }: { locale: string }) {
                   Upcoming Meeting
                 </div>
                 
-                <h4 className="text-xl font-bold text-white mb-2">
-                  Upcoming Side Event at OEWG / MOP
+                <h4 className="text-xl font-bold text-white mb-1">
+                  Kigali Side Event: Accra-Helsinki Group for Sustainable Cooling
                 </h4>
                 
-                <div className="space-y-2 text-sm text-slate-300 mb-6">
+                <div className="space-y-2.5 text-sm text-slate-300 mb-6">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4 text-amber-400 shrink-0" />
+                    <span><strong>Date &amp; Time:</strong> 2 November 2026 &bull; 1:00 PM</span>
+                  </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="w-4 h-4 text-amber-400 shrink-0" />
-                    <span><strong>Location &amp; Date:</strong> TBD / Nairobi &bull; Upcoming Montreal Protocol Session</span>
+                    <span><strong>Venue:</strong> Kigali, Rwanda &bull; Montreal Protocol Session</span>
                   </div>
-                  <div className="flex items-start gap-2">
+                  <div className="flex items-start gap-2 bg-amber-500/10 border border-amber-500/30 p-3 rounded-xl text-amber-200">
                     <Info className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                    <span><strong>Topics to be discussed:</strong> Shared responsibility mechanisms, market transformation in Article 5 Parties, lifecycle refrigerant management, and SF₆ phase-down schedules.</span>
+                    <div>
+                      <strong className="text-amber-300 block text-xs uppercase tracking-wide">Theme:</strong>
+                      <span className="text-sm font-semibold italic text-white">“VSLS&apos;s - a growing uncontrolled threat to the ozone layer”</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2 pt-2">
+                  <div className="flex items-center gap-2">
                     <FileText className="w-4 h-4 text-slate-400 shrink-0" />
-                    <span className="text-xs text-slate-400">Documents &amp; presentations on UNEP website: <em>TBD prior to session convening</em></span>
+                    <span><strong>Topics:</strong> TBD (Submit suggested discussion topics below)</span>
+                  </div>
+                  <div className="pt-2">
+                    <a
+                      href="https://ozone.unep.org/meetings/47th-meeting-open-ended-working-group-parties/side-events"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 text-xs font-semibold transition-colors"
+                    >
+                      <FileText className="w-3.5 h-3.5 shrink-0" />
+                      <span>UNEP Ozone Secretariat Side Events Portal</span>
+                      <ExternalLink className="w-3 h-3 shrink-0" />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -475,12 +533,12 @@ export function GroupOverview({ locale }: { locale: string }) {
                   </a>
                   <span className="text-slate-600">&bull;</span>
                   <a
-                    href="https://ozone.unep.org"
+                    href="https://ozone.unep.org/meetings/thirty-seventh-meeting-parties/side-events?arg_1=2025-11-03"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-slate-400 hover:text-slate-300 inline-flex items-center gap-1"
+                    className="text-amber-400 hover:text-amber-300 inline-flex items-center gap-1 underline"
                   >
-                    <span>UNEP Portal Record</span>
+                    <span>UNEP Side Events Official Record (Nov 3, 2025)</span>
                     <ExternalLink size={11} />
                   </a>
                 </div>
