@@ -36,8 +36,8 @@ export function HeroSection({ locale }: { locale: string }) {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="flex flex-col items-center justify-center mb-8"
         >
-          <div className="p-3 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl hover:border-amber-400/40 transition-colors">
-            <AccraHelsinkiLogo size="xl" showText={false} variant="dark" />
+          <div className="p-2.5 bg-white/5 backdrop-blur-md rounded-full border border-white/20 shadow-2xl hover:border-amber-400/50 transition-all hover:scale-105 duration-300">
+            <AccraHelsinkiLogo size="2xl" showText={false} variant="dark" />
           </div>
           <div className="mt-4 flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-amber-400/90">
             <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
