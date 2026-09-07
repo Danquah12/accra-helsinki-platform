@@ -40,7 +40,7 @@ const NEWS_ARTICLES = [
 
 export default function LatestNews({ locale }: { locale: string }) {
   return (
-    <section className="py-24 bg-white border-t border-slate-100">
+    <section className="py-24 bg-gradient-to-b from-slate-50 via-slate-100/50 to-slate-100/90 border-t border-slate-200">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div className="max-w-2xl">

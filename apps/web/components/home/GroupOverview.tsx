@@ -297,12 +297,12 @@ export function GroupOverview({ locale }: { locale: string }) {
           {/* Slide Image Container with Interactive Zoom */}
           <div 
             onClick={() => setIsSlideModalOpen(true)}
-            className="group relative rounded-2xl overflow-hidden border-2 border-white/15 bg-white p-2.5 sm:p-4 cursor-pointer shadow-2xl hover:border-amber-400/60 transition-all duration-300"
+            className="group relative rounded-2xl overflow-hidden border border-emerald-500/30 bg-slate-900/80 p-2 sm:p-3 cursor-pointer shadow-2xl hover:border-amber-400/60 transition-all duration-300"
           >
             <img
               src="/images/beyond-kigali-framework.png"
               alt="Beyond Kigali - Accra-Helsinki Group for Truly Sustainable Cooling Framework Slide"
-              className="w-full h-auto object-contain rounded-xl transform group-hover:scale-[1.008] transition-transform duration-300"
+              className="w-full h-auto object-contain rounded-xl transform group-hover:scale-[1.008] transition-transform duration-300 shadow-md"
             />
             <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
               <div className="px-5 py-2.5 rounded-full bg-slate-900/90 border border-amber-400/50 text-amber-300 font-bold text-sm flex items-center gap-2 shadow-2xl">
@@ -373,11 +373,11 @@ export function GroupOverview({ locale }: { locale: string }) {
                 </button>
               </div>
 
-              <div className="overflow-auto max-h-[80vh] flex items-center justify-center bg-white p-2 rounded-2xl">
+              <div className="overflow-auto max-h-[80vh] flex items-center justify-center bg-slate-950/90 border border-white/10 p-2 sm:p-4 rounded-2xl">
                 <img
                   src="/images/beyond-kigali-framework.png"
                   alt="Beyond Kigali Slide Fullscreen"
-                  className="w-full h-auto object-contain rounded-xl"
+                  className="w-full h-auto object-contain rounded-xl shadow-xl"
                 />
               </div>
 

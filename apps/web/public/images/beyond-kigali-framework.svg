@@ -15,9 +15,9 @@
     </marker>
   </defs>
 
-  <!-- Clean Canvas Background -->
-  <rect width="1200" height="700" fill="#ffffff" rx="16" />
-  <rect x="2" y="2" width="1196" height="696" fill="none" stroke="#e2e8f0" stroke-width="2" rx="16" />
+  <!-- Soft Elegant Canvas Background (Not Stark White) -->
+  <rect width="1200" height="700" fill="#f8fafc" rx="16" />
+  <rect x="2" y="2" width="1196" height="696" fill="none" stroke="#cbd5e1" stroke-width="2" rx="16" />
 
   <!-- Slide Title -->
   <text x="600" y="52" text-anchor="middle" class="title">
