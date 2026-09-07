@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, ChevronDown, CheckCircle, Bot, BookOpen, Sparkles } from 'lucide-react';
 import MobileNav from './MobileNav';
 import LanguageSwitcher from './LanguageSwitcher';
+import ThemeColorSwitcher from '@/components/shared/ThemeColorSwitcher';
 import AccraHelsinkiLogo from '@/components/shared/AccraHelsinkiLogo';
 
 const navItems = [
@@ -233,8 +234,9 @@ export default function Header({ locale }: { locale: string }) {
             ))}
           </nav>
 
-          {/* Right actions: Language Switcher and AI Assistant (Take Action removed) */}
-          <div className="hidden lg:flex items-center gap-4 shrink-0">
+          {/* Right actions: Language Switcher, Color Theme Switcher and AI Assistant */}
+          <div className="hidden lg:flex items-center gap-3 shrink-0">
+            <ThemeColorSwitcher variant="header" />
             <LanguageSwitcher currentLocale={locale} />
             <Link
               href={`/${locale}/research/ai-assistant`}

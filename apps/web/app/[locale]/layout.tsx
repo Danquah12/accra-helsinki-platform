@@ -3,6 +3,7 @@ import { getMessages } from 'next-intl/server';
 import { Inter } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import ThemeColorSwitcher from '@/components/shared/ThemeColorSwitcher';
 import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -33,6 +34,7 @@ export default async function LocaleLayout({
             {children}
           </main>
           <Footer locale={locale} />
+          <ThemeColorSwitcher variant="floating" />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -80,5 +80,27 @@
   body {
     background-color: var(--background);
     color: var(--foreground);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  body.theme-white {
+    background-color: #ffffff;
+    color: #0f172a;
+  }
+  body.theme-dark {
+    background-color: #090d16;
+    color: #f8fafc;
+  }
+  body.theme-nordic {
+    background-color: #07162c;
+    color: #f0f9ff;
+  }
+  body.theme-emerald {
+    background-color: #02261a;
+    color: #ecfdf5;
+  }
+  body.theme-sand {
+    background-color: #faf8f4;
+    color: #292524;
   }
 }
+

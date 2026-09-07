@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronDown, Bot } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
+import ThemeColorSwitcher from '@/components/shared/ThemeColorSwitcher';
 import AccraHelsinkiLogo from '@/components/shared/AccraHelsinkiLogo';
 
 interface MobileNavProps {
@@ -108,8 +109,12 @@ export default function MobileNav({ locale, navItems, onClose, toggleLocale }: M
         ))}
       </div>
 
-      {/* Drawer Footer with Language Switcher and AI Assistant */}
+      {/* Drawer Footer with Theme Switcher, Language Switcher and AI Assistant */}
       <div className="p-4 border-t border-slate-200 bg-slate-50 flex flex-col gap-3 mt-auto">
+        <div className="flex items-center justify-between">
+          <span className="text-sm font-medium text-slate-600">Theme Color</span>
+          <ThemeColorSwitcher variant="header" />
+        </div>
         <div className="flex items-center justify-between">
           <span className="text-sm font-medium text-slate-600">Language</span>
           <LanguageSwitcher currentLocale={locale} />
