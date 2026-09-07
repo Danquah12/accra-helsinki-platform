@@ -9,21 +9,26 @@ import {
   Globe2, 
   Calendar, 
   MapPin, 
-  FileText,
-  ExternalLink,
-  Mail,
-  Send,
-  CheckCircle2,
-  BookmarkCheck,
-  ChevronRight,
-  ArrowRight,
-  Info
+  FileText, 
+  ExternalLink, 
+  Mail, 
+  Send, 
+  CheckCircle2, 
+  BookmarkCheck, 
+  ChevronRight, 
+  ArrowRight, 
+  Info,
+  Maximize2,
+  Download,
+  X,
+  Layers
 } from 'lucide-react';
 import AccraHelsinkiLogo from '@/components/shared/AccraHelsinkiLogo';
 
 export function GroupOverview({ locale }: { locale: string }) {
   const [topicInput, setTopicInput] = useState('');
   const [submittedTopic, setSubmittedTopic] = useState(false);
+  const [isSlideModalOpen, setIsSlideModalOpen] = useState(false);
 
   const handleTopicSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -219,6 +224,146 @@ export function GroupOverview({ locale }: { locale: string }) {
 
           </div>
         </div>
+
+        {/* ========================================================================= */}
+        {/* BEYOND KIGALI — TRANSITION ROADMAP SLIDE (Bottom of Background & Overview) */}
+        {/* ========================================================================= */}
+        <div className="mb-20 bg-gradient-to-br from-emerald-950/40 via-slate-900 to-slate-900 border border-emerald-500/30 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+          
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 border-b border-white/10 pb-6">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+                <Layers className="w-3.5 h-3.5" />
+                Strategic Transition Framework
+              </div>
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">
+                Beyond Kigali — Accra-Helsinki Group for Truly Sustainable Cooling
+              </h3>
+              <p className="text-sm sm:text-base text-slate-300 mt-2 max-w-3xl leading-relaxed">
+                The comprehensive architectural roadmap: connecting demand reduction, non-chemical cooling, refrigerant transitions, and lifecycle management to prevent climate tipping points.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3 shrink-0">
+              <button
+                onClick={() => setIsSlideModalOpen(true)}
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs sm:text-sm font-semibold transition-all shadow-sm active:scale-95"
+              >
+                <Maximize2 size={16} />
+                <span>Expand Fullscreen</span>
+              </button>
+              <a
+                href="/images/beyond-kigali-framework.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs sm:text-sm font-semibold transition-all shadow-sm active:scale-95"
+              >
+                <ExternalLink size={16} />
+                <span>Open Original Slide</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Slide Image Container with Interactive Zoom */}
+          <div 
+            onClick={() => setIsSlideModalOpen(true)}
+            className="group relative rounded-2xl overflow-hidden border-2 border-white/15 bg-white p-2.5 sm:p-4 cursor-pointer shadow-2xl hover:border-amber-400/60 transition-all duration-300"
+          >
+            <img
+              src="/images/beyond-kigali-framework.png"
+              alt="Beyond Kigali - Accra-Helsinki Group for Truly Sustainable Cooling Framework Slide"
+              className="w-full h-auto object-contain rounded-xl transform group-hover:scale-[1.008] transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+              <div className="px-5 py-2.5 rounded-full bg-slate-900/90 border border-amber-400/50 text-amber-300 font-bold text-sm flex items-center gap-2 shadow-2xl">
+                <Maximize2 size={18} />
+                <span>Click to View Fullscreen Slide</span>
+              </div>
+            </div>
+          </div>
+
+          {/* 3 Structured Explanatory Columns for the Slide */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-white/10">
+            <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10">
+              <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-2 block">
+                1. Demand-Side &amp; Non-Chemical
+              </span>
+              <h4 className="text-base font-bold text-white mb-2">Passive &amp; Refrigerant-Free First</h4>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Prioritizing building design, shading, insulation, and non-vapor-compression technologies to drastically lower the aggregate need for active mechanical cooling.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2 block">
+                2. Chemical Evolution
+              </span>
+              <h4 className="text-base font-bold text-white mb-2">Safe Natural Alternatives</h4>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Transitioning beyond high-GWP HFCs to climate-friendly and chemically safe alternatives with zero ODP, ultra-low GWP, and no hazardous PFAS or TFA breakdown products.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10">
+              <span className="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2 block">
+                3. Systemic Outcomes
+              </span>
+              <h4 className="text-base font-bold text-white mb-2">Lifecycle &amp; Super-Pollutants</h4>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Lifecycle Refrigeration Management (LRM) coupled with Energy Efficiency MEPS to shrink halogenated feedstock demand, speed Kigali goals, and cut N₂O, SF₆, and PFCs.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Fullscreen Modal Lightbox for the Slide */}
+        {isSlideModalOpen && (
+          <div 
+            className="fixed inset-0 z-[999] bg-slate-950/95 backdrop-blur-md flex items-center justify-center p-4 sm:p-8"
+            onClick={() => setIsSlideModalOpen(false)}
+          >
+            <div 
+              className="relative max-w-6xl w-full bg-slate-900 border border-white/20 rounded-3xl p-4 sm:p-6 shadow-2xl overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+                <div className="flex items-center gap-3">
+                  <AccraHelsinkiLogo size="sm" showText={false} />
+                  <span className="font-bold text-sm sm:text-base text-white">
+                    Beyond Kigali — Accra-Helsinki Group for Truly Sustainable Cooling
+                  </span>
+                </div>
+                <button
+                  onClick={() => setIsSlideModalOpen(false)}
+                  className="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors"
+                  aria-label="Close modal"
+                >
+                  <X size={20} />
+                </button>
+              </div>
+
+              <div className="overflow-auto max-h-[80vh] flex items-center justify-center bg-white p-2 rounded-2xl">
+                <img
+                  src="/images/beyond-kigali-framework.png"
+                  alt="Beyond Kigali Slide Fullscreen"
+                  className="w-full h-auto object-contain rounded-xl"
+                />
+              </div>
+
+              <div className="flex justify-end gap-3 pt-4">
+                <a
+                  href="/images/beyond-kigali-framework.png"
+                  download="beyond-kigali-accra-helsinki-framework.png"
+                  className="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white text-xs sm:text-sm font-bold rounded-xl transition-colors inline-flex items-center gap-2"
+                >
+                  <Download size={16} />
+                  <span>Download Slide</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Meeting Information Section */}
         <div className="bg-slate-900/90 border border-white/15 rounded-3xl p-8 sm:p-12 shadow-2xl space-y-12">

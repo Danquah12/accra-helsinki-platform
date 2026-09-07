@@ -91,10 +91,10 @@ export function AccraHelsinkiLogo({
                 fill="none"
               />
 
-              {/* Bottom Text Circular Arc (Left to Right reading) */}
+              {/* Bottom Text Circular Arc (Dropped down into middle of channel to avoid inner circle line) */}
               <path
                 id="bottomArcPath"
-                d="M 58,200 A 142,142 0 0,0 342,200"
+                d="M 35,200 A 165,165 0 0,0 365,200"
                 fill="none"
               />
 
@@ -125,7 +125,7 @@ export function AccraHelsinkiLogo({
             </text>
 
             {/* Circular Text: INDEPENDENT, INFORMAL, OPEN */}
-            <text fill="#1E293B" fontSize="16" fontWeight="800" letterSpacing="2.5" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+            <text fill="#1E293B" fontSize="13.5" fontWeight="800" letterSpacing="2.2" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
               <textPath href="#bottomArcPath" startOffset="50%" textAnchor="middle">
                 INDEPENDENT, INFORMAL, OPEN
               </textPath>
