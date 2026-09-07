@@ -1,37 +1,24 @@
 {
   "nav": {
     "home": "Nyumbani",
-    "issues": "Changamoto",
-    "countries": "Nchi",
+    "issues": "Masuala",
     "research": "Utafiti na Takwimu",
     "laws": "Sheria na Sera",
     "solutions": "Suluhu",
-    "media": "Habari na Vyombo",
+    "media": "Vyombo vya Habari",
     "learn": "Elimu",
-    "action": "Chukua Hatua",
-    "about": "Kuhusu Sisi"
+    "about": "Kuhusu Kikundi"
   },
   "home": {
-    "heroTitle": "Afrika Sio Jalala la Taka Duniani",
-    "heroSubtitle": "Jukwaa la Ujasusi wa Mazingira la CSRTA linawezesha jamii, watafiti, na watunga sera kwa takwimu thabiti ili kukomesha utupaji taka hatarishi barani Afrika.",
-    "takeAction": "Chukua Hatua",
+    "heroTitle": "Kikundi cha Accra-Helsinki cha Upunguzaji Joto Endelevu",
+    "heroSubtitle": "Jumuiya isiyo rasmi ya watu na vikundi vyenye mawazo sawa inayolenga kuimarisha Itifaki ya Montreal kuhusu Dutu Zinazomomonyoa Tabaka la Ozoni, na kuzuia upungufu wa ozoni na viwango hatari vya mabadiliko ya tabianchi",
+    "exploreGroup": "Fahamu Kikundi",
     "exploreData": "Chunguza Takwimu",
     "readResearch": "Soma Utafiti",
-    "stat1": "25-75%",
-    "stat1Label": "Vifaa Vibovu Vinavyoagizwa",
-    "stat2": "54",
-    "stat2Label": "Nchi Zilizoathirika",
-    "stat3": "4",
-    "stat3Label": "Mikataba ya Kimataifa",
-    "stat4": "1,000+",
-    "stat4Label": "Matukio Yaliyothibitishwa",
-    "theCrisis": "Mgogoro wa Mazingira",
-    "theCrisisSubtitle": "Vitisho vikubwa vya mazingira vinavyoikabili bara la Afrika leo.",
-    "reportTitle": "Ripoti Utupaji Taka Hatarishi",
-    "reportDesc": "Je, umeshuhudia utupaji haramu wa taka za kielektroniki? Toa taarifa bila kujitambulisha.",
-    "reportBtn": "Ripoti Tukio",
-    "aiTitle": "Msaidizi wa Utafiti wa AI",
-    "aiDesc": "Uliza msaidizi wetu kuhusu sheria, mikataba na takwimu za mazingira barani Afrika.",
+    "theCrisis": "Migogoro: Vitisho Vikubwa vya Mazingira",
+    "theCrisisSubtitle": "Kikundi kinawakilisha maslahi ya kimataifa yakilenga SLCPs, LLCPs na vifaa vya zamani vya upunguzaji joto.",
+    "aiTitle": "Msaidizi wa AI wa Upunguzaji Joto Endelevu",
+    "aiDesc": "Uliza msaidizi wetu kuhusu mikataba, tafiti za kisayansi na mbadala salama wa gesi za kemikali.",
     "aiBtn": "Uliza Msaidizi"
   },
   "common": {
@@ -42,20 +29,19 @@
     "loading": "Inapakia..."
   },
   "footer": {
-    "organization": "Jukwaa la Ujasusi wa Mazingira la CSRTA. Kulinda mazingira ya Afrika kupitia takwimu na hatua thabiti.",
-    "explore": "Chunguza",
-    "takeAction": "Chukua Hatua",
+    "organization": "Kikundi cha Accra-Helsinki cha Upunguzaji Joto Endelevu. Kuimarisha Itifaki ya Montreal na kuzuia mabadiliko hatari ya tabianchi.",
+    "explore": "Jukwaa",
     "connect": "Wasiliana",
     "newsletter": "Jiunge na jarida letu",
     "emailPlaceholder": "Barua pepe yako",
     "subscribe": "Jiunge",
-    "copyright": "© 2025 CSRTA. Haki zote zimehifadhiwa.",
+    "copyright": "© 2025 Kikundi cha Accra-Helsinki cha Upunguzaji Joto Endelevu. Haki zote zimehifadhiwa.",
     "privacy": "Sera ya Faragha",
     "terms": "Vigezo vya Huduma",
     "accessibility": "Upatikanaji"
   },
   "about": {
-    "title": "Kuhusu Sisi",
-    "description": "Jifunze zaidi kuhusu CSRTA na wajibu wetu barani Afrika."
+    "title": "Kuhusu Kikundi",
+    "description": "Jumuiya isiyo rasmi inayolenga kuimarisha Itifaki ya Montreal."
   }
 }

@@ -2,36 +2,23 @@
   "nav": {
     "home": "Home",
     "issues": "Issues",
-    "countries": "Countries",
     "research": "Research & Data",
     "laws": "Laws & Policy",
     "solutions": "Solutions",
     "media": "Media",
     "learn": "Learn",
-    "action": "Take Action",
     "about": "About"
   },
   "home": {
-    "heroTitle": "Africa Is Not the World's Dumping Ground",
-    "heroSubtitle": "The CSRTA Africa Environmental Intelligence Platform empowers communities, researchers, and policymakers with data-driven insights to stop environmental dumping and build sustainable futures.",
-    "takeAction": "Take Action",
+    "heroTitle": "Accra-Helsinki Group for Sustainable Cooling",
+    "heroSubtitle": "An informal community of like-minded individuals and groups focused on strengthening the Montreal Protocol on Substances that Deplete the Ozone Layer, and preventing ozone depletion and climate tipping points",
+    "exploreGroup": "Learn About the Group",
     "exploreData": "Explore Data",
     "readResearch": "Read Research",
-    "stat1": "25-75%",
-    "stat1Label": "Unusable Imported Appliances",
-    "stat2": "54",
-    "stat2Label": "Affected Countries",
-    "stat3": "4",
-    "stat3Label": "International Treaties",
-    "stat4": "1,000+",
-    "stat4Label": "Known Dumping Incidents",
-    "theCrisis": "The Crisis",
-    "theCrisisSubtitle": "Major environmental threats facing the African continent today.",
-    "reportTitle": "Report Environmental Dumping",
-    "reportDesc": "Witnessed illegal dumping of e-waste or hazardous materials? Report it anonymously.",
-    "reportBtn": "Report an Incident",
-    "aiTitle": "AI Research Assistant",
-    "aiDesc": "Ask our AI assistant about policies, treaties, or data regarding environmental dumping in Africa.",
+    "theCrisis": "The Crises: Major Environmental Threats",
+    "theCrisisSubtitle": "The Group represents global interests focused on SLCPs, LLCPs, and obsolete refrigerants.",
+    "aiTitle": "AI Sustainable Cooling Assistant",
+    "aiDesc": "Ask our AI assistant about treaties, scientific research, and low-GWP refrigerant alternatives.",
     "aiBtn": "Ask the Assistant"
   },
   "common": {
@@ -42,20 +29,19 @@
     "loading": "Loading..."
   },
   "footer": {
-    "organization": "CSRTA Environmental Intelligence Platform. Protecting Africa's ecosystems through data and action.",
-    "explore": "Explore",
-    "takeAction": "Take Action",
+    "organization": "Accra-Helsinki Group for Sustainable Cooling. Strengthening the Montreal Protocol and preventing ozone depletion and climate tipping points.",
+    "explore": "Platform",
     "connect": "Connect",
     "newsletter": "Subscribe to our newsletter",
     "emailPlaceholder": "Email address",
     "subscribe": "Subscribe",
-    "copyright": "© 2025 CSRTA. All rights reserved.",
+    "copyright": "© 2025 Accra-Helsinki Group for Sustainable Cooling. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "accessibility": "Accessibility"
   },
   "about": {
-    "title": "About Us",
-    "description": "Learn more about CSRTA and our mission."
+    "title": "About the Group",
+    "description": "An informal community of like-minded individuals and groups focused on strengthening the Montreal Protocol."
   }
 }

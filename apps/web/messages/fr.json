@@ -1,37 +1,24 @@
 {
   "nav": {
     "home": "Accueil",
-    "issues": "Problèmes",
-    "countries": "Pays",
+    "issues": "Enjeux",
     "research": "Recherche & Données",
     "laws": "Lois & Politiques",
     "solutions": "Solutions",
     "media": "Médias",
     "learn": "Apprendre",
-    "action": "Agir",
     "about": "À Propos"
   },
   "home": {
-    "heroTitle": "L'Afrique N'est Pas le Dépotoir du Monde",
-    "heroSubtitle": "La plateforme d'intelligence environnementale CSRTA Afrique donne aux communautés, chercheurs et décideurs les moyens d'arrêter le dumping environnemental grâce aux données.",
-    "takeAction": "Agir",
+    "heroTitle": "Groupe Accra-Helsinki pour le Refroidissement Durable",
+    "heroSubtitle": "Une communauté informelle d'individus et de groupes partageant les mêmes idées, axée sur le renforcement du Protocole de Montréal sur les substances qui appauvrissent la couche d'ozone et sur la prévention de l'appauvrissement de l'ozone et des points de basculement climatique",
+    "exploreGroup": "Découvrir le Groupe",
     "exploreData": "Explorer les Données",
     "readResearch": "Lire la Recherche",
-    "stat1": "25-75%",
-    "stat1Label": "Appareils Importés Inutilisables",
-    "stat2": "54",
-    "stat2Label": "Pays Touchés",
-    "stat3": "4",
-    "stat3Label": "Traités Internationaux",
-    "stat4": "1,000+",
-    "stat4Label": "Incidents Connus",
-    "theCrisis": "La Crise",
-    "theCrisisSubtitle": "Les principales menaces environnementales auxquelles le continent africain est confronté aujourd'hui.",
-    "reportTitle": "Signaler un Dumping",
-    "reportDesc": "Vous avez été témoin d'un déversement illégal de déchets ? Signalez-le de manière anonyme.",
-    "reportBtn": "Signaler un Incident",
-    "aiTitle": "Assistant de Recherche IA",
-    "aiDesc": "Posez des questions à notre assistant IA sur les politiques et les données concernant le dumping en Afrique.",
+    "theCrisis": "Les Crises: Menaces Environnementales Majeures",
+    "theCrisisSubtitle": "Le Groupe représente des intérêts mondiaux axés sur les PACV, les PACL et les réfrigérants obsolètes.",
+    "aiTitle": "Assistant IA Refroidissement Durable",
+    "aiDesc": "Interrogez notre assistant IA sur les traités, la recherche scientifique et les alternatives à faible PRG.",
     "aiBtn": "Interroger l'IA"
   },
   "common": {
@@ -42,20 +29,19 @@
     "loading": "Chargement..."
   },
   "footer": {
-    "organization": "Plateforme d'Intelligence Environnementale CSRTA. Protéger les écosystèmes d'Afrique.",
-    "explore": "Explorer",
-    "takeAction": "Agir",
+    "organization": "Groupe Accra-Helsinki pour le Refroidissement Durable. Renforcer le Protocole de Montréal et prévenir les points de basculement climatique.",
+    "explore": "Plateforme",
     "connect": "Se Connecter",
-    "newsletter": "Abonnez-vous à notre newsletter",
+    "newsletter": "Abonnez-vous à notre lettre d'information",
     "emailPlaceholder": "Adresse e-mail",
     "subscribe": "S'abonner",
-    "copyright": "© 2025 CSRTA. Tous droits réservés.",
+    "copyright": "© 2025 Groupe Accra-Helsinki pour le Refroidissement Durable. Tous droits réservés.",
     "privacy": "Politique de Confidentialité",
     "terms": "Conditions d'Utilisation",
     "accessibility": "Accessibilité"
   },
   "about": {
-    "title": "À Propos",
-    "description": "En savoir plus sur CSRTA et notre mission."
+    "title": "À Propos du Groupe",
+    "description": "Une communauté informelle axée sur le renforcement du Protocole de Montréal."
   }
 }

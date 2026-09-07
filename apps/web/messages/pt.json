@@ -1,37 +1,24 @@
 {
   "nav": {
     "home": "Início",
-    "issues": "Problemas",
-    "countries": "Países",
+    "issues": "Temas",
     "research": "Pesquisa & Dados",
     "laws": "Leis & Políticas",
     "solutions": "Soluções",
     "media": "Mídia",
     "learn": "Aprender",
-    "action": "Agir",
-    "about": "Sobre"
+    "about": "Sobre o Grupo"
   },
   "home": {
-    "heroTitle": "África Não É o Depósito de Lixo do Mundo",
-    "heroSubtitle": "A Plataforma de Inteligência Ambiental CSRTA África capacita comunidades, pesquisadores e tomadores de decisão com dados para acabar com o despejo ambiental e construir um futuro sustentável.",
-    "takeAction": "Agir",
+    "heroTitle": "Grupo Acra-Helsinque para Resfriamento Sustentável",
+    "heroSubtitle": "Uma comunidade informal de indivíduos e grupos afins focados em fortalecer o Protocolo de Montreal sobre Substâncias que Destroem a Camada de Ozônio e prevenir a destruição do ozônio e pontos de inflexão climática",
+    "exploreGroup": "Conheça o Grupo",
     "exploreData": "Explorar Dados",
     "readResearch": "Ler Pesquisa",
-    "stat1": "25-75%",
-    "stat1Label": "Aparelhos Importados Inutilizáveis",
-    "stat2": "54",
-    "stat2Label": "Países Afetados",
-    "stat3": "4",
-    "stat3Label": "Tratados Internacionais",
-    "stat4": "1.000+",
-    "stat4Label": "Incidentes Conhecidos de Despejo",
-    "theCrisis": "A Crise",
-    "theCrisisSubtitle": "As principais ameaças ambientais enfrentadas pelo continente africano hoje.",
-    "reportTitle": "Denunciar Despejo Ambiental",
-    "reportDesc": "Testemunhou descarte ilegal de lixo eletrônico ou materiais perigosos? Denuncie anonimamente.",
-    "reportBtn": "Denunciar Incidente",
-    "aiTitle": "Assistente de Pesquisa IA",
-    "aiDesc": "Pergunte ao nosso assistente sobre políticas, tratados ou dados sobre lixo eletrônico na África.",
+    "theCrisis": "As Crises: Principais Ameaças Ambientais",
+    "theCrisisSubtitle": "O Grupo representa interesses globais focados em SLCPs, LLCPs e refrigerantes obsoletos.",
+    "aiTitle": "Assistente IA de Resfriamento Sustentável",
+    "aiDesc": "Pergunte ao nosso assistente sobre tratados, pesquisas e alternativas de baixo GWP.",
     "aiBtn": "Consultar Assistente"
   },
   "common": {
@@ -42,20 +29,19 @@
     "loading": "Carregando..."
   },
   "footer": {
-    "organization": "Plataforma de Inteligência Ambiental CSRTA. Protegendo os ecossistemas da África através de dados e ação.",
-    "explore": "Explorar",
-    "takeAction": "Agir",
+    "organization": "Grupo Acra-Helsinque para Resfriamento Sustentável. Fortalecendo o Protocolo de Montreal e prevenindo pontos de inflexão climática.",
+    "explore": "Plataforma",
     "connect": "Conectar",
     "newsletter": "Assine nossa newsletter",
     "emailPlaceholder": "Endereço de e-mail",
     "subscribe": "Inscrever-se",
-    "copyright": "© 2025 CSRTA. Todos os direitos reservados.",
+    "copyright": "© 2025 Grupo Acra-Helsinque para Resfriamento Sustentável. Todos os direitos reservados.",
     "privacy": "Política de Privacidade",
     "terms": "Termos de Serviço",
     "accessibility": "Acessibilidade"
   },
   "about": {
-    "title": "Sobre Nós",
-    "description": "Saiba mais sobre a CSRTA e nossa missão."
+    "title": "Sobre o Grupo",
+    "description": "Comunidade informal focada no fortalecimento do Protocolo de Montreal."
   }
 }
