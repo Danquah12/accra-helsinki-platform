@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Palette, Check } from 'lucide-react';
-import { ThemeId, THEME_OPTIONS, applyThemeToDOM } from '@/components/shared/ThemeColorSwitcher';
+import { ThemeId, THEME_OPTIONS, useTheme } from '@/lib/context/ThemeContext';
 
 const PARTNERS = [
   { name: 'UNEP Ozone Secretariat', tag: 'UN Environment', dot: 'bg-sky-400' },
@@ -89,31 +89,10 @@ const THEME_STYLES: Record<
 };
 
 export default function PartnersBar() {
-  const [currentTheme, setCurrentTheme] = useState<ThemeId>('dark');
-
-  useEffect(() => {
-    const saved = localStorage.getItem('accra-helsinki-theme') as ThemeId | null;
-    if (saved && THEME_OPTIONS.some((t) => t.id === saved)) {
-      setCurrentTheme(saved);
-    }
-
-    const handleExternalChange = (e: Event) => {
-      const customEvent = e as CustomEvent<{ theme: ThemeId }>;
-      if (customEvent.detail?.theme) {
-        setCurrentTheme(customEvent.detail.theme);
-      }
-    };
-
-    window.addEventListener('accra-helsinki-theme-change', handleExternalChange);
-    return () => {
-      window.removeEventListener('accra-helsinki-theme-change', handleExternalChange);
-    };
-  }, []);
+  const { theme: currentTheme, setTheme } = useTheme();
 
   const handleThemeChange = (theme: ThemeId) => {
-    setCurrentTheme(theme);
-    localStorage.setItem('accra-helsinki-theme', theme);
-    applyThemeToDOM(theme);
+    setTheme(theme);
   };
 
   const themeStyle = THEME_STYLES[currentTheme] || THEME_STYLES.dark;

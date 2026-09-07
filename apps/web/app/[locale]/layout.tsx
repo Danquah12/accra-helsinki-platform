@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import ThemeColorSwitcher from '@/components/shared/ThemeColorSwitcher';
+import { ThemeProvider } from '@/lib/context/ThemeContext';
 import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -27,15 +28,24 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={isRtl ? 'rtl' : 'ltr'} className={`${inter.variable} antialiased`}>
-      <body className="min-h-screen flex flex-col font-sans bg-white text-slate-900">
-        <NextIntlClientProvider messages={messages}>
-          <Header locale={locale} />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer locale={locale} />
-          <ThemeColorSwitcher variant="floating" />
-        </NextIntlClientProvider>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('accra-helsinki-theme')||'dark';document.documentElement.setAttribute('data-theme',t);if(document.body){document.body.className+=' theme-'+t;}}catch(e){}})()`,
+          }}
+        />
+      </head>
+      <body className="min-h-screen flex flex-col font-sans transition-colors duration-300">
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
+            <Header locale={locale} />
+            <main className="flex-1">
+              {children}
+            </main>
+            <Footer locale={locale} />
+            <ThemeColorSwitcher variant="floating" />
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

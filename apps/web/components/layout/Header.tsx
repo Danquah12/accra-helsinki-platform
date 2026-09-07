@@ -8,6 +8,7 @@ import { Menu, ChevronDown, CheckCircle, Bot, BookOpen, Sparkles } from 'lucide-
 import MobileNav from './MobileNav';
 import LanguageSwitcher from './LanguageSwitcher';
 import ThemeColorSwitcher from '@/components/shared/ThemeColorSwitcher';
+import { useTheme } from '@/lib/context/ThemeContext';
 import AccraHelsinkiLogo from '@/components/shared/AccraHelsinkiLogo';
 
 const navItems = [
@@ -136,10 +137,22 @@ const navItems = [
 ];
 
 export default function Header({ locale }: { locale: string }) {
+  const { theme } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
+
+  const isDark = theme === 'dark' || theme === 'nordic' || theme === 'emerald';
+
+  const headerBgClass =
+    {
+      white: 'bg-white/95 border-b border-slate-200 shadow-sm text-slate-900',
+      sand: 'bg-[#faf8f4]/95 border-b border-amber-200/90 shadow-sm text-stone-900',
+      nordic: 'bg-[#07162c]/95 border-b border-sky-800/60 shadow-sm text-sky-100',
+      emerald: 'bg-[#02261a]/95 border-b border-emerald-800/60 shadow-sm text-emerald-100',
+      dark: 'bg-slate-950/95 border-b border-slate-800 shadow-sm text-white',
+    }[theme] || 'bg-slate-950/95 border-b border-slate-800 shadow-sm text-white';
 
   const handleMouseEnter = (menuName: string) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -159,13 +172,13 @@ export default function Header({ locale }: { locale: string }) {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-lg bg-white/90 border-b border-b-slate-200/80 shadow-sm">
+    <header className={`sticky top-0 z-50 w-full backdrop-blur-lg transition-colors duration-300 ${headerBgClass}`}>
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           
           {/* Logo with Deepened Yellow Hosting the Black Star */}
           <Link href={`/${locale}`} className="flex items-center shrink-0">
-            <AccraHelsinkiLogo size="md" variant="light" />
+            <AccraHelsinkiLogo size="md" variant={isDark ? 'dark' : 'light'} />
           </Link>
 
           {/* Desktop Nav (Countries & Take Action removed) */}
@@ -181,7 +194,11 @@ export default function Header({ locale }: { locale: string }) {
                   href={`/${locale}${item.href === '/' ? '' : item.href}`}
                   className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     activeMenu === item.name || (item.href !== '/' && pathname.includes(item.href))
-                      ? 'text-emerald-800 bg-emerald-50'
+                      ? isDark
+                        ? 'text-amber-400 bg-white/10'
+                        : 'text-emerald-800 bg-emerald-50'
+                      : isDark
+                      ? 'text-slate-200 hover:text-white hover:bg-white/10'
                       : 'text-slate-700 hover:text-emerald-800 hover:bg-slate-100/80'
                   }`}
                 >
@@ -203,12 +220,16 @@ export default function Header({ locale }: { locale: string }) {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.15 }}
-                        className="absolute top-full left-0 mt-0 w-max min-w-[220px] max-w-screen-md bg-white border border-slate-200 shadow-xl rounded-xl overflow-hidden p-6 grid gap-8 z-50"
+                        className={`absolute top-full left-0 mt-0 w-max min-w-[220px] max-w-screen-md rounded-xl overflow-hidden p-6 grid gap-8 z-50 ${
+                          isDark
+                            ? 'bg-slate-900 border border-slate-750 shadow-2xl text-white'
+                            : 'bg-white border border-slate-200 shadow-xl text-slate-900'
+                        }`}
                         style={{ gridTemplateColumns: `repeat(${item.dropdown.length}, minmax(0, 1fr))` }}
                       >
                         {item.dropdown.map((col, idx) => (
                           <div key={idx} className="flex flex-col gap-3 min-w-[190px]">
-                            <h4 className="font-bold text-emerald-950 text-xs uppercase tracking-wider mb-1">
+                            <h4 className={`font-bold text-xs uppercase tracking-wider mb-1 ${isDark ? 'text-amber-400' : 'text-emerald-950'}`}>
                               {col.title}
                             </h4>
                             <div className="flex flex-col gap-2">
@@ -216,7 +237,9 @@ export default function Header({ locale }: { locale: string }) {
                                 <Link
                                   key={linkIdx}
                                   href={`/${locale}${link.href}`}
-                                  className="text-slate-600 hover:text-emerald-700 text-sm font-medium transition-colors flex items-center"
+                                  className={`text-sm font-medium transition-colors flex items-center ${
+                                    isDark ? 'text-slate-300 hover:text-white' : 'text-slate-600 hover:text-emerald-700'
+                                  }`}
                                   onClick={() => setActiveMenu(null)}
                                 >
                                   {link.icon && link.icon}
@@ -249,7 +272,7 @@ export default function Header({ locale }: { locale: string }) {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 text-slate-800"
+            className={`lg:hidden p-2 ${isDark ? 'text-white' : 'text-slate-800'}`}
             onClick={() => setIsMobileMenuOpen(true)}
             aria-label="Open menu"
           >

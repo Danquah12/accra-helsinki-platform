@@ -1,6 +1,9 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Calendar, ExternalLink, Globe2 } from 'lucide-react';
+import { useTheme } from '@/lib/context/ThemeContext';
 
 const NEWS_ARTICLES = [
   {
@@ -39,24 +42,39 @@ const NEWS_ARTICLES = [
 ];
 
 export default function LatestNews({ locale }: { locale: string }) {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark' || theme === 'nordic' || theme === 'emerald';
+  const isLight = !isDark;
+
+  const sectionBg =
+    {
+      white: 'bg-white text-slate-900 border-t border-slate-200',
+      sand: 'bg-[#faf8f4] text-stone-900 border-t border-amber-200',
+      nordic: 'bg-[#07162c] text-sky-100 border-t border-sky-800/40',
+      emerald: 'bg-[#02261a] text-emerald-100 border-t border-emerald-800/40',
+      dark: 'bg-slate-950 text-white border-t border-slate-800',
+    }[theme] || 'bg-slate-950 text-white border-t border-slate-800';
+
   return (
-    <section className="py-24 bg-gradient-to-b from-slate-50 via-slate-100/50 to-slate-100/90 border-t border-slate-200">
+    <section className={`py-24 transition-colors duration-300 ${sectionBg}`}>
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div className="max-w-2xl">
-            <span className="text-xs font-bold uppercase tracking-wider text-amber-700 mb-2 block">
+            <span className="text-xs font-bold uppercase tracking-wider text-amber-500 mb-2 block">
               Meetings &bull; Dispatches &bull; Analysis
             </span>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 mb-4">
+            <h2 className={`text-3xl sm:text-4xl font-black mb-4 ${isLight ? 'text-slate-900' : 'text-white'}`}>
               Latest Group Activities &amp; Press
             </h2>
-            <p className="text-base text-slate-600">
+            <p className={`text-base ${isLight ? 'text-slate-600' : 'text-slate-300'}`}>
               Coverage of high-level convenings on the margins of Montreal Protocol Meetings of the Parties, policy declarations, and scientific dialogues.
             </p>
           </div>
           <Link
             href={`/${locale}/media/news`}
-            className="inline-flex items-center gap-2 text-emerald-800 font-bold hover:text-emerald-900 transition-colors"
+            className={`inline-flex items-center gap-2 font-bold transition-colors ${
+              isLight ? 'text-emerald-800 hover:text-emerald-900' : 'text-amber-400 hover:text-amber-300'
+            }`}
           >
             <span>All Press &amp; Media</span>
             <ArrowRight size={16} />
@@ -67,7 +85,9 @@ export default function LatestNews({ locale }: { locale: string }) {
           {NEWS_ARTICLES.map((news) => (
             <div 
               key={news.id} 
-              className="group flex flex-col bg-slate-50/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/80"
+              className={`group flex flex-col rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border ${
+                isLight ? 'bg-slate-50/90 border-slate-200 text-slate-900' : 'bg-slate-900/90 border-slate-800 text-white'
+              }`}
             >
               <div className={`aspect-[16/9] w-full ${news.image} relative overflow-hidden flex items-center justify-center p-6 text-white`}>
                 <Globe2 className="w-12 h-12 text-white/20 group-hover:scale-110 transition-transform duration-500" />
@@ -85,11 +105,15 @@ export default function LatestNews({ locale }: { locale: string }) {
                   <span className="truncate max-w-[150px] italic">{news.byline}</span>
                 </div>
 
-                <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-emerald-800 transition-colors line-clamp-2">
+                <h3 className={`text-lg font-bold mb-3 transition-colors line-clamp-2 ${
+                  isLight ? 'text-slate-900 group-hover:text-emerald-800' : 'text-white group-hover:text-amber-300'
+                }`}>
                   {news.title}
                 </h3>
 
-                <p className="text-slate-600 text-sm mb-6 line-clamp-3 flex-1 leading-relaxed">
+                <p className={`text-sm mb-6 line-clamp-3 flex-1 leading-relaxed ${
+                  isLight ? 'text-slate-600' : 'text-slate-300'
+                }`}>
                   {news.excerpt}
                 </p>
 

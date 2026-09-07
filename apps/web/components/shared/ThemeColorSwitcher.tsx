@@ -2,106 +2,25 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Palette, Check, Sun, Moon, Droplets, Leaf, Compass } from 'lucide-react';
+import {
+  ThemeId,
+  ThemeOption,
+  THEME_OPTIONS,
+  applyThemeToDOM,
+  useTheme,
+} from '@/lib/context/ThemeContext';
 
-export type ThemeId = 'dark' | 'white' | 'nordic' | 'emerald' | 'sand';
-
-export interface ThemeOption {
-  id: ThemeId;
-  label: string;
-  sublabel: string;
-  bgPreview: string;
-  textColor: string;
-  dotColor: string;
-}
-
-export const THEME_OPTIONS: ThemeOption[] = [
-  {
-    id: 'dark',
-    label: 'Dark Midnight',
-    sublabel: 'Deep atmospheric slate (Default)',
-    bgPreview: 'bg-slate-950',
-    textColor: 'text-white',
-    dotColor: 'bg-amber-400',
-  },
-  {
-    id: 'white',
-    label: 'Clean White',
-    sublabel: 'Pure crisp high-contrast light',
-    bgPreview: 'bg-white',
-    textColor: 'text-slate-900',
-    dotColor: 'bg-emerald-600',
-  },
-  {
-    id: 'nordic',
-    label: 'Nordic Blue',
-    sublabel: 'Finnish Arctic marine tone',
-    bgPreview: 'bg-sky-950',
-    textColor: 'text-sky-100',
-    dotColor: 'bg-cyan-400',
-  },
-  {
-    id: 'emerald',
-    label: 'Montreal Emerald',
-    sublabel: 'Sustainable cooling deep green',
-    bgPreview: 'bg-emerald-950',
-    textColor: 'text-emerald-100',
-    dotColor: 'bg-emerald-400',
-  },
-  {
-    id: 'sand',
-    label: 'Warm Sand',
-    sublabel: 'Diplomatic warm parchment',
-    bgPreview: 'bg-[#f7f5f0]',
-    textColor: 'text-amber-950',
-    dotColor: 'bg-amber-600',
-  },
-];
-
-export function applyThemeToDOM(theme: ThemeId) {
-  if (typeof document === 'undefined') return;
-  const root = document.documentElement;
-  const body = document.body;
-
-  root.setAttribute('data-theme', theme);
-  
-  // Remove existing theme classes
-  body.classList.remove('theme-dark', 'theme-white', 'theme-nordic', 'theme-emerald', 'theme-sand');
-  body.classList.add(`theme-${theme}`);
-
-  // Broadcast custom event so listening components update instantly
-  window.dispatchEvent(new CustomEvent('accra-helsinki-theme-change', { detail: { theme } }));
-}
+export type { ThemeId, ThemeOption };
+export { THEME_OPTIONS, applyThemeToDOM };
 
 interface ThemeColorSwitcherProps {
   variant?: 'header' | 'floating' | 'inline';
 }
 
 export default function ThemeColorSwitcher({ variant = 'header' }: ThemeColorSwitcherProps) {
-  const [currentTheme, setCurrentTheme] = useState<ThemeId>('dark');
+  const { theme: currentTheme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const saved = localStorage.getItem('accra-helsinki-theme') as ThemeId | null;
-    if (saved && THEME_OPTIONS.some(t => t.id === saved)) {
-      setCurrentTheme(saved);
-      applyThemeToDOM(saved);
-    } else {
-      applyThemeToDOM('dark');
-    }
-
-    const handleExternalChange = (e: Event) => {
-      const customEvent = e as CustomEvent<{ theme: ThemeId }>;
-      if (customEvent.detail?.theme) {
-        setCurrentTheme(customEvent.detail.theme);
-      }
-    };
-
-    window.addEventListener('accra-helsinki-theme-change', handleExternalChange);
-    return () => {
-      window.removeEventListener('accra-helsinki-theme-change', handleExternalChange);
-    };
-  }, []);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -114,13 +33,11 @@ export default function ThemeColorSwitcher({ variant = 'header' }: ThemeColorSwi
   }, []);
 
   const handleSelect = (id: ThemeId) => {
-    setCurrentTheme(id);
-    localStorage.setItem('accra-helsinki-theme', id);
-    applyThemeToDOM(id);
+    setTheme(id);
     setIsOpen(false);
   };
 
-  const activeOption = THEME_OPTIONS.find(t => t.id === currentTheme) || THEME_OPTIONS[0];
+  const activeOption = THEME_OPTIONS.find((t) => t.id === currentTheme) || THEME_OPTIONS[0];
 
   if (variant === 'floating') {
     return (
