@@ -1,7 +1,17 @@
 import createMiddleware from 'next-intl/middleware';
 import { routing } from './i18n/routing';
+import { NextRequest, NextResponse } from 'next/server';
 
-export default createMiddleware(routing);
+const handleI18nRouting = createMiddleware(routing);
+
+export default function middleware(request: NextRequest) {
+  try {
+    return handleI18nRouting(request);
+  } catch (err) {
+    console.error('Routing middleware caught error:', err);
+    return NextResponse.next();
+  }
+}
 
 export const config = {
   // Match all pathnames except for
