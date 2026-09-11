@@ -102,5 +102,10 @@
     background-color: #faf8f4;
     color: #292524;
   }
+
+  a, a:visited {
+    color: inherit;
+    text-decoration: inherit;
+  }
 }
 
