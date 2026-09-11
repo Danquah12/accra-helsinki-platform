@@ -53,7 +53,7 @@ export function AccraHelsinkiLogo({
       >
         {mode === 'image' ? (
           <img
-            src="/images/accra-helsinki-logo-original.png"
+            src="/images/accra-helsinki-logo.png"
             alt="Accra-Helsinki Group for Sustainable Cooling Logo"
             className="w-full h-full object-contain rounded-full shadow-sm"
           />
@@ -64,163 +64,179 @@ export function AccraHelsinkiLogo({
             xmlns="http://www.w3.org/2000/svg"
           >
             <defs>
-              {/* Deepened Rich Gold Yellow hosting the Black Star (per customer instruction) */}
-              <linearGradient id="deepGoldYellow" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#E48A04" />
-                <stop offset="50%" stopColor="#D97706" />
-                <stop offset="100%" stopColor="#B45309" />
+              {/* Ghana Gold Yellow */}
+              <linearGradient id="ghanaGoldYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#F9C015" />
+                <stop offset="100%" stopColor="#F5BA13" />
               </linearGradient>
 
               {/* Finnish Nordic Blue */}
-              <linearGradient id="finnishBlue" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#00458C" />
-                <stop offset="100%" stopColor="#003066" />
+              <linearGradient id="finnishNordicBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#124E8F" />
+                <stop offset="100%" stopColor="#0D3E74" />
               </linearGradient>
 
-              {/* Cooling Airflow Blue */}
-              <linearGradient id="coolingFlow" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#0284C7" />
-                <stop offset="50%" stopColor="#38BDF8" />
-                <stop offset="100%" stopColor="#7DD3FC" />
-              </linearGradient>
-
-              {/* Top Text Circular Arc */}
+              {/* Top Text Circular Arc (Concentric at radius 157.5) */}
               <path
                 id="topArcPath"
-                d="M 52,200 A 148,148 0 0,1 348,200"
+                d="M 48,200 A 157,157 0 0,1 352,200"
                 fill="none"
               />
 
-              {/* Bottom Text Circular Arc (Dropped down into middle of channel to avoid inner circle line) */}
+              {/* Bottom Text Circular Arc (Concentric at radius 158.5) */}
               <path
                 id="bottomArcPath"
-                d="M 35,200 A 165,165 0 0,0 365,200"
+                d="M 43,200 A 158.5,158.5 0 0,0 357,200"
                 fill="none"
               />
 
-              {/* Inner Upper Clip Path for Left Quadrant (Finland) */}
-              <clipPath id="leftQuadClip">
-                <rect x="60" y="60" width="140" height="116" />
+              {/* Inner Circle Clip Path for Core Artwork (Radius 138) */}
+              <clipPath id="innerCircleClip">
+                <circle cx="200" cy="200" r="137" />
               </clipPath>
 
-              {/* Inner Upper Clip Path for Right Quadrant (Ghana) */}
-              <clipPath id="rightQuadClip">
-                <rect x="200" y="60" width="140" height="116" />
+              {/* Clip Path for Upper Left Quadrant (Accra / Ghana) */}
+              <clipPath id="leftUpperQuadClip">
+                <rect x="50" y="50" width="150" height="126" />
+              </clipPath>
+
+              {/* Clip Path for Upper Right Quadrant (Helsinki / Finland) */}
+              <clipPath id="rightUpperQuadClip">
+                <rect x="200" y="50" width="150" height="126" />
               </clipPath>
             </defs>
 
-            {/* Background disc */}
-            <circle cx="200" cy="200" r="190" fill="#FAF9F6" />
+            {/* Background disc (Parchment Ivory) */}
+            <circle cx="200" cy="200" r="192" fill="#FAF8F5" />
 
-            {/* Concentric Outer Rings */}
-            <circle cx="200" cy="200" r="186" fill="none" stroke="#1E293B" strokeWidth="4.5" />
-            <circle cx="200" cy="200" r="176" fill="none" stroke="#1E293B" strokeWidth="1.8" />
-            <circle cx="200" cy="200" r="138" fill="#FFFFFF" stroke="#1E293B" strokeWidth="3" />
+            {/* Concentric Double Outer Rings */}
+            <circle cx="200" cy="200" r="188" fill="none" stroke="#111827" strokeWidth="3.6" />
+            <circle cx="200" cy="200" r="177" fill="none" stroke="#111827" strokeWidth="1.6" />
 
             {/* Circular Text: ACCRA-HELSINKI GROUP */}
-            <text fill="#1E293B" fontSize="23" fontWeight="900" letterSpacing="4" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+            <text fill="#111827" fontSize="20.5" fontWeight="900" letterSpacing="3.4" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
               <textPath href="#topArcPath" startOffset="50%" textAnchor="middle">
                 ACCRA-HELSINKI GROUP
               </textPath>
             </text>
 
             {/* Circular Text: INDEPENDENT, INFORMAL, OPEN */}
-            <text fill="#1E293B" fontSize="13.5" fontWeight="800" letterSpacing="2.2" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+            <text fill="#111827" fontSize="13" fontWeight="800" letterSpacing="2.2" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
               <textPath href="#bottomArcPath" startOffset="50%" textAnchor="middle">
                 INDEPENDENT, INFORMAL, OPEN
               </textPath>
             </text>
 
-            {/* ================= UPPER SECTION ================= */}
-            {/* Left Quadrant: Finland / Helsinki (Blue Cross on White) */}
-            <g clipPath="url(#leftQuadClip)">
-              {/* White background */}
+            {/* ================= INNER CORE ARTWORK ================= */}
+            <g clipPath="url(#innerCircleClip)">
+              {/* White Base Fill for Central Disc */}
               <circle cx="200" cy="200" r="138" fill="#FFFFFF" />
-              {/* Finnish Blue Cross */}
-              <rect x="122" y="85" width="22" height="68" fill="url(#finnishBlue)" rx="1.5" />
-              <rect x="98" y="108" width="70" height="22" fill="url(#finnishBlue)" rx="1.5" />
-            </g>
 
-            {/* Right Quadrant: Ghana / Accra (Deepened Yellow hosting Black Star) */}
-            <g clipPath="url(#rightQuadClip)">
-              {/* Deepened Yellow / Gold Fill */}
-              <circle cx="200" cy="200" r="138" fill="url(#deepGoldYellow)" />
-              {/* Ghanaian Black Star */}
-              <polygon
-                points="265,95 272.5,110 289,112 277,123.5 280,140 265,132 250,140 253,123.5 241,112 257.5,110"
+              {/* ----- UPPER LEFT: ACCRA / GHANA (GOLD YELLOW WITH BLACK STAR) ----- */}
+              <g clipPath="url(#leftUpperQuadClip)">
+                <circle cx="200" cy="200" r="138" fill="url(#ghanaGoldYellow)" />
+                {/* Ghanaian 5-Pointed Black Star (Precisely Sized & Centered) */}
+                <polygon
+                  points="144,101 149.9,116.9 166.8,117.6 153.5,128.1 158.1,144.4 144,135 129.9,144.4 134.5,128.1 121.2,117.6 138.1,116.9"
+                  fill="#111827"
+                  stroke="#111827"
+                  strokeWidth="0.5"
+                  strokeLinejoin="round"
+                />
+              </g>
+
+              {/* ----- UPPER RIGHT: HELSINKI / FINLAND (WHITE WITH NORDIC CROSS) ----- */}
+              <g clipPath="url(#rightUpperQuadClip)">
+                <circle cx="200" cy="200" r="138" fill="#FFFFFF" />
+                {/* Official Finnish Flag Proportions: Vertical bar offset left so right arm is longer */}
+                {/* Horizontal bar (Width 52px, Height 14px) */}
+                <rect x="232" y="118" width="52" height="14" fill="url(#finnishNordicBlue)" rx="0.5" />
+                {/* Vertical bar (Width 14px, Height 44px, offset to x=244..258) */}
+                <rect x="244" y="103" width="14" height="44" fill="url(#finnishNordicBlue)" rx="0.5" />
+              </g>
+
+              {/* Vertical Divider Between Ghana & Finland */}
+              <line x1="200" y1="62" x2="200" y2="175" stroke="#111827" strokeWidth="3" />
+
+              {/* ----- CENTER BANNER: SUSTAINABLE COOLING ----- */}
+              {/* Warm Ivory/Cream Banner Fill */}
+              <rect x="60" y="175" width="280" height="42" fill="#FAF5EE" />
+              <line x1="60" y1="175" x2="340" y2="175" stroke="#111827" strokeWidth="3" />
+              <line x1="60" y1="217" x2="340" y2="217" stroke="#111827" strokeWidth="3" />
+
+              {/* Banner Text with Generous Padding on Both Sides (No clipping of S or G) */}
+              <text
+                x="200"
+                y="203.5"
+                textAnchor="middle"
                 fill="#111827"
-                stroke="#000000"
-                strokeWidth="1"
-                strokeLinejoin="round"
-              />
+                fontSize="17.5"
+                fontWeight="900"
+                letterSpacing="1.8"
+                style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
+              >
+                SUSTAINABLE COOLING
+              </text>
+
+              {/* ----- LOWER HEMISPHERE: COOLANT CIRCULATION & DROPLET ----- */}
+              {/* Scaled down & centered with >35px clearance to inner ring */}
+              <g transform="translate(0, 0)">
+                {/* Infinity Flow Loops (Light Blue & Airflow) */}
+                <path
+                  d="M 172,274 C 150,250 126,270 148,292 C 170,314 230,248 252,270 C 274,292 250,314 228,292 C 206,270 186,270 172,274"
+                  fill="none"
+                  stroke="#BAE6FD"
+                  strokeWidth="7"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M 173,273 C 153,252 130,270 149,291 C 169,312 229,249 251,269 C 271,290 249,312 227,291 C 208,270 188,270 173,273"
+                  fill="none"
+                  stroke="#38BDF8"
+                  strokeWidth="3.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M 166,276 C 154,260 136,273 150,287 C 169,305 225,255 244,273 C 263,291 244,307 227,290"
+                  fill="none"
+                  stroke="#0284C7"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                />
+
+                {/* Airflow Breeze Curves in Center */}
+                <path
+                  d="M 175,273 C 190,270 210,279 230,276 C 242,274 249,268 252,266"
+                  fill="none"
+                  stroke="#0284C7"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M 176,278 C 192,275 212,285 232,282"
+                  fill="none"
+                  stroke="#0284C7"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                />
+
+                {/* Water Droplet on Left Loop */}
+                <path
+                  d="M 162,256 C 155,267 146,277 146,285 C 146,294 153,301 162,301 C 171,301 178,294 178,285 C 178,277 169,267 162,256 Z"
+                  fill="#0284C7"
+                  stroke="#111827"
+                  strokeWidth="2.4"
+                  strokeLinejoin="round"
+                />
+                {/* Droplet Light Reflection Highlight */}
+                <ellipse cx="158.5" cy="285" rx="2.8" ry="6" fill="#BAE6FD" opacity="0.85" transform="rotate(-20 158.5 285)" />
+              </g>
             </g>
 
-            {/* Vertical Divider between Finland & Ghana */}
-            <line x1="200" y1="62" x2="200" y2="176" stroke="#1E293B" strokeWidth="2.5" />
-
-            {/* ================= CENTER BANNER ================= */}
-            {/* Banner Background & Dividers */}
-            <rect x="63" y="176" width="274" height="42" fill="#FFFFFF" />
-            <line x1="63" y1="176" x2="337" y2="176" stroke="#1E293B" strokeWidth="3" />
-            <line x1="63" y1="218" x2="337" y2="218" stroke="#1E293B" strokeWidth="3" />
-
-            {/* Banner Text: SUSTAINABLE COOLING */}
-            <text
-              x="200"
-              y="204"
-              textAnchor="middle"
-              fill="#1E293B"
-              fontSize="20"
-              fontWeight="900"
-              letterSpacing="2.5"
-              style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
-            >
-              SUSTAINABLE COOLING
-            </text>
-
-            {/* ================= LOWER SECTION ================= */}
-            {/* Infinity Symbol & Cooling Airflow with Droplet */}
-            <g transform="translate(0, 5)">
-              {/* Infinity Airflow Loops */}
-              <path
-                d="M 160,270 C 130,240 100,270 130,300 C 160,330 240,240 270,270 C 300,300 270,330 240,300 C 210,270 180,270 160,270"
-                fill="none"
-                stroke="#BAE6FD"
-                strokeWidth="7"
-                strokeLinecap="round"
-              />
-              <path
-                d="M 162,268 C 135,242 105,270 132,298 C 160,326 238,242 268,268 C 296,296 268,326 238,298 C 212,270 185,270 162,268"
-                fill="none"
-                stroke="#0284C7"
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
-              <path
-                d="M 155,275 C 138,255 115,272 135,292 C 160,315 235,248 260,272 C 285,295 260,318 238,295"
-                fill="none"
-                stroke="#38BDF8"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-              <path
-                d="M 175,272 C 190,272 210,285 225,285"
-                fill="none"
-                stroke="#0284C7"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-              />
-
-              {/* Water Droplet on Left Loop */}
-              <path
-                d="M 166,252 C 158,264 148,276 148,285 C 148,295 156,303 166,303 C 176,303 184,295 184,285 C 184,276 174,264 166,252 Z"
-                fill="#0284C7"
-                stroke="#1E293B"
-                strokeWidth="2.5"
-              />
-              {/* Droplet Highlight */}
-              <ellipse cx="162" cy="284" rx="3.5" ry="7" fill="#BAE6FD" opacity="0.8" transform="rotate(-20 162 284)" />
-            </g>
+            {/* Inner Ring Border Line enclosing Emblem */}
+            <circle cx="200" cy="200" r="138" fill="none" stroke="#111827" strokeWidth="3.2" />
           </svg>
         )}
       </div>
