@@ -15,7 +15,7 @@ const upcomingEvents = [
     date: "2 November 2026 • 1:00 PM",
     location: "Kigali, Rwanda • Montreal Protocol Session",
     type: "UNEP Side Event",
-    description: "Theme: “VSLS's - a growing uncontrolled threat to the ozone layer”. The Accra-Helsinki Group convenes in Kigali to address Very Short-Lived Substances (VSLSs) and uncontrolled chemical threats to ozone layer recovery and climate stabilization. Topics: TBD.",
+    description: "Theme: “VSLS - a growing uncontrolled threat to the ozone layer”. The Accra-Helsinki Group convenes in Kigali to address Very Short-Lived Substances (VSLS) and uncontrolled chemical threats to ozone layer recovery and climate stabilization. Topics: TBD.",
     unepUrl: "https://ozone.unep.org/meetings/47th-meeting-open-ended-working-group-parties/side-events",
     unepText: "UNEP Ozone Secretariat Side Events Portal"
   },

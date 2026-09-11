@@ -33,7 +33,7 @@ const pastEvents = [
     date: "July 2024",
     location: "Montreal, Canada &bull; 46th Open-ended Working Group",
     outcomes: "Initial high-level consultations exploring the establishment of the Group, tackling market dumping barriers, and tying energy efficiency to the Kigali Amendment.",
-    unepUrl: "https://iifiir.org/en/news/live-from-oewg-meetings-what-is-accra-helsinki-roup",
+    unepUrl: "https://iifiir.org/en/news/live-from-oewg-meetings-what-is-accra-helsinki-group",
     unepText: "IIR Report: Live from OEWG-46"
   }
 ];

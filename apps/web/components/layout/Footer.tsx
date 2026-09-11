@@ -42,7 +42,7 @@ export function Footer({ locale }: { locale: string }) {
             </h3>
             <ul className="space-y-3">
               {[
-                { label: 'The Crises (SLCPs & LLCPs)', href: '/#crises' },
+                { label: 'Environmental Dumping Issues', href: '/issues' },
                 { label: 'Research Library', href: '/research/library' },
                 { label: 'Montreal Protocol Database', href: '/policy/montreal-protocol/refrigerants' },
                 { label: 'Sustainable Cooling Solutions', href: '/solutions/clean-cooling' },
@@ -66,7 +66,7 @@ export function Footer({ locale }: { locale: string }) {
               {[
                 { label: 'Vienna Convention & Montreal Protocol', href: '/policy/montreal-protocol' },
                 { label: 'Kigali Amendment (HFC Phasedown)', href: '/policy/montreal-protocol/kigali' },
-                { label: 'SF₆ Regulatory Phasedown Measures', href: '/policy/montreal-protocol' },
+                { label: 'SF₆ Regulatory Phasedown Measures', href: '/policy/montreal-protocol#sf6' },
                 { label: 'Global Compliance Checker', href: '/policy/compliance-checker' },
                 { label: 'International Treaty Timeline', href: '/policy/timeline' },
               ].map((item) => (

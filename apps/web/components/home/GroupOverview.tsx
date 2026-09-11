@@ -58,40 +58,8 @@ export function GroupOverview({ locale }: { locale: string }) {
       <div className="absolute top-10 left-1/4 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-10 right-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-4">
         
-        {/* Section Pill Badge */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          <div className={`inline-flex items-center gap-2 backdrop-blur-md px-4 py-1.5 rounded-full border mb-6 ${
-            isLight ? 'bg-slate-100 border-amber-500/30 text-amber-900' : 'bg-white/10 border-amber-400/30 text-amber-300'
-          }`}>
-            <AccraHelsinkiLogo size="sm" showText={false} variant={isDark ? 'dark' : 'light'} />
-            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
-              Background &bull; Overview &bull; Meetings
-            </span>
-          </div>
-
-          <h2 className={`text-3xl sm:text-4xl md:text-6xl font-black tracking-tight mb-6 leading-tight transition-colors ${
-            isLight ? 'text-slate-900' : 'text-white'
-          }`}>
-            The Accra-Helsinki Group <br className="hidden sm:inline" />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-emerald-600 to-sky-600">
-              for Sustainable Cooling
-            </span>
-          </h2>
-
-          {/* Mandated Definition */}
-          <div className={`text-left p-6 rounded-r-2xl border-l-4 border-amber-500 my-8 shadow-sm transition-colors ${
-            isLight ? 'bg-slate-50 border border-slate-200 text-slate-800' : 'bg-white/[0.04] border border-white/10 text-emerald-100 shadow-xl'
-          }`}>
-            <p className={`text-lg sm:text-xl md:text-2xl font-normal leading-relaxed ${
-              isLight ? 'text-slate-800' : 'text-emerald-100'
-            }`}>
-              “An informal community of like-minded individuals and groups focused on strengthening the Montreal Protocol on Substances that Deplete the Ozone Layer, and preventing ozone depletion and climate tipping points”
-            </p>
-          </div>
-        </div>
-
         {/* Mission Statement Box */}
         <div className={`mb-16 rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden transition-colors ${
           isLight
@@ -270,7 +238,7 @@ export function GroupOverview({ locale }: { locale: string }) {
                 </li>
                 <li>
                   <a
-                    href="https://iifiir.org/en/news/live-from-oewg-meetings-what-is-accra-helsinki-roup"
+                    href="https://iifiir.org/en/news/live-from-oewg-meetings-what-is-accra-helsinki-group"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`${isLight ? 'text-amber-700 hover:text-amber-800' : 'text-amber-400 hover:text-amber-300'} transition-colors inline-flex items-center gap-1.5 underline`}
@@ -404,7 +372,7 @@ export function GroupOverview({ locale }: { locale: string }) {
               </span>
               <h4 className={`text-base font-bold mb-2 ${isLight ? 'text-slate-900' : 'text-white'}`}>Lifecycle &amp; Super-Pollutants</h4>
               <p className={`text-xs leading-relaxed ${isLight ? 'text-slate-600' : 'text-slate-300'}`}>
-                Lifecycle Refrigeration Management (LRM) coupled with Energy Efficiency MEPS to shrink halogenated feedstock demand, speed Kigali goals, and cut N₂O, SF₆, and PFCs.
+                Lifecycle Refrigerant Management (LRM) coupled with Energy Efficiency MEPS to shrink halogenated feedstock demand, speed Kigali goals, and cut N₂O, SF₆, and PFCs.
               </p>
             </div>
           </div>
@@ -524,7 +492,7 @@ export function GroupOverview({ locale }: { locale: string }) {
                     <Info className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
                     <div>
                       <strong className="text-amber-800 dark:text-amber-300 block text-xs uppercase tracking-wide">Theme:</strong>
-                      <span className={`text-sm font-semibold italic ${isLight ? 'text-slate-900' : 'text-white'}`}>“VSLS&apos;s - a growing uncontrolled threat to the ozone layer”</span>
+                      <span className={`text-sm font-semibold italic ${isLight ? 'text-slate-900' : 'text-white'}`}>“VSLS - a growing uncontrolled threat to the ozone layer”</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
@@ -666,7 +634,7 @@ export function GroupOverview({ locale }: { locale: string }) {
                   <strong>Topics discussed:</strong> What is the Accra-Helsinki Group, addressing market barriers, energy efficiency with refrigerant transition, and non-F-gas alternatives.
                 </p>
                 <a
-                  href="https://iifiir.org/en/news/live-from-oewg-meetings-what-is-accra-helsinki-roup"
+                  href="https://iifiir.org/en/news/live-from-oewg-meetings-what-is-accra-helsinki-group"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-amber-400 hover:text-amber-300 text-xs inline-flex items-center gap-1 underline"
