@@ -1,0 +1,10 @@
+﻿/* TEAM */
+Agency: Expedite Consults LLC
+Role: Design, Development & Platform Engineering
+Website: https://expediteconsults.com
+Contact: info@expediteconsults.com
+
+/* SITE */
+Standards: HTML5, CSS3, Next.js 15, React, TypeScript, Tailwind CSS
+Organization: Accra-Helsinki Group for Sustainable Cooling
+URL: https://accra-helsinki.vercel.app

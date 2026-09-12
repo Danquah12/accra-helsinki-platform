@@ -101,9 +101,23 @@ export function Footer({ locale }: { locale: string }) {
         </div>
         
         <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-slate-500">
-            &copy; 2025 Accra-Helsinki Group for Sustainable Cooling. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-xs text-slate-500 text-center sm:text-left">
+            <p>
+              &copy; {new Date().getFullYear()} Accra-Helsinki Group for Sustainable Cooling. All rights reserved.
+            </p>
+            <span className="hidden sm:inline text-slate-700">&bull;</span>
+            <p>
+              Designed &amp; Developed by{' '}
+              <a
+                href="https://expediteconsults.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-amber-400 font-medium transition-colors underline underline-offset-2"
+              >
+                Expedite Consults LLC
+              </a>
+            </p>
+          </div>
           <div className="flex space-x-6 text-xs text-slate-500">
             <Link href={`/${locale}/about/accra-helsinki`} className="hover:text-white transition-colors">About the Group</Link>
             <Link href={`/${locale}/about/contact`} className="hover:text-white transition-colors">Contact</Link>
