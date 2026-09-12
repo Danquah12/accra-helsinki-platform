@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React from 'react';
 
@@ -43,9 +43,37 @@ export function AccraHelsinkiLogo({
   const textColor = textClassName || (variant === 'dark' ? 'text-white' : 'text-slate-900');
   const subtextColor = subtextClassName || (variant === 'dark' ? 'text-amber-400' : 'text-amber-700 font-bold');
 
+  // Tick marks between outer rings
+  const ticks: React.ReactElement[] = [];
+  for (let i = 0; i <= 28; i++) {
+    const angleDeg = -160 + (i * (320 / 28));
+    const angleRad = (angleDeg * Math.PI) / 180;
+    const r1 = 182;
+    const r2 = 190;
+    const x1 = 200 + r1 * Math.cos(angleRad);
+    const y1 = 200 + r1 * Math.sin(angleRad);
+    const x2 = 200 + r2 * Math.cos(angleRad);
+    const y2 = 200 + r2 * Math.sin(angleRad);
+    ticks.push(
+      <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#1a1a1a" strokeWidth="2" />
+    );
+  }
+
+  // Ghana star points
+  const starPoints = (() => {
+    const cx = 115, cy = 140, R = 52, r = 22;
+    const pts: string[] = [];
+    for (let i = 0; i < 5; i++) {
+      const outerAngle = (i * 72 - 90) * Math.PI / 180;
+      const innerAngle = (i * 72 - 90 + 36) * Math.PI / 180;
+      pts.push(`${(cx + R * Math.cos(outerAngle)).toFixed(2)},${(cy + R * Math.sin(outerAngle)).toFixed(2)}`);
+      pts.push(`${(cx + r * Math.cos(innerAngle)).toFixed(2)},${(cy + r * Math.sin(innerAngle)).toFixed(2)}`);
+    }
+    return pts.join(' ');
+  })();
+
   return (
     <div className={`inline-flex items-center gap-3.5 ${className}`}>
-      {/* Official Emblem */}
       <div
         className="relative shrink-0 flex items-center justify-center select-none drop-shadow-sm transition-transform hover:scale-105 duration-300"
         style={{ width: px, height: px }}
@@ -57,179 +85,126 @@ export function AccraHelsinkiLogo({
             className="w-full h-full object-contain rounded-full shadow-sm"
           />
         ) : (
-          <svg
-            viewBox="0 0 400 400"
-            className="w-full h-full"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg viewBox="0 0 400 400" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              {/* Top arc text path — radius 158 from center (200,200) */}
-              <path
-                id="topArcPath"
-                d="M 42,200 A 158,158 0 0,1 358,200"
-                fill="none"
-              />
-
-              {/* Bottom arc text path */}
-              <path
-                id="bottomArcPath"
-                d="M 46,210 A 155,155 0 0,0 354,210"
-                fill="none"
-              />
-
-              {/* Clip for inner disc */}
+              <path id="topArcPath" d="M 35,200 A 165,165 0 0,1 365,200" fill="none" />
+              <path id="bottomArcPath" d="M 38,212 A 163,163 0 0,0 362,212" fill="none" />
               <clipPath id="innerDiscClip">
-                <circle cx="200" cy="200" r="138" />
+                <circle cx="200" cy="200" r="170" />
+              </clipPath>
+              <clipPath id="leftFlagClip">
+                <rect x="30" y="30" width="170" height="198" />
+              </clipPath>
+              <clipPath id="rightFlagClip">
+                <rect x="200" y="30" width="170" height="198" />
               </clipPath>
             </defs>
 
-            {/* ── OUTER RINGS ── */}
+            {/* Background */}
             <circle cx="200" cy="200" r="196" fill="#FAF8F3" />
-            <circle cx="200" cy="200" r="190" fill="none" stroke="#111111" strokeWidth="4.5" />
-            <circle cx="200" cy="200" r="178" fill="none" stroke="#111111" strokeWidth="2" />
 
-            {/* ── TOP ARC TEXT: ACCRA-HELSINKI GROUP ── */}
-            <text
-              fill="#111111"
-              fontSize="21"
-              fontWeight="900"
-              letterSpacing="3.5"
-              style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
-            >
+            {/* Outer ring */}
+            <circle cx="200" cy="200" r="194" fill="none" stroke="#1a1a1a" strokeWidth="3" />
+
+            {/* Tick marks */}
+            {ticks}
+
+            {/* Inner ring */}
+            <circle cx="200" cy="200" r="174" fill="none" stroke="#1a1a1a" strokeWidth="3" />
+
+            {/* Top arc text */}
+            <text fill="#1a1a1a" fontSize="22" fontWeight="900" letterSpacing="3"
+              style={{ fontFamily: 'Arial Black, Arial, Helvetica, sans-serif' }}>
               <textPath href="#topArcPath" startOffset="50%" textAnchor="middle">
                 ACCRA-HELSINKI GROUP
               </textPath>
             </text>
 
-            {/* ── BOTTOM ARC TEXT: INDEPENDENT, INFORMAL, OPEN ── */}
-            <text
-              fill="#111111"
-              fontSize="14"
-              fontWeight="800"
-              letterSpacing="2"
-              style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
-            >
+            {/* Bottom arc text */}
+            <text fill="#1a1a1a" fontSize="15" fontWeight="800" letterSpacing="1.5"
+              style={{ fontFamily: 'Arial Black, Arial, Helvetica, sans-serif' }}>
               <textPath href="#bottomArcPath" startOffset="50%" textAnchor="middle">
                 INDEPENDENT, INFORMAL, OPEN
               </textPath>
             </text>
 
-            {/* ── INNER DISC WHITE BASE ── */}
-            <circle cx="200" cy="200" r="138" fill="#FFFFFF" />
+            {/* White inner disc */}
+            <circle cx="200" cy="200" r="170" fill="#FFFFFF" />
 
-            {/* ── FLAG PANELS (rectangular, clipped to inner disc) ── */}
-            {/* LEFT: Ghana — Gold Yellow */}
-            <rect x="62" y="63" width="138" height="116" fill="#F5C518" clipPath="url(#innerDiscClip)" />
-            {/* RIGHT: Finland — White */}
-            <rect x="200" y="63" width="138" height="116" fill="#FFFFFF" clipPath="url(#innerDiscClip)" />
+            {/* Ghana gold left panel */}
+            <circle cx="200" cy="200" r="170" fill="#F5C518" clipPath="url(#leftFlagClip)" />
 
-            {/* Panel dividers */}
-            <line x1="62" y1="179" x2="338" y2="179" stroke="#111111" strokeWidth="2.5" clipPath="url(#innerDiscClip)" />
-            <line x1="200" y1="63" x2="200" y2="179" stroke="#111111" strokeWidth="2.5" />
+            {/* Finland white right panel */}
+            <circle cx="200" cy="200" r="170" fill="#FFFFFF" clipPath="url(#rightFlagClip)" />
 
-            {/* ── GHANA BLACK STAR (5-pointed, centered in left panel: cx≈131, cy≈121) ── */}
-            <polygon
-              points="131,92 138.5,114 162,114 143.5,127.5 150.5,150 131,136.5 111.5,150 118.5,127.5 100,114 123.5,114"
-              fill="#111111"
-            />
+            {/* Horizontal divider (bottom of flag panels) */}
+            <line x1="30" y1="228" x2="370" y2="228" stroke="#1a1a1a" strokeWidth="3" clipPath="url(#innerDiscClip)" />
 
-            {/* ── FINLAND NORDIC CROSS (bold + centered in right panel: cx≈269, cy≈121) ── */}
-            {/* Horizontal bar */}
-            <rect x="220" y="114" width="90" height="14" fill="#2255A0" clipPath="url(#innerDiscClip)" />
-            {/* Vertical bar */}
-            <rect x="255" y="87" width="14" height="66" fill="#2255A0" clipPath="url(#innerDiscClip)" />
+            {/* Vertical divider */}
+            <line x1="200" y1="30" x2="200" y2="228" stroke="#1a1a1a" strokeWidth="3" clipPath="url(#innerDiscClip)" />
 
-            {/* ── CENTER BANNER: SUSTAINABLE COOLING ── */}
-            <rect x="62" y="179" width="276" height="44" fill="#FFFDF5" clipPath="url(#innerDiscClip)" />
-            <line x1="62" y1="223" x2="338" y2="223" stroke="#111111" strokeWidth="2.5" clipPath="url(#innerDiscClip)" />
-            <text
-              x="200"
-              y="208"
-              textAnchor="middle"
-              fill="#111111"
-              fontSize="19"
-              fontWeight="900"
-              letterSpacing="2"
-              style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
-            >
+            {/* Ghana black star */}
+            <polygon points={starPoints} fill="#1a1a1a" clipPath="url(#innerDiscClip)" />
+
+            {/* Finland blue cross */}
+            <rect x="230" y="118" width="110" height="18" fill="#3B6BB5" clipPath="url(#rightFlagClip)" />
+            <rect x="276" y="80" width="18" height="100" fill="#3B6BB5" clipPath="url(#rightFlagClip)" />
+
+            {/* SUSTAINABLE COOLING text */}
+            <text x="200" y="262" textAnchor="middle" fill="#1a1a1a" fontSize="23"
+              fontWeight="900" letterSpacing="1.5"
+              style={{ fontFamily: 'Arial Black, Arial, Helvetica, sans-serif' }}
+              clipPath="url(#innerDiscClip)">
               SUSTAINABLE COOLING
             </text>
 
-            {/* ── COOLANT LOOP (lemniscate / infinity shape) ── */}
-            {/* Light blue fill */}
+            {/* Lemniscate main body */}
             <path
-              d="M 200,268 C 215,245 252,240 268,258 C 284,276 268,308 248,302 C 228,296 212,272 200,268 C 188,264 172,276 160,286 C 148,296 145,308 152,316 C 159,324 176,322 183,308 C 190,294 192,276 200,268 Z"
-              fill="#BAE6FD"
-              opacity="0.6"
+              d="M 200,310 C 222,282 264,280 278,300 C 292,320 276,344 256,338 C 236,332 218,310 200,310 C 182,310 164,332 144,338 C 124,344 108,320 122,300 C 136,280 178,282 200,310 Z"
+              fill="none" stroke="#5BB8E8" strokeWidth="2.5"
+              strokeLinecap="round" strokeLinejoin="round"
               clipPath="url(#innerDiscClip)"
             />
-            {/* Outer glow stroke */}
-            <path
-              d="M 200,270 C 218,247 256,242 271,260 C 286,278 268,310 247,304 C 226,298 210,272 200,270 C 190,268 174,276 162,284 C 143,296 144,316 155,322 C 166,328 181,322 186,308 C 191,294 193,274 200,270 Z"
-              fill="none"
-              stroke="#7DD3F8"
-              strokeWidth="8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              clipPath="url(#innerDiscClip)"
-            />
-            {/* Crisp inner stroke */}
-            <path
-              d="M 200,270 C 218,247 256,242 271,260 C 286,278 268,310 247,304 C 226,298 210,272 200,270 C 190,268 174,276 162,284 C 143,296 144,316 155,322 C 166,328 181,322 186,308 C 191,294 193,274 200,270 Z"
-              fill="none"
-              stroke="#0EA5E9"
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              clipPath="url(#innerDiscClip)"
-            />
-            {/* Left scroll curl */}
-            <path
-              d="M 155,322 C 148,332 138,333 135,325 C 132,317 140,308 148,312"
-              fill="none"
-              stroke="#0EA5E9"
-              strokeWidth="3"
-              strokeLinecap="round"
-              clipPath="url(#innerDiscClip)"
-            />
+
             {/* Right scroll curl */}
             <path
-              d="M 247,304 C 258,298 268,302 268,311 C 268,320 258,325 252,320"
-              fill="none"
-              stroke="#0EA5E9"
-              strokeWidth="3"
-              strokeLinecap="round"
-              clipPath="url(#innerDiscClip)"
+              d="M 278,300 C 294,288 310,293 310,306 C 310,319 298,325 288,320 C 278,315 276,305 282,300"
+              fill="none" stroke="#5BB8E8" strokeWidth="2.5"
+              strokeLinecap="round" clipPath="url(#innerDiscClip)"
             />
 
-            {/* ── WATER DROPLET on left loop ── */}
+            {/* Left scroll curl */}
             <path
-              d="M 155,258 C 148,268 140,278 140,287 C 140,298 147,306 155,306 C 163,306 170,298 170,287 C 170,278 162,268 155,258 Z"
-              fill="#0284C7"
-              stroke="#111111"
-              strokeWidth="2"
-              strokeLinejoin="round"
-              clipPath="url(#innerDiscClip)"
-            />
-            {/* Droplet highlight */}
-            <ellipse
-              cx="151"
-              cy="287"
-              rx="3"
-              ry="7"
-              fill="#BAE6FD"
-              opacity="0.85"
-              transform="rotate(-20 151 287)"
-              clipPath="url(#innerDiscClip)"
+              d="M 122,300 C 106,288 90,293 90,306 C 90,319 102,325 112,320 C 122,315 124,305 118,300"
+              fill="none" stroke="#5BB8E8" strokeWidth="2.5"
+              strokeLinecap="round" clipPath="url(#innerDiscClip)"
             />
 
-            {/* ── INNER RING BORDER ── */}
-            <circle cx="200" cy="200" r="138" fill="none" stroke="#111111" strokeWidth="3.5" />
+            {/* Center crossing detail lines */}
+            <path d="M 186,310 C 193,303 207,303 214,310"
+              fill="none" stroke="#5BB8E8" strokeWidth="1.5"
+              strokeLinecap="round" clipPath="url(#innerDiscClip)" />
+            <path d="M 184,317 C 192,310 208,310 216,317"
+              fill="none" stroke="#5BB8E8" strokeWidth="1.5"
+              strokeLinecap="round" clipPath="url(#innerDiscClip)" />
+
+            {/* Water droplet */}
+            <path
+              d="M 155,288 C 147,300 136,312 136,322 C 136,336 144,346 155,346 C 166,346 174,336 174,322 C 174,312 163,300 155,288 Z"
+              fill="#5BB8E8" stroke="#3A8FC8" strokeWidth="2"
+              strokeLinejoin="round" clipPath="url(#innerDiscClip)"
+            />
+            <ellipse cx="150" cy="320" rx="3.5" ry="8" fill="#BAE6FD" opacity="0.9"
+              transform="rotate(-20 150 320)" clipPath="url(#innerDiscClip)" />
+            <ellipse cx="162" cy="296" rx="2" ry="3" fill="#BAE6FD" opacity="0.75"
+              transform="rotate(-15 162 296)" clipPath="url(#innerDiscClip)" />
+
+            {/* Inner disc border (over everything) */}
+            <circle cx="200" cy="200" r="170" fill="none" stroke="#1a1a1a" strokeWidth="3" />
           </svg>
         )}
       </div>
 
-      {/* Accompanying Typography */}
       {showText && (
         <div className="flex flex-col text-left">
           <span className={`tracking-tight leading-tight uppercase ${textColor} ${fontConf.text}`}>
