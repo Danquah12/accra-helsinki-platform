@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React from 'react';
 
@@ -43,35 +43,6 @@ export function AccraHelsinkiLogo({
   const textColor = textClassName || (variant === 'dark' ? 'text-white' : 'text-slate-900');
   const subtextColor = subtextClassName || (variant === 'dark' ? 'text-amber-400' : 'text-amber-700 font-bold');
 
-  // Tick marks between the two outer rings — full 360 degrees
-  const ticks: React.ReactElement[] = [];
-  for (let i = 0; i < 60; i++) {
-    const angleDeg = i * 6;
-    const angleRad = (angleDeg * Math.PI) / 180;
-    const r1 = 177;
-    const r2 = 190;
-    const x1 = 200 + r1 * Math.cos(angleRad);
-    const y1 = 200 + r1 * Math.sin(angleRad);
-    const x2 = 200 + r2 * Math.cos(angleRad);
-    const y2 = 200 + r2 * Math.sin(angleRad);
-    ticks.push(
-      <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#1a1a1a" strokeWidth="2" />
-    );
-  }
-
-  // Ghana star points — 5-pointed star, centered at (115, 138)
-  const starPoints = (() => {
-    const cx = 115, cy = 138, R = 50, r = 20;
-    const pts: string[] = [];
-    for (let i = 0; i < 5; i++) {
-      const outerAngle = (i * 72 - 90) * Math.PI / 180;
-      const innerAngle = (i * 72 - 90 + 36) * Math.PI / 180;
-      pts.push(`${(cx + R * Math.cos(outerAngle)).toFixed(2)},${(cy + R * Math.sin(outerAngle)).toFixed(2)}`);
-      pts.push(`${(cx + r * Math.cos(innerAngle)).toFixed(2)},${(cy + r * Math.sin(innerAngle)).toFixed(2)}`);
-    }
-    return pts.join(' ');
-  })();
-
   return (
     <div className={`inline-flex items-center gap-3.5 ${className}`}>
       <div
@@ -87,162 +58,192 @@ export function AccraHelsinkiLogo({
         ) : (
           <svg viewBox="0 0 400 400" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              {/*
-                Arc text paths sit in the ring band between r=174 (inner ring) and r=194 (outer ring).
-                Baseline at r=184 → top of 16px font at r=168 (just inside inner ring edge).
-                For top arc: sweep clockwise (large-arc=1, sweep=1).
-                Start/end on the horizontal midline so text centres at the top.
-              */}
-              <path
-                id="topArcPath"
-                d="M 16,200 A 184,184 0 0,1 384,200"
-                fill="none"
-              />
-              {/*
-                Bottom arc: sweep counter-clockwise (sweep=0) so text reads right-side up on bottom.
-                Baseline at r=184.
-              */}
-              <path
-                id="bottomArcPath"
-                d="M 16,200 A 184,184 0 0,0 384,200"
-                fill="none"
-              />
-
-              {/* Inner disc clip (r=170) — used for inner artwork only */}
+              {/* Inner circle clip for central artwork (radius 143) */}
               <clipPath id="innerDiscClip">
-                <circle cx="200" cy="200" r="170" />
+                <circle cx="200" cy="200" r="143" />
               </clipPath>
-
-              {/* Left flag panel clip */}
+              {/* Left flag panel clip (Ghana) */}
               <clipPath id="leftFlagClip">
-                <rect x="30" y="30" width="170" height="200" />
+                <rect x="40" y="40" width="160" height="126" />
               </clipPath>
-
-              {/* Right flag panel clip */}
+              {/* Right flag panel clip (Finland) */}
               <clipPath id="rightFlagClip">
-                <rect x="200" y="30" width="170" height="200" />
+                <rect x="200" y="40" width="160" height="126" />
               </clipPath>
             </defs>
 
-            {/* ── 1. BACKGROUND DISC ── */}
-            <circle cx="200" cy="200" r="196" fill="#FAF8F3" />
+            {/* Background disc (warm ivory/parchment) */}
+            <circle cx="200" cy="200" r="198" fill="#FAF5EE" />
 
-            {/* ── 2. OUTER RING ── */}
-            <circle cx="200" cy="200" r="194" fill="none" stroke="#1a1a1a" strokeWidth="3" />
+            {/* Outer Ring (r=178) */}
+            <circle cx="200" cy="200" r="178" fill="none" stroke="#152022" strokeWidth="2.5" />
 
-            {/* ── 3. TICK MARKS (full circle, between r=177 and r=190) ── */}
-            {ticks}
+            {/* Inner Ring (r=143) */}
+            <circle cx="200" cy="200" r="143" fill="none" stroke="#152022" strokeWidth="2.5" />
 
-            {/* ── 4. INNER RING ── */}
-            <circle cx="200" cy="200" r="174" fill="none" stroke="#1a1a1a" strokeWidth="3" />
+            {/* Middle Ring Flanking Arcs (r=160.5) */}
+            {/* Left arc from 158 deg to 214 deg */}
+            <path d="M 51.18,260.12 A 160.5,160.5 0 0,1 67.43,110.23" fill="none" stroke="#152022" strokeWidth="2.5" strokeLinecap="round" />
+            {/* Right arc from 326 deg to 22 deg */}
+            <path d="M 333.07,110.23 A 160.5,160.5 0 0,1 348.82,260.12" fill="none" stroke="#152022" strokeWidth="2.5" strokeLinecap="round" />
 
-            {/* ── 5. WHITE INNER DISC ── */}
-            <circle cx="200" cy="200" r="170" fill="#FFFFFF" />
+            {/* Top Arc Characters: ACCRA-HELSINKI GROUP */}
+            <g id="topArcText">
+            <text key="top-0" x="200" y="39.5" transform="rotate(-49.15, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="16.5" fontWeight="900" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>A</text>
+            <text key="top-1" x="200" y="39.5" transform="rotate(-43.56, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="16.5" fontWeight="900" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>C</text>
+            <text key="top-2" x="200" y="39.5" transform="rotate(-38.08, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="16.5" fontWeight="900" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>C</text>
+            <text key="top-3" x="200" y="39.5" transform="rotate(-32.60, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="16.5" fontWeight="900" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>R</text>
+            <text key="top-4" x="200" y="39.5" transform="rotate(-27.01, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="16.5" fontWeight="900" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>A</text>
+            <text key="top-5" x="200" y="39.5" transform="rotate(-21.97, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="16.5" fontWeight="900" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>-</text>
+            <text key="top-6" x="200" y="39.5" transform="rotate(-16.93, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="16.5" fontWeight="900" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>H</text>
+            <text key="top-7" x="200" y="39.5" transform="rotate(-11.56, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="16.5" fontWeight="900" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>E</text>
+            <text key="top-8" x="200" y="39.5" transform="rotate(-6.63, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="16.5" fontWeight="900" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>L</text>
+            <text key="top-9" x="200" y="39.5" transform="rotate(-1.70, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="16.5" fontWeight="900" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>S</text>
+            <text key="top-10" x="200" y="39.5" transform="rotate(2.47, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="16.5" fontWeight="900" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>I</text>
+            <text key="top-11" x="200" y="39.5" transform="rotate(6.96, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="16.5" fontWeight="900" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>N</text>
+            <text key="top-12" x="200" y="39.5" transform="rotate(12.55, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="16.5" fontWeight="900" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>K</text>
+            <text key="top-13" x="200" y="39.5" transform="rotate(16.93, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="16.5" fontWeight="900" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>I</text>
+            <text key="top-15" x="200" y="39.5" transform="rotate(26.47, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="16.5" fontWeight="900" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>G</text>
+            <text key="top-16" x="200" y="39.5" transform="rotate(32.16, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="16.5" fontWeight="900" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>R</text>
+            <text key="top-17" x="200" y="39.5" transform="rotate(37.86, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="16.5" fontWeight="900" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>O</text>
+            <text key="top-18" x="200" y="39.5" transform="rotate(43.67, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="16.5" fontWeight="900" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>U</text>
+            <text key="top-19" x="200" y="39.5" transform="rotate(49.26, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="16.5" fontWeight="900" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>P</text>
+            </g>
 
-            {/* ── 6. GHANA GOLD LEFT PANEL ── */}
-            <circle cx="200" cy="200" r="170" fill="#F5C518" clipPath="url(#leftFlagClip)" />
+            {/* Bottom Arc Characters: INDEPENDENT, INFORMAL, OPEN */}
+            <g id="bottomArcText">
+            <text key="bot-0" x="200" y="360.5" transform="rotate(61.58, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>I</text>
+            <text key="bot-1" x="200" y="360.5" transform="rotate(57.55, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>N</text>
+            <text key="bot-2" x="200" y="360.5" transform="rotate(52.34, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>D</text>
+            <text key="bot-3" x="200" y="360.5" transform="rotate(47.37, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>E</text>
+            <text key="bot-4" x="200" y="360.5" transform="rotate(42.51, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>P</text>
+            <text key="bot-5" x="200" y="360.5" transform="rotate(37.66, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>E</text>
+            <text key="bot-6" x="200" y="360.5" transform="rotate(32.68, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>N</text>
+            <text key="bot-7" x="200" y="360.5" transform="rotate(27.47, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>D</text>
+            <text key="bot-8" x="200" y="360.5" transform="rotate(22.50, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>E</text>
+            <text key="bot-9" x="200" y="360.5" transform="rotate(17.53, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>N</text>
+            <text key="bot-10" x="200" y="360.5" transform="rotate(12.55, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>T</text>
+            <text key="bot-11" x="200" y="360.5" transform="rotate(8.88, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>,</text>
+            <text key="bot-13" x="200" y="360.5" transform="rotate(2.01, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>I</text>
+            <text key="bot-14" x="200" y="360.5" transform="rotate(-2.01, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>N</text>
+            <text key="bot-15" x="200" y="360.5" transform="rotate(-6.99, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>F</text>
+            <text key="bot-16" x="200" y="360.5" transform="rotate(-12.08, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>O</text>
+            <text key="bot-17" x="200" y="360.5" transform="rotate(-17.41, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>R</text>
+            <text key="bot-18" x="200" y="360.5" transform="rotate(-23.09, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>M</text>
+            <text key="bot-19" x="200" y="360.5" transform="rotate(-28.78, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>A</text>
+            <text key="bot-20" x="200" y="360.5" transform="rotate(-33.63, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>L</text>
+            <text key="bot-21" x="200" y="360.5" transform="rotate(-37.18, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>,</text>
+            <text key="bot-23" x="200" y="360.5" transform="rotate(-45.36, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>O</text>
+            <text key="bot-24" x="200" y="360.5" transform="rotate(-50.57, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>P</text>
+            <text key="bot-25" x="200" y="360.5" transform="rotate(-55.42, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>E</text>
+            <text key="bot-26" x="200" y="360.5" transform="rotate(-60.39, 200, 200)" textAnchor="middle" dominantBaseline="central" fill="#152022" fontSize="12.5" fontWeight="800" style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}>N</text>
+            </g>
 
-            {/* ── 7. FINLAND WHITE RIGHT PANEL ── */}
-            <circle cx="200" cy="200" r="170" fill="#FFFFFF" clipPath="url(#rightFlagClip)" />
+            {/* Central Artwork (clipped to inner circle r=143) */}
+            <g clipPath="url(#innerDiscClip)">
+              {/* Base fill for inner circle */}
+              <circle cx="200" cy="200" r="143" fill="#FAF5EE" />
 
-            {/* ── 8. PANEL DIVIDERS ── */}
-            {/* Horizontal line at bottom of flag area */}
-            <line x1="30" y1="228" x2="370" y2="228" stroke="#1a1a1a" strokeWidth="3" clipPath="url(#innerDiscClip)" />
-            {/* Vertical centre divider */}
-            <line x1="200" y1="30" x2="200" y2="228" stroke="#1a1a1a" strokeWidth="3" clipPath="url(#innerDiscClip)" />
+              {/* Ghana Gold Panel (top-left) */}
+              <rect x="40" y="40" width="160" height="126" fill="#FBCB13" clipPath="url(#leftFlagClip)" />
 
-            {/* ── 9. GHANA BLACK STAR ── */}
-            <polygon points={starPoints} fill="#1a1a1a" clipPath="url(#innerDiscClip)" />
+              {/* Finland White Panel (top-right) */}
+              <rect x="200" y="40" width="160" height="126" fill="#FFFFFF" clipPath="url(#rightFlagClip)" />
 
-            {/* ── 10. FINLAND BLUE CROSS ── */}
-            {/* Horizontal bar */}
-            <rect x="228" y="118" width="114" height="18" fill="#3B6BB5" clipPath="url(#rightFlagClip)" />
-            {/* Vertical bar */}
-            <rect x="276" y="78" width="18" height="102" fill="#3B6BB5" clipPath="url(#rightFlagClip)" />
+              {/* Ghana 5-Pointed Black Star (cx=134, cy=112, R=25, r=10.5) */}
+              <polygon
+                points="134,87 140.2,101.7 157.8,102.5 144.1,113.3 148.8,129.8 134,120.2 119.2,129.8 123.9,113.3 110.2,102.5 127.8,101.7"
+                fill="#152022"
+              />
 
-            {/* ── 11. SUSTAINABLE COOLING TEXT ── */}
-            <text
-              x="200"
-              y="262"
-              textAnchor="middle"
-              fill="#1a1a1a"
-              fontSize="22"
-              fontWeight="900"
-              letterSpacing="1.2"
-              style={{ fontFamily: 'Arial Black, Arial, Helvetica, sans-serif' }}
-              clipPath="url(#innerDiscClip)"
-            >
-              SUSTAINABLE COOLING
-            </text>
+              {/* Finland Nordic Cross (cx=266, cy=112) */}
+              {/* Horizontal bar (width 58, height 13) */}
+              <rect x="237" y="105.5" width="58" height="13" fill="#1A5086" />
+              {/* Vertical bar (width 13, height 48, shifted left) */}
+              <rect x="254" y="88" width="13" height="48" fill="#1A5086" />
 
-            {/* ── 12. LEMNISCATE LOOP ── */}
-            <path
-              d="M 200,308 C 222,280 264,278 278,298 C 292,318 276,344 256,338 C 236,332 218,308 200,308 C 182,308 164,332 144,338 C 124,344 108,318 122,298 C 136,278 178,280 200,308 Z"
-              fill="none" stroke="#5BB8E8" strokeWidth="2.5"
-              strokeLinecap="round" strokeLinejoin="round"
-              clipPath="url(#innerDiscClip)"
-            />
-            {/* Right scroll curl */}
-            <path
-              d="M 278,298 C 294,286 312,292 312,306 C 312,320 298,326 288,320 C 278,314 276,304 282,298"
-              fill="none" stroke="#5BB8E8" strokeWidth="2.5"
-              strokeLinecap="round" clipPath="url(#innerDiscClip)"
-            />
-            {/* Left scroll curl */}
-            <path
-              d="M 122,298 C 106,286 88,292 88,306 C 88,320 102,326 112,320 C 122,314 124,304 118,298"
-              fill="none" stroke="#5BB8E8" strokeWidth="2.5"
-              strokeLinecap="round" clipPath="url(#innerDiscClip)"
-            />
-            {/* Centre crossing detail lines */}
-            <path d="M 186,308 C 193,301 207,301 214,308"
-              fill="none" stroke="#5BB8E8" strokeWidth="1.5"
-              strokeLinecap="round" clipPath="url(#innerDiscClip)" />
-            <path d="M 184,316 C 192,309 208,309 216,316"
-              fill="none" stroke="#5BB8E8" strokeWidth="1.5"
-              strokeLinecap="round" clipPath="url(#innerDiscClip)" />
+              {/* SUSTAINABLE COOLING Text */}
+              <text
+                x="200"
+                y="190"
+                textAnchor="middle"
+                fill="#152022"
+                fontSize="16.5"
+                fontWeight="900"
+                letterSpacing="1.2"
+                style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}
+              >
+                SUSTAINABLE COOLING
+              </text>
 
-            {/* ── 13. WATER DROPLET ── */}
-            <path
-              d="M 152,284 C 144,296 133,308 133,318 C 133,332 141,342 152,342 C 163,342 171,332 171,318 C 171,308 160,296 152,284 Z"
-              fill="#5BB8E8" stroke="#3A8FC8" strokeWidth="2"
-              strokeLinejoin="round" clipPath="url(#innerDiscClip)"
-            />
-            <ellipse cx="147" cy="316" rx="3.5" ry="8" fill="#BAE6FD" opacity="0.9"
-              transform="rotate(-20 147 316)" clipPath="url(#innerDiscClip)" />
-            <ellipse cx="159" cy="291" rx="2" ry="3" fill="#BAE6FD" opacity="0.75"
-              transform="rotate(-15 159 291)" clipPath="url(#innerDiscClip)" />
+              {/* Coolant Loops & Airflow Lines (Center crossing at 200, 258) */}
+              {/* Outer light blue infinity loop */}
+              <path
+                d="
+                  M 200,258
+                  C 224,222 268,220 290,242
+                  C 310,262 292,298 262,294
+                  C 232,290 216,262 200,258
+                  C 184,254 168,290 138,294
+                  C 108,298 90,262 110,242
+                  C 132,220 176,222 200,258 Z
+                "
+                fill="none"
+                stroke="#84B9D2"
+                strokeWidth="3.4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
 
-            {/* ── 14. INNER DISC BORDER (drawn over inner content) ── */}
-            <circle cx="200" cy="200" r="170" fill="none" stroke="#1a1a1a" strokeWidth="3" />
+              {/* Inner light blue loop with right spiral swirl */}
+              <path
+                d="
+                  M 200,258
+                  C 218,234 254,232 272,250
+                  C 288,266 276,284 256,280
+                  C 238,276 214,258 200,258
+                  C 186,258 162,276 144,280
+                  C 124,284 112,266 128,250
+                  C 146,232 182,234 200,258
+                "
+                fill="none"
+                stroke="#84B9D2"
+                strokeWidth="3.4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
 
-            {/*
-              ── 15. ARC TEXT — drawn LAST so it renders ON TOP of everything ──
-              Paths at r=184, sitting in the ring band between inner (r=174) and outer (r=194) rings.
-            */}
-            <text
-              fill="#1a1a1a"
-              fontSize="17"
-              fontWeight="900"
-              letterSpacing="2.5"
-              style={{ fontFamily: 'Arial Black, Arial, Helvetica, sans-serif' }}
-            >
-              <textPath href="#topArcPath" startOffset="50%" textAnchor="middle">
-                ACCRA-HELSINKI GROUP
-              </textPath>
-            </text>
+              {/* Right spiral curl (curls inward into nautilus wind spiral) */}
+              <path
+                d="M 272,250 C 286,238 296,246 294,260 C 292,274 278,278 268,270 C 258,262 260,248 270,244 C 278,240 284,246 280,252"
+                fill="none"
+                stroke="#84B9D2"
+                strokeWidth="3.4"
+                strokeLinecap="round"
+              />
 
-            <text
-              fill="#1a1a1a"
-              fontSize="13"
-              fontWeight="800"
-              letterSpacing="1.2"
-              style={{ fontFamily: 'Arial Black, Arial, Helvetica, sans-serif' }}
-            >
-              <textPath href="#bottomArcPath" startOffset="50%" textAnchor="middle">
-                INDEPENDENT, INFORMAL, OPEN
-              </textPath>
-            </text>
+              {/* 3 Breeze / Airflow curves flowing right from droplet across center */}
+              <path d="M 152,248 C 180,242 220,248 268,248" fill="none" stroke="#2E71A1" strokeWidth="2.2" strokeLinecap="round" />
+              <path d="M 154,256 C 186,252 226,260 274,266" fill="none" stroke="#2E71A1" strokeWidth="2.2" strokeLinecap="round" />
+              <path d="M 156,264 C 188,262 226,270 256,280" fill="none" stroke="#2E71A1" strokeWidth="2.2" strokeLinecap="round" />
+
+              {/* Water Droplet on left (cx=146, cy=256) */}
+              <path
+                d="M 148,232 C 132,252 132,272 148,272 C 164,272 164,252 148,232 Z"
+                fill="#62A8D1"
+                stroke="#154360"
+                strokeWidth="2.6"
+                strokeLinejoin="round"
+              />
+              {/* Droplet inner highlight curve */}
+              <path
+                d="M 139,256 A 8,8 0 0,0 146,266"
+                fill="none"
+                stroke="#B8E0F2"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+              />
+            </g>
           </svg>
         )}
       </div>
