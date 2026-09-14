@@ -19,7 +19,7 @@ export function AccraHelsinkiLogo({
   textClassName,
   subtextClassName,
   variant = 'light',
-  mode = 'svg',
+  mode = 'image',
 }: LogoProps) {
   const pixelSizes = {
     sm: 44,
