@@ -53,7 +53,7 @@ export function AccraHelsinkiLogo({
           <img
             src="/images/accra-helsinki-logo.png"
             alt="Accra-Helsinki Group for Sustainable Cooling Logo"
-            className="w-full h-full object-contain rounded-full shadow-md bg-white"
+            className="w-full h-full object-contain rounded-full drop-shadow-md"
           />
         ) : (
           <svg viewBox="0 0 400 400" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
