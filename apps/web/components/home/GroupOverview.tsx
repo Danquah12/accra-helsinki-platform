@@ -154,7 +154,7 @@ export function GroupOverview({ locale }: { locale: string }) {
 
                 <div className="border-l-2 border-sky-500 pl-3">
                   <div className={`font-bold ${isLight ? 'text-slate-900' : 'text-white'}`}>Tapio Reinikainen</div>
-                  <div className={`text-xs ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>Co-Chair &bull; Finland (Senior Climate &amp; Environmental Expert)</div>
+                  <div className={`text-xs ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>Co-Chair &bull; Finland (Chief Specialist, Climate Solutions, Finnish Environment Institute)</div>
                 </div>
               </div>
 

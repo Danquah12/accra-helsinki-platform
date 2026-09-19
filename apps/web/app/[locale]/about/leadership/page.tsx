@@ -52,7 +52,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Tapio Reinikainen</h3>
               <p className="text-sm font-semibold text-sky-800 mb-4">
-                Senior Climate &amp; Environmental Expert (Finland)
+                Chief Specialist, Climate Solutions, Finnish Environment Institute
               </p>
               <p className="text-sm text-slate-600 leading-relaxed">
                 Distinguished Finnish climate and environmental diplomat and advisor with extensive tenure across European Union environmental policy, international Montreal Protocol negotiations, and Nordic clean cooling transition frameworks.

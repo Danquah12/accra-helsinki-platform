@@ -91,7 +91,7 @@ export function Footer({ locale }: { locale: string }) {
               </p>
               <p>
                 <strong className="text-slate-200">Tapio Reinikainen</strong> (Finland)<br />
-                <span className="text-[11px] text-slate-500">Senior Climate &amp; Cooling Expert</span>
+                <span className="text-[11px] text-slate-500">Chief Specialist, Climate Solutions, Finnish Environment Institute</span>
               </p>
               <p className="text-[11px] text-amber-400/90 pt-1">
                 Operates under the Chatham House Rule &bull; Lineage of the Toronto and Stockholm Groups
