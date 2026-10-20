@@ -21,7 +21,7 @@
 
   <!-- Slide Title -->
   <text x="600" y="52" text-anchor="middle" class="title">
-    Beyond Kigali – Accra-Helsinki Group for Truly Sustainable Cooling
+    Beyond Kigali: Accra-Helsinki Group for Sustainable Cooling
   </text>
 
   <!-- ============================================================== -->
@@ -237,13 +237,14 @@
   <!-- Flow Arrow 2 -> 3 -->
   <polygon points="360,558 382,558 382,550 398,568 382,586 382,578 360,578" fill="#00b0f0" />
 
-  <!-- Step 3: Reduced chemical feedstock production -->
+  <!-- Step 3: Reduced need for and emissions from feedstock production -->
   <g transform="translate(406, 500)">
     <rect width="132" height="135" rx="4" fill="#70ad47" stroke="#375623" stroke-width="2" />
-    <text x="66" y="44" class="flow-text" font-size="14">Reduced</text>
-    <text x="66" y="66" class="flow-text" font-size="14">chemical</text>
-    <text x="66" y="88" class="flow-text" font-size="14">feedstock</text>
-    <text x="66" y="110" class="flow-text" font-size="14">production</text>
+    <text x="66" y="34" class="flow-text" font-size="12">Reduced need</text>
+    <text x="66" y="54" class="flow-text" font-size="12">for and</text>
+    <text x="66" y="74" class="flow-text" font-size="12">emissions from</text>
+    <text x="66" y="94" class="flow-text" font-size="12">feedstock</text>
+    <text x="66" y="114" class="flow-text" font-size="12">production</text>
   </g>
 
   <!-- Flow Arrow 3 -> 4 -->

@@ -64,6 +64,7 @@ export function Footer({ locale }: { locale: string }) {
             </h3>
             <ul className="space-y-3">
               {[
+                { label: 'The MP10 Portfolio of Opportunities', href: '/policy/mp10' },
                 { label: 'Vienna Convention & Montreal Protocol', href: '/policy/montreal-protocol' },
                 { label: 'Kigali Amendment (HFC Phasedown)', href: '/policy/montreal-protocol/kigali' },
                 { label: 'SF₆ Regulatory Phasedown Measures', href: '/policy/montreal-protocol#sf6' },

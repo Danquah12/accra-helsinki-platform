@@ -25,6 +25,7 @@ import {
 } from 'lucide-react';
 import AccraHelsinkiLogo from '@/components/shared/AccraHelsinkiLogo';
 import { useTheme } from '@/lib/context/ThemeContext';
+import { MP10PortfolioSection } from './MP10PortfolioSection';
 
 export function GroupOverview({ locale }: { locale: string }) {
   const [topicInput, setTopicInput] = useState('');
@@ -273,7 +274,7 @@ export function GroupOverview({ locale }: { locale: string }) {
               <h3 className={`text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight ${
                 isLight ? 'text-slate-900' : 'text-white'
               }`}>
-                Beyond Kigali — Accra-Helsinki Group for Truly Sustainable Cooling
+                Beyond Kigali: Accra-Helsinki Group for Sustainable Cooling
               </h3>
               <p className={`text-sm sm:text-base mt-2 max-w-3xl leading-relaxed ${
                 isLight ? 'text-slate-600' : 'text-slate-300'
@@ -283,6 +284,14 @@ export function GroupOverview({ locale }: { locale: string }) {
             </div>
 
             <div className="flex flex-wrap items-center gap-3 shrink-0">
+              <a
+                href="/documents/accra-helsinki-mp10-portfolio-of-opportunities.pdf"
+                download="accra-helsinki-mp10-portfolio-of-opportunities.pdf"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-white text-xs sm:text-sm font-bold transition-all shadow-md active:scale-95"
+              >
+                <Download size={16} />
+                <span>Download MP10 PDF</span>
+              </a>
               <button
                 onClick={() => setIsSlideModalOpen(true)}
                 className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all shadow-sm active:scale-95 ${
@@ -306,7 +315,7 @@ export function GroupOverview({ locale }: { locale: string }) {
               <a
                 href="/images/beyond-kigali-framework.png"
                 download="beyond-kigali-accra-helsinki-framework.png"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs sm:text-sm font-semibold transition-all shadow-sm active:scale-95"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs sm:text-sm font-semibold transition-all shadow-sm active:scale-95"
               >
                 <Download size={16} />
                 <span>HD PNG</span>
@@ -377,6 +386,9 @@ export function GroupOverview({ locale }: { locale: string }) {
             </div>
           </div>
 
+          {/* The MP10 Portfolio of Opportunities */}
+          <MP10PortfolioSection isLight={isLight} locale={locale} />
+
         </div>
 
         {/* Fullscreen Modal Lightbox for the Slide */}
@@ -393,7 +405,7 @@ export function GroupOverview({ locale }: { locale: string }) {
                 <div className="flex items-center gap-3">
                   <AccraHelsinkiLogo size="sm" showText={false} />
                   <span className="font-bold text-sm sm:text-base text-white">
-                    Beyond Kigali — Accra-Helsinki Group for Truly Sustainable Cooling
+                    Beyond Kigali: Accra-Helsinki Group for Sustainable Cooling
                   </span>
                 </div>
                 <button

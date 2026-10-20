@@ -10,8 +10,8 @@ import '../globals.css';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata = {
-  title: 'Accra-Helsinki | CSRTA Africa Environmental Intelligence Platform',
-  description: 'Empowering communities, researchers, and policymakers with data-driven insights to stop environmental dumping and build sustainable futures in Africa.',
+  title: 'Accra-Helsinki Group for Sustainable Cooling',
+  description: 'Strengthening the Montreal Protocol on Substances that Deplete the Ozone Layer, stopping environmental dumping, and preventing climate tipping points.',
 };
 
 export default async function LocaleLayout({
