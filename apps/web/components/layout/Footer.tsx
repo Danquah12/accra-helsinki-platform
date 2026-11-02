@@ -122,8 +122,6 @@ export function Footer({ locale }: { locale: string }) {
           <div className="flex space-x-6 text-xs text-slate-500">
             <Link href={`/${locale}/about/accra-helsinki`} className="hover:text-white transition-colors">About the Group</Link>
             <Link href={`/${locale}/about/contact`} className="hover:text-white transition-colors">Contact</Link>
-            <Link href={`/${locale}/privacy`} className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href={`/${locale}/terms`} className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
