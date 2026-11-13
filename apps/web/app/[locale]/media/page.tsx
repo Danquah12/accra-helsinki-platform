@@ -17,7 +17,7 @@ export default async function MediaPage({ params }: { params: Promise<{ locale: 
     { title: "Documentaries", icon: Film, href: "/media/documentaries", desc: "In-depth investigative films exposing the reality of environmental dumping." },
     { title: "Video Library", icon: Video, href: "/media/videos", desc: "Interviews, explainer videos, and short features on our work." },
     { title: "Press Releases", icon: FileText, href: "/media/press-releases", desc: "Official announcements and statements for the press." },
-    { title: "Photo Gallery", icon: ImageIcon, href: "/media/photos", desc: "High-resolution imagery of our initiatives across Africa." },
+    { title: "Photo Gallery", icon: ImageIcon, href: "/media/photos", desc: "Official photography from the MOP 38 Kigali side event, diplomatic summits, and global missions." },
     { title: "Press Kit", icon: Briefcase, href: "/media/press-kit", desc: "Logos, brand guidelines, and background information for journalists." },
     { title: "Speeches", icon: Mic, href: "/media/speeches", desc: "Transcripts and recordings of key addresses by leadership." },
   ];
