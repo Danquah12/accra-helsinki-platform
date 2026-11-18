@@ -35,18 +35,19 @@ export function Footer({ locale }: { locale: string }) {
             </div>
           </div>
 
-          {/* Explore Links (No Countries!) */}
+          {/* Explore Links */}
           <div>
             <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-4">
-              Platform
+              Platform &amp; Media
             </h3>
             <ul className="space-y-3">
               {[
+                { label: 'Photo Gallery (MOP 38 & Beijing)', href: '/media/photos' },
                 { label: 'Environmental Dumping Issues', href: '/issues' },
                 { label: 'Research Library', href: '/research/library' },
                 { label: 'Montreal Protocol Database', href: '/policy/montreal-protocol/refrigerants' },
                 { label: 'Sustainable Cooling Solutions', href: '/solutions/clean-cooling' },
-                { label: 'MOP37 News & Activities', href: '/media/news' },
+                { label: 'News & Media Center', href: '/media' },
               ].map((item) => (
                 <li key={item.label}>
                   <Link href={`/${locale}${item.href}`} className="text-xs sm:text-sm text-slate-400 hover:text-amber-400 transition-colors">
@@ -110,7 +111,7 @@ export function Footer({ locale }: { locale: string }) {
             <p>
               Designed &amp; Developed by{' '}
               <a
-                href="https://expediteconsults.com"
+                href="https://www.expediteconsults.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-amber-400 font-medium transition-colors underline underline-offset-2"
@@ -119,8 +120,11 @@ export function Footer({ locale }: { locale: string }) {
               </a>
             </p>
           </div>
-          <div className="flex space-x-6 text-xs text-slate-500">
-            <Link href={`/${locale}/about/accra-helsinki`} className="hover:text-white transition-colors">About the Group</Link>
+          <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-xs text-slate-500">
+            <Link href={`/${locale}/about/accra-helsinki`} className="hover:text-white transition-colors">About</Link>
+            <Link href={`/${locale}/media/photos`} className="hover:text-white transition-colors text-amber-400 font-medium">Photo Gallery</Link>
+            <Link href={`/${locale}/privacy`} className="hover:text-white transition-colors">Privacy Notice</Link>
+            <Link href={`/${locale}/terms`} className="hover:text-white transition-colors">Terms of Participation</Link>
             <Link href={`/${locale}/about/contact`} className="hover:text-white transition-colors">Contact</Link>
           </div>
         </div>

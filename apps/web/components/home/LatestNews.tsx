@@ -70,15 +70,28 @@ export default function LatestNews({ locale }: { locale: string }) {
               Coverage of high-level convenings on the margins of Montreal Protocol Meetings of the Parties, policy declarations, and scientific dialogues.
             </p>
           </div>
-          <Link
-            href={`/${locale}/media/news`}
-            className={`inline-flex items-center gap-2 font-bold transition-colors ${
-              isLight ? 'text-emerald-800 hover:text-emerald-900' : 'text-amber-400 hover:text-amber-300'
-            }`}
-          >
-            <span>All Press &amp; Media</span>
-            <ArrowRight size={16} />
-          </Link>
+          <div className="flex flex-wrap items-center gap-4">
+            <Link
+              href={`/${locale}/media/photos`}
+              className={`inline-flex items-center gap-2 font-bold px-4 py-2 rounded-lg text-sm transition-all shadow-sm ${
+                isLight 
+                  ? 'bg-emerald-800 hover:bg-emerald-900 text-white' 
+                  : 'bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold'
+              }`}
+            >
+              <span>Photo Gallery (16 Photos)</span>
+              <ArrowRight size={15} />
+            </Link>
+            <Link
+              href={`/${locale}/media/news`}
+              className={`inline-flex items-center gap-2 font-bold text-sm transition-colors ${
+                isLight ? 'text-emerald-800 hover:text-emerald-900' : 'text-slate-300 hover:text-white'
+              }`}
+            >
+              <span>All News &amp; Dispatches</span>
+              <ArrowRight size={15} />
+            </Link>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -130,9 +143,9 @@ export default function LatestNews({ locale }: { locale: string }) {
                 ) : (
                   <Link
                     href={`/${locale}${news.href}`}
-                    className="inline-flex items-center gap-2 text-emerald-700 font-bold hover:text-emerald-800 transition-colors mt-auto text-sm"
+                    className="inline-flex items-center gap-2 text-emerald-600 dark:text-amber-400 font-bold hover:text-emerald-700 dark:hover:text-amber-300 transition-colors mt-auto text-sm"
                   >
-                    <span>Read More</span>
+                    <span>View Photo Gallery (MOP 38 Kigali)</span>
                     <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                   </Link>
                 )}
