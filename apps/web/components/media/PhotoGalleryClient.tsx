@@ -15,17 +15,19 @@ import {
   Filter,
   Camera,
   Layers,
-  Award
+  Award,
+  Globe2
 } from 'lucide-react';
 
 export interface GalleryPhoto {
   id: string;
+  event: 'mop38' | 'china-africa';
   src: string;
   alt: string;
   caption: string;
   title: string;
   description: string;
-  category: 'all' | 'presentations' | 'delegations' | 'panel';
+  category: 'delegations' | 'presentations' | 'panel';
   date: string;
   location: string;
   featured?: boolean;
@@ -34,6 +36,7 @@ export interface GalleryPhoto {
 export const mop38Photos: GalleryPhoto[] = [
   {
     id: 'mop38-01',
+    event: 'mop38',
     src: '/images/gallery/mop38/mop38-kigali-group-photo.jpg',
     alt: 'Thirty-Eighth Meeting of the Parties to the Montreal Protocol (MOP 38) official group photo in Kigali, Rwanda',
     caption: 'Accra-Helsinki side event at MOP 38, Kigali',
@@ -46,6 +49,7 @@ export const mop38Photos: GalleryPhoto[] = [
   },
   {
     id: 'mop38-02',
+    event: 'mop38',
     src: '/images/gallery/mop38/mop38-kigali-handshake-banner.jpg',
     alt: 'Bilateral partnership handshake beside the Accra-Helsinki Group for Sustainable Cooling banner',
     caption: 'Accra-Helsinki side event at MOP 38, Kigali',
@@ -58,6 +62,7 @@ export const mop38Photos: GalleryPhoto[] = [
   },
   {
     id: 'mop38-03',
+    event: 'mop38',
     src: '/images/gallery/mop38/mop38-kigali-delegates-banner-group.jpg',
     alt: 'Accra-Helsinki Group delegation assembly at Kigali conference venue',
     caption: 'Accra-Helsinki side event at MOP 38, Kigali',
@@ -70,6 +75,7 @@ export const mop38Photos: GalleryPhoto[] = [
   },
   {
     id: 'mop38-04',
+    event: 'mop38',
     src: '/images/gallery/mop38/mop38-kigali-eu-vsls-presentation.jpg',
     alt: 'Tom Van Ierland from the European Commission presenting Regulating VSLS emissions in the EU',
     caption: 'Accra-Helsinki side event at MOP 38, Kigali',
@@ -82,6 +88,7 @@ export const mop38Photos: GalleryPhoto[] = [
   },
   {
     id: 'mop38-05',
+    event: 'mop38',
     src: '/images/gallery/mop38/mop38-kigali-presentation-vslss.jpg',
     alt: 'Scientific presentation on VSLSs versus Long-lived controlled ODSs from SAP Ozone Assessment Report',
     caption: 'Accra-Helsinki side event at MOP 38, Kigali',
@@ -94,6 +101,7 @@ export const mop38Photos: GalleryPhoto[] = [
   },
   {
     id: 'mop38-06',
+    event: 'mop38',
     src: '/images/gallery/mop38/mop38-kigali-panel-discussion.jpg',
     alt: 'Panel discussion on Chlorinated very short-lived substances in the atmosphere: trends and significance',
     caption: 'Accra-Helsinki side event at MOP 38, Kigali',
@@ -106,6 +114,7 @@ export const mop38Photos: GalleryPhoto[] = [
   },
   {
     id: 'mop38-07',
+    event: 'mop38',
     src: '/images/gallery/mop38/mop38-kigali-panel-speakers.jpg',
     alt: 'High-level panel speakers discussing policy alignment to eliminate environmental dumping',
     caption: 'Accra-Helsinki side event at MOP 38, Kigali',
@@ -118,6 +127,7 @@ export const mop38Photos: GalleryPhoto[] = [
   },
   {
     id: 'mop38-08',
+    event: 'mop38',
     src: '/images/gallery/mop38/mop38-kigali-side-event-hall.jpg',
     alt: 'Delegates and attendees gathered in the conference hall during the Accra-Helsinki side event',
     caption: 'Accra-Helsinki side event at MOP 38, Kigali',
@@ -130,6 +140,7 @@ export const mop38Photos: GalleryPhoto[] = [
   },
   {
     id: 'mop38-09',
+    event: 'mop38',
     src: '/images/gallery/mop38/mop38-kigali-delegates.jpg',
     alt: 'Delegates in consultation during the Kigali MOP 38 side event',
     caption: 'Accra-Helsinki side event at MOP 38, Kigali',
@@ -142,6 +153,7 @@ export const mop38Photos: GalleryPhoto[] = [
   },
   {
     id: 'mop38-10',
+    event: 'mop38',
     src: '/images/gallery/mop38/mop38-kigali-leaders-selfie.jpg',
     alt: 'Accra-Helsinki Group organizers and leadership celebrating after the side event',
     caption: 'Accra-Helsinki side event at MOP 38, Kigali',
@@ -154,17 +166,108 @@ export const mop38Photos: GalleryPhoto[] = [
   },
 ];
 
+export const chinaAfricaPhotos: GalleryPhoto[] = [
+  {
+    id: 'china-africa-01',
+    event: 'china-africa',
+    src: '/images/gallery/china-africa-2026/china-africa-full-delegation-main-banner.jpg',
+    alt: 'China-Africa Standardization Cooperation Conference 2026 full delegation in Beijing, China',
+    caption: 'China-Africa Standardization Cooperation Conference, Beijing',
+    title: 'Standards "Soft Connectivity" for China-Africa High-Quality Development',
+    description: 'High-level commemorative delegation photograph of African energy efficiency officers, standards leadership, and Chinese host officials before the main conference backdrop in Beijing (November 7–9, 2026).',
+    category: 'delegations',
+    date: '7–9 November 2026',
+    location: 'Beijing, China',
+    featured: true,
+  },
+  {
+    id: 'china-africa-02',
+    event: 'china-africa',
+    src: '/images/gallery/china-africa-2026/china-africa-green-standards-seminar-group.jpg',
+    alt: 'Seminar on Green, Low-Carbon and Sustainable Standardization in Beijing',
+    caption: 'China-Africa Standardization Cooperation Conference, Beijing',
+    title: 'Seminar on Green, Low-Carbon & Sustainable Standardization',
+    description: 'African delegates led by Kofi Agyarko alongside Chinese standardization experts convening at the dedicated technical seminar on green, low-carbon, and sustainable cooling standards.',
+    category: 'presentations',
+    date: '7–9 November 2026',
+    location: 'Beijing, China',
+    featured: true,
+  },
+  {
+    id: 'china-africa-03',
+    event: 'china-africa',
+    src: '/images/gallery/china-africa-2026/china-africa-kofi-agyarko-bilateral-discussion.jpg',
+    alt: 'Kofi Agyarko in bilateral technical discussion with standards expert in Beijing',
+    caption: 'China-Africa Standardization Cooperation Conference, Beijing',
+    title: 'Strategic Technical Consultation on Cooling Standards',
+    description: 'Mr. Kofi Agyarko engaging in one-on-one consultations on harmonizing Minimum Energy Performance Standards (MEPS) and preventing the export of outdated, energy-inefficient cooling appliances.',
+    category: 'panel',
+    date: '7–9 November 2026',
+    location: 'Beijing, China',
+    featured: false,
+  },
+  {
+    id: 'china-africa-04',
+    event: 'china-africa',
+    src: '/images/gallery/china-africa-2026/china-africa-delegation-conference-backdrop.jpg',
+    alt: 'African cooling and energy efficiency delegates with Chinese conference hosts',
+    caption: 'China-Africa Standardization Cooperation Conference, Beijing',
+    title: 'African Standardization Delegation with Host Leadership',
+    description: 'Delegation of African energy efficiency champions and standards officers before the official conference emblem backdrop in Beijing.',
+    category: 'delegations',
+    date: '7–9 November 2026',
+    location: 'Beijing, China',
+    featured: false,
+  },
+  {
+    id: 'china-africa-05',
+    event: 'china-africa',
+    src: '/images/gallery/china-africa-2026/china-africa-african-experts-chinese-hosts.jpg',
+    alt: 'African experts and Chinese counterparts advocating shared responsibility',
+    caption: 'China-Africa Standardization Cooperation Conference, Beijing',
+    title: 'Advancing Shared Responsibility & Export Standards',
+    description: 'African standards leaders and Chinese industry counterparts uniting around common cooling appliance benchmarks to eliminate environmental dumping and protect grid infrastructure.',
+    category: 'delegations',
+    date: '7–9 November 2026',
+    location: 'Beijing, China',
+    featured: false,
+  },
+  {
+    id: 'china-africa-06',
+    event: 'china-africa',
+    src: '/images/gallery/china-africa-2026/china-africa-registration-delegates-beijing.jpg',
+    alt: 'Delegates at the China-Africa Standardization Cooperation Conference registration entrance',
+    caption: 'China-Africa Standardization Cooperation Conference, Beijing',
+    title: 'Arrival & Registration at Grand Ballroom, Beijing',
+    description: 'Mr. Kofi Agyarko and African delegation members arriving at the Grand Ballroom entrance for the opening plenary of the China-Africa Standardization Cooperation Conference in Beijing.',
+    category: 'delegations',
+    date: '7–9 November 2026',
+    location: 'Beijing, China',
+    featured: false,
+  },
+];
+
+export const allGalleryPhotos: GalleryPhoto[] = [
+  ...mop38Photos,
+  ...chinaAfricaPhotos,
+];
+
 export default function PhotoGalleryClient() {
+  const [selectedEvent, setSelectedEvent] = useState<'all' | 'mop38' | 'china-africa'>('all');
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
 
-  const filteredPhotos = mop38Photos.filter((photo) => {
+  const eventPhotos = selectedEvent === 'all' 
+    ? allGalleryPhotos 
+    : allGalleryPhotos.filter((p) => p.event === selectedEvent);
+
+  const filteredPhotos = eventPhotos.filter((photo) => {
     if (activeCategory === 'all') return true;
     return photo.category === activeCategory;
   });
 
   const handleOpenLightbox = (photoId: string) => {
-    const index = mop38Photos.findIndex((p) => p.id === photoId);
+    const index = filteredPhotos.findIndex((p) => p.id === photoId);
     if (index !== -1) {
       setSelectedPhotoIndex(index);
     }
@@ -177,16 +280,16 @@ export default function PhotoGalleryClient() {
   const handlePrev = useCallback(() => {
     if (selectedPhotoIndex === null) return;
     setSelectedPhotoIndex((prev) => 
-      prev === null ? 0 : (prev - 1 + mop38Photos.length) % mop38Photos.length
+      prev === null ? 0 : (prev - 1 + filteredPhotos.length) % filteredPhotos.length
     );
-  }, [selectedPhotoIndex]);
+  }, [selectedPhotoIndex, filteredPhotos.length]);
 
   const handleNext = useCallback(() => {
     if (selectedPhotoIndex === null) return;
     setSelectedPhotoIndex((prev) => 
-      prev === null ? 0 : (prev + 1) % mop38Photos.length
+      prev === null ? 0 : (prev + 1) % filteredPhotos.length
     );
-  }, [selectedPhotoIndex]);
+  }, [selectedPhotoIndex, filteredPhotos.length]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -201,10 +304,44 @@ export default function PhotoGalleryClient() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [selectedPhotoIndex, handlePrev, handleNext]);
 
-  const currentPhoto = selectedPhotoIndex !== null ? mop38Photos[selectedPhotoIndex] : null;
+  const currentPhoto = selectedPhotoIndex !== null ? filteredPhotos[selectedPhotoIndex] : null;
 
   return (
     <div className="space-y-12">
+      {/* Event Selection Switcher Tabs */}
+      <div className="flex flex-wrap items-center gap-3 p-2 bg-white rounded-2xl border border-slate-200 shadow-sm max-w-fit">
+        <button
+          onClick={() => { setSelectedEvent('all'); setActiveCategory('all'); }}
+          className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+            selectedEvent === 'all'
+              ? 'bg-slate-900 text-white shadow-md'
+              : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+          }`}
+        >
+          All Collections ({allGalleryPhotos.length})
+        </button>
+        <button
+          onClick={() => { setSelectedEvent('mop38'); setActiveCategory('all'); }}
+          className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+            selectedEvent === 'mop38'
+              ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20'
+              : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+          }`}
+        >
+          MOP 38 Kigali Side Event ({mop38Photos.length})
+        </button>
+        <button
+          onClick={() => { setSelectedEvent('china-africa'); setActiveCategory('all'); }}
+          className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+            selectedEvent === 'china-africa'
+              ? 'bg-amber-600 text-white shadow-md shadow-amber-600/20'
+              : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+          }`}
+        >
+          China-Africa Standards Conference, Beijing ({chinaAfricaPhotos.length})
+        </button>
+      </div>
+
       {/* Featured Event Banner */}
       <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-950 via-slate-900 to-sky-950 p-8 md:p-12 text-white shadow-2xl border border-emerald-500/20">
         <div className="absolute top-0 right-0 -mr-16 -mt-16 w-80 h-80 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none" />
@@ -213,32 +350,54 @@ export default function PhotoGalleryClient() {
         <div className="relative z-10 max-w-4xl space-y-6">
           <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-emerald-300 border border-emerald-500/30">
             <Sparkles className="w-3.5 h-3.5" />
-            Special Collection • 10 Photos
+            {selectedEvent === 'mop38' && 'Featured Album • MOP 38 Kigali Side Event'}
+            {selectedEvent === 'china-africa' && 'Featured Album • China-Africa Standards Conference'}
+            {selectedEvent === 'all' && `Official Photo Archives • ${allGalleryPhotos.length} High-Res Images`}
           </div>
 
           <div>
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-3">
-              Accra-Helsinki side event at MOP 38, Kigali
+              {selectedEvent === 'mop38' && 'Accra-Helsinki side event at MOP 38, Kigali'}
+              {selectedEvent === 'china-africa' && 'China-Africa Standardization Cooperation Conference 2026'}
+              {selectedEvent === 'all' && 'Accra-Helsinki Group Photo Archives'}
             </h2>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl">
-              Photographic highlights from the Accra-Helsinki Group for Sustainable Cooling side event held during the 
-              Thirty-Eighth Meeting of the Parties to the Montreal Protocol (MOP 38) in Kigali, Rwanda. Bringing together delegates, 
-              atmospheric scientists, and policy pioneers to eliminate environmental dumping and advance energy-efficient cooling.
+              {selectedEvent === 'mop38' && (
+                'Photographic documentation of the Accra-Helsinki Group for Sustainable Cooling side event during the Thirty-Eighth Meeting of the Parties (MOP 38) in Kigali, Rwanda. Advancing VSLS regulatory controls, anti-dumping measures, and the 10th anniversary of the Kigali Amendment.'
+              )}
+              {selectedEvent === 'china-africa' && (
+                'High-level technical conference in Beijing on standards "soft connectivity" and the Seminar on Green, Low-Carbon & Sustainable Standardization. African leaders led by Kofi Agyarko pushing for common cooling appliance standards and shared responsibility to prevent environmental dumping.'
+              )}
+              {selectedEvent === 'all' && (
+                'Comprehensive visual documentation of high-level diplomatic side events, standards summits, and technical convenings uniting Article 5 and Article 2 leaders to accelerate sustainable cooling and stop environmental dumping.'
+              )}
             </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-y-3 gap-x-6 text-sm text-slate-300 pt-2 border-t border-slate-700/60">
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4 text-emerald-400" />
-              <span>2–6 November 2026</span>
+              <span>
+                {selectedEvent === 'mop38' && '2–6 November 2026'}
+                {selectedEvent === 'china-africa' && '7–9 November 2026'}
+                {selectedEvent === 'all' && 'November 2026 Summits'}
+              </span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4 text-sky-400" />
-              <span>Kigali Convention Center, Rwanda</span>
+              <span>
+                {selectedEvent === 'mop38' && 'Kigali Convention Center, Rwanda'}
+                {selectedEvent === 'china-africa' && 'Grand Ballroom, Beijing, China'}
+                {selectedEvent === 'all' && 'Kigali, Rwanda & Beijing, China'}
+              </span>
             </div>
             <div className="flex items-center gap-2">
               <Award className="w-4 h-4 text-amber-400" />
-              <span>10th Anniversary Kigali Amendment (2016–2026)</span>
+              <span>
+                {selectedEvent === 'mop38' && 'MOP 38 & 10th Kigali Amendment Anniversary'}
+                {selectedEvent === 'china-africa' && 'Green, Low-Carbon & Sustainable Standards'}
+                {selectedEvent === 'all' && 'Sustainable Cooling & Anti-Dumping Standards'}
+              </span>
             </div>
           </div>
         </div>
@@ -251,11 +410,11 @@ export default function PhotoGalleryClient() {
             onClick={() => setActiveCategory('all')}
             className={`px-4 py-2 rounded-xl text-sm font-semibold transition-all ${
               activeCategory === 'all'
-                ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20'
+                ? 'bg-slate-900 text-white shadow-md'
                 : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
             }`}
           >
-            All Event Photos ({mop38Photos.length})
+            All in Current View ({eventPhotos.length})
           </button>
           <button
             onClick={() => setActiveCategory('delegations')}
@@ -265,7 +424,7 @@ export default function PhotoGalleryClient() {
                 : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
             }`}
           >
-            Delegations & Partners (4)
+            Delegations &amp; Leadership
           </button>
           <button
             onClick={() => setActiveCategory('presentations')}
@@ -275,7 +434,7 @@ export default function PhotoGalleryClient() {
                 : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
             }`}
           >
-            Keynote Presentations (2)
+            Keynotes &amp; Seminars
           </button>
           <button
             onClick={() => setActiveCategory('panel')}
@@ -285,13 +444,13 @@ export default function PhotoGalleryClient() {
                 : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
             }`}
           >
-            Panel & Dialogues (4)
+            Panel &amp; Consultations
           </button>
         </div>
 
         <div className="text-xs text-slate-500 font-medium flex items-center gap-1.5 self-end sm:self-center">
           <Camera className="w-3.5 h-3.5 text-slate-400" />
-          Showing {filteredPhotos.length} of {mop38Photos.length} high-res images
+          Showing {filteredPhotos.length} of {eventPhotos.length} photos (No Duplicates)
         </div>
       </div>
 
@@ -322,8 +481,12 @@ export default function PhotoGalleryClient() {
               </div>
 
               {/* Caption pill over photo */}
-              <div className="absolute top-3 left-3">
-                <span className="inline-block rounded-lg bg-black/70 backdrop-blur-md px-2.5 py-1 text-[11px] font-semibold text-emerald-300 border border-emerald-400/30">
+              <div className="absolute top-3 left-3 right-3 flex items-start justify-between gap-2">
+                <span className={`inline-block rounded-lg backdrop-blur-md px-2.5 py-1 text-[11px] font-semibold border ${
+                  photo.event === 'china-africa'
+                    ? 'bg-amber-950/80 text-amber-300 border-amber-400/40'
+                    : 'bg-black/70 text-emerald-300 border-emerald-400/30'
+                }`}>
                   {photo.caption}
                 </span>
               </div>
@@ -368,11 +531,15 @@ export default function PhotoGalleryClient() {
             {/* Top Bar */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-slate-950/80">
               <div className="flex items-center gap-3">
-                <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-semibold">
+                <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${
+                  currentPhoto.event === 'china-africa'
+                    ? 'bg-amber-500/20 text-amber-300 border-amber-500/30'
+                    : 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30'
+                }`}>
                   {currentPhoto.caption}
                 </span>
                 <span className="text-xs text-slate-400 hidden sm:inline-block">
-                  Photo {selectedPhotoIndex + 1} of {mop38Photos.length}
+                  Photo {selectedPhotoIndex + 1} of {filteredPhotos.length}
                 </span>
               </div>
 
