@@ -160,14 +160,15 @@ export function MP10PortfolioSection({ isLight = false, locale = 'en' }: MP10Por
         {filteredOpportunities.map((item) => {
           const theme = getColorClasses(item.color);
           return (
-            <div
+            <Link
               key={item.id}
-              className={`rounded-2xl p-6 sm:p-7 border transition-all duration-300 flex flex-col justify-between group ${
+              href={`/${locale}/policy/mp10#opportunity-${item.id}`}
+              className={`rounded-2xl p-6 sm:p-7 border transition-all duration-300 flex flex-col justify-between group cursor-pointer ${
                 theme.hover
               } ${
                 isLight
-                  ? 'bg-white border-slate-200 shadow-sm hover:shadow-md'
-                  : 'bg-white/[0.03] border-white/10 hover:bg-white/[0.06]'
+                  ? 'bg-white border-slate-200 shadow-sm hover:shadow-md hover:border-amber-400'
+                  : 'bg-white/[0.03] border-white/10 hover:bg-white/[0.06] hover:border-amber-400/50'
               }`}
             >
               <div>
@@ -213,11 +214,12 @@ export function MP10PortfolioSection({ isLight = false, locale = 'en' }: MP10Por
                   <span className={`w-2 h-2 rounded-full ${theme.dot}`}></span>
                   <span className="font-semibold">{item.category}</span>
                 </span>
-                <span className="font-mono text-[11px] text-amber-600 dark:text-amber-400 font-bold">
-                  MP10 #{item.id}
+                <span className="font-mono text-[11px] text-amber-600 dark:text-amber-400 font-bold group-hover:underline flex items-center gap-1">
+                  <span>View in MP10 Document</span>
+                  <ArrowRight size={11} className="transition-transform group-hover:translate-x-1" />
                 </span>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
@@ -235,6 +237,14 @@ export function MP10PortfolioSection({ isLight = false, locale = 'en' }: MP10Por
           </p>
         </div>
         <div className="flex items-center gap-3 shrink-0">
+          <Link
+            href={`/${locale}/policy/mp10`}
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 dark:text-emerald-400 hover:underline"
+          >
+            <span>Read Complete MP10 Strategy Page</span>
+            <ArrowRight size={13} />
+          </Link>
+          <span className="text-slate-400">&bull;</span>
           <a
             href="/documents/accra-helsinki-mp10-portfolio-of-opportunities.pdf"
             target="_blank"

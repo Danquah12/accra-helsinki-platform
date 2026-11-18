@@ -184,6 +184,28 @@ export function GroupOverview({ locale }: { locale: string }) {
               <ul className={`space-y-2.5 text-xs ${isLight ? 'text-slate-600' : 'text-slate-300'}`}>
                 <li>
                   <a
+                    href="https://gna.org.gh/2026/10/africa-must-not-become-a-dumping-ground-for-inefficient-appliances/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${isLight ? 'text-amber-700 hover:text-amber-800' : 'text-amber-400 hover:text-amber-300'} transition-colors inline-flex items-center gap-1.5 underline font-semibold`}
+                  >
+                    <span>Ghana News Agency: Africa Must Not Become a Dumping Ground for Inefficient Appliances — Kofi Agyarko</span>
+                    <ExternalLink size={12} className="shrink-0" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://gna.org.gh/2026/10/african-experts-push-for-common-cooling-appliance-standards/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${isLight ? 'text-amber-700 hover:text-amber-800' : 'text-amber-400 hover:text-amber-300'} transition-colors inline-flex items-center gap-1.5 underline font-semibold`}
+                  >
+                    <span>Ghana News Agency: African Experts Push for Common Cooling Appliance Standards</span>
+                    <ExternalLink size={12} className="shrink-0" />
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="https://ozone.unep.org/system/files/documents/History%20of%20Accra-Helsinki%20Group_Marco%20and%20Stephen.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -333,7 +355,7 @@ export function GroupOverview({ locale }: { locale: string }) {
             }`}
           >
             <img
-              src="/images/beyond-kigali-framework.png"
+              src="/images/beyond-kigali-framework.svg"
               alt="Beyond Kigali - Accra-Helsinki Group for Truly Sustainable Cooling Framework Slide"
               className="w-full h-auto object-contain rounded-xl transform group-hover:scale-[1.008] transition-transform duration-300 shadow-md"
             />
@@ -355,9 +377,9 @@ export function GroupOverview({ locale }: { locale: string }) {
               <span className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-2 block">
                 1. Demand-Side &amp; Non-Chemical
               </span>
-              <h4 className={`text-base font-bold mb-2 ${isLight ? 'text-slate-900' : 'text-white'}`}>Passive &amp; Refrigerant-Free First</h4>
+              <h4 className={`text-base font-bold mb-2 ${isLight ? 'text-slate-900' : 'text-white'}`}>Passive Cooling &amp; Alternative Technologies</h4>
               <p className={`text-xs leading-relaxed ${isLight ? 'text-slate-600' : 'text-slate-300'}`}>
-                Prioritizing building design, shading, insulation, and non-vapor-compression technologies to drastically lower the aggregate need for active mechanical cooling.
+                Implementing passive cooling solutions immediately worldwide as a first resort, and gradually fostering refrigerant-free Alternative Cooling Technologies (ACTs) taking into account improving Technological Readiness Levels (TRLs) and lifecycle impacts.
               </p>
             </div>
 
@@ -367,9 +389,9 @@ export function GroupOverview({ locale }: { locale: string }) {
               <span className="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 mb-2 block">
                 2. Chemical Evolution
               </span>
-              <h4 className={`text-base font-bold mb-2 ${isLight ? 'text-slate-900' : 'text-white'}`}>Safe Natural Alternatives</h4>
+              <h4 className={`text-base font-bold mb-2 ${isLight ? 'text-slate-900' : 'text-white'}`}>Safe Natural Alternatives (NatRef)</h4>
               <p className={`text-xs leading-relaxed ${isLight ? 'text-slate-600' : 'text-slate-300'}`}>
-                Transitioning beyond high-GWP HFCs to climate-friendly and chemically safe alternatives with zero ODP, ultra-low GWP, and no hazardous PFAS or TFA breakdown products.
+                Shifting from fluorinated refrigerants to natural working fluids (propane, CO₂, ammonia) to prevent environmental and chemical lock-in of persistent PFAS (&ldquo;forever chemicals&rdquo;) and harmful TFA breakdown products.
               </p>
             </div>
 
@@ -379,9 +401,9 @@ export function GroupOverview({ locale }: { locale: string }) {
               <span className="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block">
                 3. Systemic Outcomes
               </span>
-              <h4 className={`text-base font-bold mb-2 ${isLight ? 'text-slate-900' : 'text-white'}`}>Lifecycle &amp; Super-Pollutants</h4>
+              <h4 className={`text-base font-bold mb-2 ${isLight ? 'text-slate-900' : 'text-white'}`}>Lifecycle, Feedstocks &amp; Super-Pollutants</h4>
               <p className={`text-xs leading-relaxed ${isLight ? 'text-slate-600' : 'text-slate-300'}`}>
-                Lifecycle Refrigerant Management (LRM) coupled with Energy Efficiency MEPS to shrink halogenated feedstock demand, speed Kigali goals, and cut N₂O, SF₆, and PFCs.
+                Lifecycle Refrigerant Management (LRM) coupled with Energy Efficiency MEPS to reduce the need for and emissions from feedstock production, speed Kigali implementation, and reduce emissions of N₂O, SF₆, VSLSs, and PFAS.
               </p>
             </div>
           </div>
@@ -419,7 +441,7 @@ export function GroupOverview({ locale }: { locale: string }) {
 
               <div className="overflow-auto max-h-[80vh] flex items-center justify-center bg-slate-950/90 border border-white/10 p-2 sm:p-4 rounded-2xl">
                 <img
-                  src="/images/beyond-kigali-framework.png"
+                  src="/images/beyond-kigali-framework.svg"
                   alt="Beyond Kigali Slide Fullscreen"
                   className="w-full h-auto object-contain rounded-xl shadow-xl"
                 />

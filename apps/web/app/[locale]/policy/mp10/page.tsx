@@ -53,7 +53,7 @@ export default async function MP10PortfolioPage({
           </div>
 
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-3xl mb-8">
-            A comprehensive, ten-point strategic roadmap to accelerate Montreal Protocol implementation, synchronize energy efficiency improvements, stop the environmental dumping of obsolete cooling appliances, and protect stratospheric ozone and climate tipping points.
+            The official ten-point strategic roadmap adopted by the Accra-Helsinki Group for Sustainable Cooling to accelerate Montreal Protocol implementation, synchronize energy efficiency improvements, stop the environmental dumping of obsolete cooling appliances, and protect stratospheric ozone and climate tipping points.
           </p>
 
           {/* Quick Actions */}
@@ -64,7 +64,7 @@ export default async function MP10PortfolioPage({
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-white font-bold text-sm transition-all shadow-md active:scale-95"
             >
               <Download size={16} />
-              <span>Download Official PDF (3 Pages)</span>
+              <span>Download Official MP10 PDF (3 Pages)</span>
             </a>
             <a
               href="/documents/accra-helsinki-mp10-portfolio-of-opportunities.pdf"
@@ -73,7 +73,7 @@ export default async function MP10PortfolioPage({
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-sm transition-all"
             >
               <ExternalLink size={16} />
-              <span>View PDF in Browser</span>
+              <span>View Approved PDF in Browser</span>
             </a>
           </div>
         </div>
@@ -115,7 +115,7 @@ export default async function MP10PortfolioPage({
                   <div className="flex-1 space-y-2">
                     <div className="flex flex-wrap items-center justify-between gap-2">
                       <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-amber-300 transition-colors">
-                        {item.title} ({item.code})
+                        {item.id}. {item.title}
                       </h3>
                       <span className="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
                         {item.badgeText}
@@ -158,15 +158,15 @@ export default async function MP10PortfolioPage({
 
             <div className="rounded-3xl p-3 sm:p-4 bg-slate-900/90 border border-emerald-500/30 shadow-2xl overflow-hidden">
               <img
-                src="/images/beyond-kigali-framework.png"
-                alt="Beyond Kigali: Accra-Helsinki Group for Sustainable Cooling"
+                src="/images/beyond-kigali-framework.svg"
+                alt="Beyond Kigali: Accra-Helsinki Group for Sustainable Cooling Architectural Framework"
                 className="w-full h-auto object-contain rounded-2xl shadow-md"
               />
             </div>
 
             <div className="flex flex-wrap items-center justify-between gap-4 mt-6 p-4 rounded-2xl bg-white/[0.03] border border-white/10 text-xs">
               <span className="text-slate-400">
-                Figure: Architectural Framework (Page 3 of Official Portfolio Document)
+                Figure: Architectural Framework (Page 3 of Official Portfolio Document) &bull; Accurate Feedstock &amp; Alternative Cooling Language
               </span>
               <div className="flex items-center gap-3">
                 <a
@@ -184,7 +184,7 @@ export default async function MP10PortfolioPage({
                   download="beyond-kigali-accra-helsinki-framework.png"
                   className="text-amber-400 hover:text-amber-300 font-bold underline inline-flex items-center gap-1"
                 >
-                  <span>HD PNG</span>
+                  <span>High-Res PNG</span>
                   <Download size={12} />
                 </a>
               </div>
